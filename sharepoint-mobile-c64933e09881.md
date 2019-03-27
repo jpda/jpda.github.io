@@ -1,0 +1,30 @@
+---
+title: "SharePoint Mobile"
+date: 2009-12-12T22:52:49.000Z
+author: "John Patrick Dandison"
+
+---
+
+For the eight people who know about SharePoint 2007’s mobile sites, you know that the out-of-the-box mobile master page is hideous. Actually, it’s about three links, black text, white background. While it is nice that you can see it on even the most rudimentary of browsers (here’s looking at you, BlackBerry Browser), they’ve made great strides with 2010’s out-of-the-box mobile pages — following closely to the great strides made in mobile browsing. The exception, of course, is the BlackBerry Browser, which is still the most god-awful mobile browser available, with the speed of a dying cow and the rendering capabilities of IE 3.
+
+Anyway, here’s how the 2007 mobile pages look:
+
+
+
+
+![IMG_0085](http://jpd.ms/wp-content/uploads/migrated/IMG_0085_thumb.png)
+
+
+
+And 2010:
+
+
+
+
+![IMG_0086](http://jpd.ms/wp-content/uploads/migrated/IMG_0086_thumb.png)
+
+
+
+Now, these are totally vanilla, unmodified mobile master pages. The differences are astonishing. Not to mention that I’d bet they look a lot better on Windows Mobile (particularly the fonts). I’m using a jesus phone for these screenshots, but nonetheless, the differences are significant. Update — I tried installing some of the additional fonts on the iPhone (particularly Calibi, Tahoma and Segoe UI) in order to make these screenshots better, but even after recompiling CGFontCache.plist, it just killed the SpringBoard on reboot. That being said, the default font for the SharePoint 2010 mobile pages is Times New Roman — ugly, but probably required for some of those particularly bad mobile browsers. I’d suggest updating that ASAP to at least only use Times when absolutely necessary.
+
+With mobile technology quickly gaining speed, I’d expect to see even more being done with Mobile SharePoint by third parties and companies. For the most part, SharePoint 2007’s mobile interface was overlooked (with good cause), but I’m thinking that the effort put in to get SharePoint up to standards and the exponential increase in the power of mobile devices (and wireless broadband), you’ll see much better acceptance of SharePoint 2010’s mobile features.
