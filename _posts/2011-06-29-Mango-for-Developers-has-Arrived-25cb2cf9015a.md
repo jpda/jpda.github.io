@@ -13,4 +13,4 @@ You can get the dev tools here: [http://www.microsoft.com/download/en/details.as
 
 And if you’re a registered developer, you should have gotten a Connect invitation sometime around mid-day. My update process went fine, and took about an hour.
 
-![mangoawwyeah](https://cdn-images-1.medium.com/max/800/0*oFMp5WAsqiG6llMA.png)
+![mangoawwyeah](/img/0_oFMp5WAsqiG6llMA.png)

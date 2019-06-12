@@ -25,5 +25,5 @@ You have to actually start playing the song you want to download, as that’s wh
 
 Lastly — don’t steal music. Paying ridiculous amounts of money for music is silly, but please support Grooveshark by going VIP, and be sure to support your artists.
 
-![image](https://cdn-images-1.medium.com/max/800/0*aeD-pXo1Ncj4Ze7c.png)
-![image](https://cdn-images-1.medium.com/max/800/0*S59RlDhYJV-6__xf.png)
+![image](/img/0_aeD-pXo1Ncj4Ze7c.png)
+![image](/img/0_S59RlDhYJV-6__xf.png)

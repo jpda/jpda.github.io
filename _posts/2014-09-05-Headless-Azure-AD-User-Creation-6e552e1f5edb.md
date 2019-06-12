@@ -129,4 +129,4 @@ if you’re using the Graph Client wrapper.
 
 Create away! You’re off.
 
-![srs](https://cdn-images-1.medium.com/max/800/0*8E4OQw_jaF_uJW3F.png)
+![srs](/img/0_8E4OQw_jaF_uJW3F.png)

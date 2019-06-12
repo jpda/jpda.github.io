@@ -25,19 +25,19 @@ Turn your phone’s Bluetooth radio on and pair it with your laptop. My PC insta
 
 Next, find your modem in Device Manager (Start à Run à devmgmt.msc à Modems à Standard Modem over Bluetooth link) or Phones and Modems in Control Panel.
 
-![tether3](https://cdn-images-1.medium.com/max/800/0*27VdsTSnh1PYKz9j.png)
+![tether3](/img/0_27VdsTSnh1PYKz9j.png)
 
 Open the properties of your modem and click the ‘Advanced’ tab. Type this in (including quotes) to the Extra Initialization Commands box: +cgdcont=1,”IP”,”wap.cingular”
 
-![tether4](https://cdn-images-1.medium.com/max/800/0*a11oWsFc8iaVdPRO.png)
+![tether4](/img/0_a11oWsFc8iaVdPRO.png)
 
 Now your modem is configured. Next we’ve got to create the actual connection. Head over to Devices and Printers.
 
-![tether5](https://cdn-images-1.medium.com/max/800/0*RCSmDKUjhZjkUoL8.png)
+![tether5](/img/0_RCSmDKUjhZjkUoL8.png)
 
 You should see your Blackberry in there — right click and select ‘Create a dial-up connection…’
 
-![tether6](https://cdn-images-1.medium.com/max/800/0*M8kqeBYtknIgCdIa.png)
+![tether6](/img/0_M8kqeBYtknIgCdIa.png)
 
 Select your modem on the next screen, and use these settings:
 
@@ -49,15 +49,15 @@ Password: CINGULAR1
 
 Click next, then finish. Chances are it won’t connect. That’s ok, because there’s another setting we have to fix.
 
-![tether7](https://cdn-images-1.medium.com/max/800/0*_bHWBQvD95P1fBpT.png)
+![tether7](/img/0__bHWBQvD95P1fBpT.png)
 
 Go to Network Connections (Start à Run à ncpa.cpl) and find your new dial-up connection. Right-click, open the Properties, and head to the Networking tab, then double-click Internet Protocol Version 4 (TCP/IP v4).
 
-![tether8](https://cdn-images-1.medium.com/max/800/0*i5uIZFrnvmNrVJS1.png)
+![tether8](/img/0_i5uIZFrnvmNrVJS1.png)
 
 Click Advanced, and Clear the ‘Use IP header compression’ checkbox under PPP Link.
 
-![tether9](https://cdn-images-1.medium.com/max/800/0*GEBzybIfD-hC2ZO5.png)
+![tether9](/img/0_GEBzybIfD-hC2ZO5.png)
 
 Now your connection should be ready to go. I’ve had good luck with both the password above and also with a blank username and password. Be sure to try a blank username\\password if the ones provided don’t work. Also, you may need to reboot for everything to properly take effect (particularly the modem installation — I had an error 734 and error 692 — rebooting fixed things right up).
 

@@ -9,7 +9,7 @@ slug: /windows-10-iot-device-provisioning-app-deployment-eedcdb1ac90a
 
 Windows 10 IoT — the promise of a universal app that can run, quite literally, anywhere. This includes tiny, cheap computers like the Raspberry Pi and Minnowboard MAX.
 
-![Raspberry Pi 2Raspberry Pi 2](https://cdn-images-1.medium.com/max/800/0*7zmZHbLexlqTHVPo.jpg)
+![Raspberry Pi 2Raspberry Pi 2](/img/0_7zmZHbLexlqTHVPo.jpg)
 Raspberry Pi 2
 
 It’s quite neat — $35 gets you, effectively, a tiny PC. Perfect for running a [media center](https://osmc.tv/), a [web server](https://www.bing.com/search?q=rpi%20webserver), arcade machines, all sorts of fun stuff. The advent of a specialized Windows 10 build being available opened the doors to the massive base of .net developers who, up until now, could struggle with Mono on Linux or have to learn a moon language like Java. On July 29th, an ‘RTM’ build dropped for Windows 10 IoT — plus Microsoft has been spending a lot of time hyping up the IoT Suite, which is basically a collection of existing products (Stream Analytics, Event Hubs, etc) that are getting a bundled offer this fall. Also coming this fall, Cardinal’s annual Innovation Summit — a place where we can meet with customers new and old to talk about cool stuff we’re building and how it fits into our customers’ daily lives. This got me thinking — what can we do to showcase the power of Windows 10 IoT + Azure IoT?
@@ -20,7 +20,7 @@ It’s quite neat — $35 gets you, effectively, a tiny PC. Perfect for runn
 
 I managed to get my hands on about a dozen Raspberry Pis — for the Summit talk, that would be plenty. I won’t get into details about _what_ I’m building in this post — you could always, you know, [come to the Summit](http://www.cardinalsolutions.com/MISCharlotte) and see it in action — but I will say it involves bluetooth and nearly the entire Azure IoT suite…but for this post, I’ll talk mostly about my biggest pain points — provisioning and app deployment.
 
-![Pi explosion.Pi explosion](https://cdn-images-1.medium.com/max/800/0*fpv3knRWh6VUWHcE.png)
+![Pi explosion.Pi explosion](/img/0_fpv3knRWh6VUWHcE.png)
 Pi explosion.
 
 #### Provisioning
@@ -49,7 +49,7 @@ Which is great if you paid by the click, I suppose. For the rest of us it’s mi
 
 Windows 10 IoT comes with a simple web portal (http://<your-pi>:8080/) for info + tasks — task/process monitor, event logs, etc. Plus app deployment. This should be easy, right? No. Apparently there’s some wonkiness with the order of operations + existing dependencies here, where I could get this to work exactly zero times. But we’ll be back…
 
-![AppX Manager from WebBAppX Manager from WebB](https://cdn-images-1.medium.com/max/800/0*_Glo4ohc4O1osRwS.png)
+![AppX Manager from WebBAppX Manager from WebB](/img/0__Glo4ohc4O1osRwS.png)
 AppX Manager from WebB
 
 #### Modern Windows App Deployment, aka, WinAppDeployCmd
@@ -90,7 +90,7 @@ At this point, I had spent one too many late nights beating my face on the keybo
 
 So innocuous. So simple. So _obvious_. Surely this little web server used something to perform its actions — I couldn’t believe I hadn’t thought of this before. Head over to your web browser and hit /RestDocumentation.htm off your Pi — you’ll find a list of interesting things you can do via HTTP with your Pi. Notably, App Deployment. Following these ‘docs’ to the T (there’s not much there), I was still getting 400s and 500s, although it wasn’t immediately obvious why. I decided that rather than trying this the ‘proper’ way, it was time to pull out the stops and just fiddle the hell out of it and figure out what the web interface was doing. Surely they didn’t write this logic twice…? ‘But you said it didn’t work above,’ you might be saying. And this would be true, it never did work from the web interface, although I never spent a whole lot of time trying to figure out why. Through a bit of trial and error, I figured out that the dependencies didn’t seem to be needed; in fact, including them caused it to blow up. Just uploading the package + certificate seemed to work fine, even on a freshly reimaged device. Fiddler showed me a few interesting things in the process:
 
-![Twiddlin’ bits in Fiddler…or would it be Fiddlin?fiddler](https://cdn-images-1.medium.com/max/800/0*AVcn-sWM1sViyQx2.png)
+![Twiddlin’ bits in Fiddler…or would it be Fiddlin?fiddler](/img/0_AVcn-sWM1sViyQx2.png)
 Twiddlin’ bits in Fiddler…or would it be Fiddlin?
 
 *   Post the form data (e.g., the packages)
@@ -104,7 +104,7 @@ There were a few other things I wanted to do too — like uninstall the app 
 
 I got to work, plunking out some HTTP requests with Powershell. This went well, until I started uploading the packages. For whatever reason, it would 500 immediately, with no logging to indicate the problem. When I took the request and reissued it in fiddler, it would fail. But when I took it into the composer and reissued it, suddenly it would work. I went back and forth for hours, comparing requests, finding nothing seemingly different between the two with the exception of the multi-part form boundary ID. I even got to the point of reflashing one of the devices to make sure I didn’t have any sort of previous-deployment hangover that was preventing the upload. Still nothing. At this point I was grasping at straws. Tired, frustrated. Ready to launch the Pi from the nearest potato gun. On further inspection of the two requests, I found _one_ thing that was different between the two — the one on the left returns 200, the one on the right returns 500. See if you can find it:
 
-![Can you find it?srsly](https://cdn-images-1.medium.com/max/800/0*RwQkQzyJWegzSTLt.png)
+![Can you find it?srsly](/img/0_RwQkQzyJWegzSTLt.png)
 Can you find it?
 
 #### Let’s talk about RFC 2616 19.2 — multipart
@@ -119,5 +119,5 @@ I think we’ve found one of those implementations. But there is a larger issue 
 
 #### What have we learned?
 
-![This is not some mundane detail, Michael!mundane details](https://cdn-images-1.medium.com/max/800/0*wA8fWYNNpZD1w8uq.png)
+![This is not some mundane detail, Michael!mundane details](/img/0_wA8fWYNNpZD1w8uq.png)
 This is not some mundane detail, Michael!

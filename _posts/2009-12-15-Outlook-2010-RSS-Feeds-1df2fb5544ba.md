@@ -11,4 +11,4 @@ Here’s a sweet little tidbit on Outlook 2010. When RSS Feed support was added 
 
 With Outlook 2010, however, they’ve already hooked it up by default. When you subscribe to a new feed, it’ll automatically create a new, local PST, and add your feed to it. How sweet is that?!
 
-![image](https://cdn-images-1.medium.com/max/800/0*h7Us_LoeLRXS1jnJ.png)
+![image](/img/0_h7Us_LoeLRXS1jnJ.png)

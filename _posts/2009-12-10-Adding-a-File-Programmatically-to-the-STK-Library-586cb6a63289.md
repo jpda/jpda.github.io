@@ -7,7 +7,7 @@ keywords: []
 slug: /adding-a-file-programmatically-to-the-stk-library-586cb6a63289
 ---
 
-![STK_Image_1](https://cdn-images-1.medium.com/max/800/0*7RZ1_RbMgVyDZTo8.png)
+![STK_Image_1](/img/0_7RZ1_RbMgVyDZTo8.png)
 
 I’ve been working with the SharePoint Training Kit ([http://slk.codeplex.com](http://slk.codeplex.com)) Training Library recently, and one of the more important features was to create an uploader. The uploader was created in Silverlight (which I’ll get to later), but once we’ve got the file, what do we do then to make sure it gets added to the training library properly? Have a look below — most important is to set the content type.
 

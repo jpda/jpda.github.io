@@ -11,6 +11,6 @@ The past week has been full of sensationalist news of the ‘impending doom’ o
 
 Anyway, a couple trees fell over in our parking lot, and there was a glaze on some of the trees, but it was pretty much still a non-event. Here are some photos:
 
-![View The 'Winter Storm' of 2009](https://cdn-images-1.medium.com/max/800/0*vtB_tqff0ubJG3g-.jpg)
+![View The 'Winter Storm' of 2009](/img/0_vtB_tqff0ubJG3g-.jpg)
 
 [View Full Album](http://cid-3fad32be06eb12d7.skydrive.live.com/redir.aspx?page=browse&resid=3FAD32BE06EB12D7!176&ct=photos)

@@ -9,4 +9,4 @@ slug: /bing-for-iphone-is-here-989c646a6832
 
 Bing for iPhone is here. It rocks.
 
-![ibing](https://cdn-images-1.medium.com/max/800/0*6q_mtwhe2x0mF8gv.png)
+![ibing](/img/0_6q_mtwhe2x0mF8gv.png)

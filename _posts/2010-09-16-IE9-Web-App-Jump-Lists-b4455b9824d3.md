@@ -24,5 +24,5 @@ So how do we do this? Simple. Drop this code into the tag of your site, customiz
 <meta name=”msapplication-navbutton-color” content=”#003466" />   
 <meta name=”msapplication-starturl” content=”./” />
 
-![image](https://cdn-images-1.medium.com/max/800/0*QlnKMmNQNwtU2O1w.png)
-![image](https://cdn-images-1.medium.com/max/800/0*m9XjyLHdPM32bQ7H.png)
+![image](/img/0_QlnKMmNQNwtU2O1w.png)
+![image](/img/0_m9XjyLHdPM32bQ7H.png)

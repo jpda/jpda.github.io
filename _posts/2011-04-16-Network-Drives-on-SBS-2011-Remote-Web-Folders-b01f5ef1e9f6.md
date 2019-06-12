@@ -15,7 +15,7 @@ One part you’ve got are the shared folders. The interface is spartan, but usab
 
 Great, you say — until you realize that it’s only good for shares _on the local machine_ (i.e., the Small Business Server box). I have two servers — one running SBS, the other running Server 2008 R2, with Hyper-V and lots of cheap storage. Since almost all of my storage is on the other box, this presented a problem. The SBS Console refuses to add anything but locally-attached drives. I tried all kinds of stuff, from Linux-esque symbolic links to NTFS junctions, none of which worked.
 
-![image](https://cdn-images-1.medium.com/max/800/0*-QjxKwJt9xOMfcHV.png)
+![image](/img/0_-QjxKwJt9xOMfcHV.png)
 
 The more I thought about it, though, the more I realized there _had_ to be a way to get the shares from my other server exposed this way as well…I mean, why have the server as the top-level of the tree view if it’s always the only root?
 
@@ -64,7 +64,7 @@ Getting the config file reader to work was pretty much a cake walk. It is a simp
 
 I created my assembly, which you can download below. It basically calls the shamelessly copy\\pasted\\tweaked methods from the two StorageInformationProviders and combines them before sending them back out. All of the caching and permissions mechanisms are still in tow, but again — please test before using this in any kind of production environment. I doubt it’s terribly kosher with the SBS peeps either.
 
-![image](https://cdn-images-1.medium.com/max/800/0*D8epqnvGGcKkZ5X8.png)
+![image](/img/0_D8epqnvGGcKkZ5X8.png)
 
 #### Method B-2: Installing My Provider
 

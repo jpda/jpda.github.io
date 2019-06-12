@@ -21,13 +21,13 @@ When you use the ‘Get Signatures with DocuSign’ option, you’re sent over t
 
 \[caption id=”attachment\_252" align=”alignnone” width=”705"\]
 
-![1-get](https://cdn-images-1.medium.com/max/800/0*AkhkQ4VYm-J2nPR-.png)
+![1-get](/img/0_AkhkQ4VYm-J2nPR-.png)
 
 Document library integration\[/caption\]
 
 \[caption id=”attachment\_253" align=”alignnone” width=”922"\]
 
-![Invite non-licensed users to sign](https://cdn-images-1.medium.com/max/800/0*KLhHDSCjJoivWTjQ.png)
+![Invite non-licensed users to sign](/img/0_KLhHDSCjJoivWTjQ.png)
 
 Invite non-licensed users to sign\[/caption\]
 
@@ -35,12 +35,12 @@ The target gets an email, inviting them to sign the document. When they click th
 
 \[caption id=”attachment\_254" align=”alignnone” width=”609"\]
 
-![Mail received by the target signer](https://cdn-images-1.medium.com/max/800/0*3tu2y7o0NIljtakm.png)
+![Mail received by the target signer](/img/0_3tu2y7o0NIljtakm.png)
 
 Mail received by the target signer\[/caption\]
 
 \[caption id=”attachment\_255" align=”alignnone” width=”756"\]
 
-![Signed document automatically back in SharePoint library](https://cdn-images-1.medium.com/max/800/0*2PW95kOOgm11YUiu.png)
+![Signed document automatically back in SharePoint library](/img/0_2PW95kOOgm11YUiu.png)
 
 Signed document automatically back in SharePoint library\[/caption\]

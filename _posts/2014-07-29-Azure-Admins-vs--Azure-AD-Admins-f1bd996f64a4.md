@@ -29,11 +29,11 @@ Once the account is in Azure AD, you can set an access level. More info on acces
 
 Adding someone from the Office portal is easy. Open the portal as an admin, go to users and get crackin’ — but note, the Office portal only allows you to add users to your own organization. Could you imagine the chaos if you had options to add users from other orgs in here? LOL
 
-![office portal](https://cdn-images-1.medium.com/max/800/0*e2FmgJHEwndpFunJ.png)
+![office portal](/img/0_e2FmgJHEwndpFunJ.png)
 
 _But_ — you can add rights to an existing user from within the Office portal. Find the user in the list and you can set their access levels in there. Here’s my Live account, which was already added to my AD — I can set admin rights right from the portal.
 
-![2-op](https://cdn-images-1.medium.com/max/800/0*nlOxY2GtkS041IUF.png)
+![2-op](/img/0_nlOxY2GtkS041IUF.png)
 
 #### Azure Portal
 
@@ -41,15 +41,15 @@ You can do everything from in here. Let’s dig in. Head into the Azure portal a
 
 Once you’ve found your directory, click it and go to the Users header — here we’ll add a new user and grant them rights to AD. Alternatively, if you already see the account you want to grant access to, you can do that from in here as well.
 
-![1-adduser](https://cdn-images-1.medium.com/max/800/0*Iq_u8PNfSSySNbuV.png)
+![1-adduser](/img/0_Iq_u8PNfSSySNbuV.png)
 
 Pick one of those three options (they’re outlined above) — if it’s not a valid account for the type you picked, when you try to go the next step, it’ll bomb out:
 
-![badacct](https://cdn-images-1.medium.com/max/800/0*taUO61GUqD3D0u7J.png)
+![badacct](/img/0_taUO61GUqD3D0u7J.png)
 
 Otherwise, when you click next, you’ll be able to both set a name & display name for the new user (so that your Xbox name ‘N00b Slay3r 123’ doesn’t show up in your corporate apps) and grant an access level. Once you click the check, that new user is ready to go.
 
-![2-user](https://cdn-images-1.medium.com/max/800/0*_pYRmAE8nSB7U4XT.png)
+![2-user](/img/0__pYRmAE8nSB7U4XT.png)
 
 #### Role Play
 

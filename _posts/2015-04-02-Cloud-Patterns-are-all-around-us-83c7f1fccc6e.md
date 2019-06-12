@@ -19,7 +19,7 @@ Let’s look at what typical major airports have to deal with:
 
 Here’s a map of Tampa, which shows this
 
-![Tampa International Airport — aviationexplorer.comTampa International Airport  - aviationexplorer.com](https://cdn-images-1.medium.com/max/800/0*4yNOm73RWFt28uHX.jpg)
+![Tampa International Airport — aviationexplorer.comTampa International Airport  - aviationexplorer.com](/img/0_4yNOm73RWFt28uHX.jpg)
 Tampa International Airport — aviationexplorer.com
 
 #### Distributed Services + Pipes/Filters
@@ -38,7 +38,7 @@ Flight — only ticketed passengers, who passed security, who are leaving fr
 
 As you can imagine, by the time you get to your gate, you can say with relative confidence that everyone there is only leaving within a small time window from that gate. This is very similar to a pipes and filters pattern, where the same task is repeated over and over again, but the entire process is broken down into discrete steps, which, when executed, process data appropriately and route to the final destination.
 
-![Pipes & filters @ MSDN: [https://msdn.microsoft.com/en-us/library/dn568100.aspx](https://msdn.microsoft.com/en-us/library/dn568100.aspx[/caption)Pipes & filters @ MSDN: https://msdn.microsoft.com/en-us/library/dn568100.aspx](https://cdn-images-1.medium.com/max/800/0*zLGbx7vwgquWykog.png)
+![Pipes & filters @ MSDN: [https://msdn.microsoft.com/en-us/library/dn568100.aspx](https://msdn.microsoft.com/en-us/library/dn568100.aspx[/caption)Pipes & filters @ MSDN: https://msdn.microsoft.com/en-us/library/dn568100.aspx](/img/0_zLGbx7vwgquWykog.png)
 Pipes & filters @ MSDN: [https://msdn.microsoft.com/en-us/library/dn568100.aspx](https://msdn.microsoft.com/en-us/library/dn568100.aspx[/caption)
 
 Think TSA is slow today? Imagine if it processed _every_ person through the airport, not just flying passengers. It would be a nightmare and horribly inefficient. By using multiple copies of the same service, closer to the consumer, you can distribute load across all of them, leading to significantly shorter wait times while still offering the same (or better) level of service.
@@ -60,7 +60,7 @@ Our modern, federated identity patterns follow a similar pattern — a trust
 
 Your cloud app does the same thing — an exchange between identity provider and relying party establishes a trust and a public key; incoming data is then signed with the private key, which can be decrypted and verified with the public key of the IdP.
 
-![Federated Identity pattern @ MSDN [https://msdn.microsoft.com/en-us/library/dn589790.aspx](https://msdn.microsoft.com/en-us/library/dn589790.aspx)Federated Identity pattern. Source: MSDN https://msdn.microsoft.com/en-us/library/dn589790.aspx](https://cdn-images-1.medium.com/max/800/0*jaXFuXKDxAkn-hjg.png)
+![Federated Identity pattern @ MSDN [https://msdn.microsoft.com/en-us/library/dn589790.aspx](https://msdn.microsoft.com/en-us/library/dn589790.aspx)Federated Identity pattern. Source: MSDN https://msdn.microsoft.com/en-us/library/dn589790.aspx](/img/0_jaXFuXKDxAkn-hjg.png)
 Federated Identity pattern @ MSDN [https://msdn.microsoft.com/en-us/library/dn589790.aspx](https://msdn.microsoft.com/en-us/library/dn589790.aspx)
 
 #### PreCheck? Preferred? SkyPriority? Priority Queuing
@@ -79,7 +79,7 @@ Similarly, for priority-but-not-critical messages, or for priority messages that
 
 \[caption id=”attachment\_410" align=”aligncenter” width=”649"\]
 
-![Simple priority queue processing @ MSDN [https://msdn.microsoft.com/en-us/library/dn589794.aspx](https://msdn.microsoft.com/en-us/library/dn589794.aspx)Simple priority queue processing. Source MSDN https://msdn.microsoft.com/en-us/library/dn589794.aspx](https://cdn-images-1.medium.com/max/800/0*pauy60Gp6CB5i9YH.png)
+![Simple priority queue processing @ MSDN [https://msdn.microsoft.com/en-us/library/dn589794.aspx](https://msdn.microsoft.com/en-us/library/dn589794.aspx)Simple priority queue processing. Source MSDN https://msdn.microsoft.com/en-us/library/dn589794.aspx](/img/0_pauy60Gp6CB5i9YH.png)
 Simple priority queue processing @ MSDN [https://msdn.microsoft.com/en-us/library/dn589794.aspx](https://msdn.microsoft.com/en-us/library/dn589794.aspx)
 
 #### Start Looking Around…

@@ -7,7 +7,7 @@ keywords: []
 slug: /i-really-like-the-panthers-no-im-serious-82a10e85fb2d
 ---
 
-![WP_000015 (1)](https://cdn-images-1.medium.com/max/800/0*A1Df4s0vMpMMMhz1.jpg)
+![WP_000015 (1)](/img/0_A1Df4s0vMpMMMhz1.jpg)
 
 Back in March I bought a new car. Per the norm, I decided to get a Panthers license plate — NC offers ’em for a cheap annual fee & I’m a huge fan, so why not?
 

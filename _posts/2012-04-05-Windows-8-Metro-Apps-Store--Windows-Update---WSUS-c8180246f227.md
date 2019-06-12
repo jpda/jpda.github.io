@@ -25,7 +25,7 @@ Either copy/paste that text into a text file, save it as BobLoblaw.reg & run it,
 
 You may have to close and reopen the store for this to work properly. From the start menu, put your mouse in the top left corner, right click & hit close to close the store. Reopen & you should be good to go.
 
-![image](https://cdn-images-1.medium.com/max/800/0*6DFgORbYlGj6T0eO.png)
+![image](/img/0_6DFgORbYlGj6T0eO.png)
 
 If I had to venture a guess, I’d bet we see something like this for enterprise app deployments — the power of an Active Directory domain + a Windows App Store:
 

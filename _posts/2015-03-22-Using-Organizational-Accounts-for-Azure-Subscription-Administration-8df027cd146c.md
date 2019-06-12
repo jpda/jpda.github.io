@@ -38,17 +38,17 @@ There is a bit of confusion surrounding how these two seemingly unrelated produc
 
 This one is quick and easy. Provided you’ve setup your Azure AD domain (there are plenty of tutorials for doing this), it’s a two step process. First we need to link your directory with an Azure AD organization/tenant. Start at [https://manage.windowsazure.com](https://manage.windowsazure.com) and head down to settings. If you’re using the same MSA that you created your Azure subscription with, your MSA should also be an administrator of your Azure AD tenant.
 
-![Under settings → subscriptions, you’ll find a list of your subscriptions.Under settings --> subscriptions, you'll find a list of your subscriptions.](https://cdn-images-1.medium.com/max/800/0*fEIdli12xGBjxumY.png)
+![Under settings → subscriptions, you’ll find a list of your subscriptions.Under settings --> subscriptions, you'll find a list of your subscriptions.](/img/0_fEIdli12xGBjxumY.png)
 Under settings → subscriptions, you’ll find a list of your subscriptions.
 
 Now, find your subscription in the list, and at the bottom you’ll see ‘Edit Directory’ in the dark bar.
 
-![Find this to link your subscription to a directory.Find this to link your subscription to a directory.](https://cdn-images-1.medium.com/max/800/0*QVni10Fh5sdvzwEv.png)
+![Find this to link your subscription to a directory.Find this to link your subscription to a directory.](/img/0_QVni10Fh5sdvzwEv.png)
 Find this to link your subscription to a directory.
 
 This will bring up a new box, listing all of the **Azure AD Tenants** (not Azure subscriptions!) your MSA has access to. In your case, you may only have one. If you have more than one, pick the one that looks familiar or that contains the organizational user you want to have access to that subscription (e.g., if I want joe@company.com to have access to my sub, I need to find the Azure AD tenant that has joe@company.com).
 
-![You’ll see a list of all of the Azure AD Tenants that MSA has access to.You'll see a list of all of the Azure AD Tenants that MSA has access to.](https://cdn-images-1.medium.com/max/800/0*_4TTBmMYeQus-BPW.png)
+![You’ll see a list of all of the Azure AD Tenants that MSA has access to.You'll see a list of all of the Azure AD Tenants that MSA has access to.](/img/0__4TTBmMYeQus-BPW.png)
 You’ll see a list of all of the Azure AD Tenants that MSA has access to.
 
 Once you’ve picked yours, you’ll need to confirm the change. No sweat.
@@ -59,9 +59,9 @@ Next we need to add the administrators.
 
 If your Azure subscription got linked up to the proper directory in the last step, this is just as easy as adding a new administrator. Under Settings → Administrators, click Add at the bottom. You should see a simple form to search for a user:
 
-![Settings → AdministratorsSettings --> Administrators](https://cdn-images-1.medium.com/max/800/0*laZmNtLQKqMam-Po.png)
-Settings → Administrators![You’ll notice MSAs resolve as MSAs…You'll notice MSAs resolve as MSAs.](https://cdn-images-1.medium.com/max/800/0*MeJUkKLA-Kfly4-3.png)
-You’ll notice MSAs resolve as MSAs…![…and organizational accounts will resolve as org accounts....and that organizational accounts will resolve as org accounts.](https://cdn-images-1.medium.com/max/800/0*bRUxK_q6N92TxZNu.png)
+![Settings → AdministratorsSettings --> Administrators](/img/0_laZmNtLQKqMam-Po.png)
+Settings → Administrators![You’ll notice MSAs resolve as MSAs…You'll notice MSAs resolve as MSAs.](/img/0_MeJUkKLA-Kfly4-3.png)
+You’ll notice MSAs resolve as MSAs…![…and organizational accounts will resolve as org accounts....and that organizational accounts will resolve as org accounts.](/img/0_bRUxK_q6N92TxZNu.png)
 …and organizational accounts will resolve as org accounts.
 
 Once you’ve typed in the proper account that needs access, check the boxes next to the subscription(s) you want that account to be able to co-adminster. If the name resolves, you’re finished.
@@ -90,14 +90,14 @@ Either create or use a MSA and add that MSA as a global administrator to each  *
 
 Next we need to add Mark (mark@sac.local) to the Larsen tenant. Head into Azure AD in the Management Portal, click Users, then Add:
 
-![Management Portal → Azure AD → Tenant → Users → AddManagement Portal --> Azure AD --> Tenant --> Users --> Add](https://cdn-images-1.medium.com/max/800/0*UjyRKUaNEx9ORpvp.png)
+![Management Portal → Azure AD → Tenant → Users → AddManagement Portal --> Azure AD --> Tenant --> Users --> Add](/img/0_UjyRKUaNEx9ORpvp.png)
 Management Portal → Azure AD → Tenant → Users → Add
 
 You’re going to want to pick ‘**User in another Windows Azure AD directory**.’ Next we’ll type in mark@sac.local — if it works, you’ve done it successfully. You can add the user as a user, unless that user is going to be administering Azure AD as well.
 
 If you get a message that the current user doesn’t have access to the directory, you’ll need to **be sure the MSA has admin rights to both Azure AD tenants**, using the info in the link a little higher.
 
-![You’ll see this message if you’re not using an account that’s an administrator in BOTH Azure AD tenants.You'll see this message if you're not using an account that's an administrator in BOTH Azure AD tenants.](https://cdn-images-1.medium.com/max/800/0*Keq5BGFNcnHCGlJW.png)
+![You’ll see this message if you’re not using an account that’s an administrator in BOTH Azure AD tenants.You'll see this message if you're not using an account that's an administrator in BOTH Azure AD tenants.](/img/0_Keq5BGFNcnHCGlJW.png)
 You’ll see this message if you’re not using an account that’s an administrator in BOTH Azure AD tenants.
 
 #### Add External Tenant user as Co-Administrator

@@ -136,7 +136,7 @@ Anyone familiar with running IIS knows you can run multiple web sites within a s
 
 Solution
 
-![solution](https://cdn-images-1.medium.com/max/800/0*CEtColnnHdG9DYJP.png)
+![solution](/img/0_CEtColnnHdG9DYJP.png)
 
 Our solution configuration is pretty simple – an Azure cloud service _with a single web role_ and two MVC web apps. We’ve also got a single HTTP endpoint for our web role on port 80.
 

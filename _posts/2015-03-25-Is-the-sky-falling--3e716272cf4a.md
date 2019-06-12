@@ -23,8 +23,8 @@ But has it? How many people lost their jobs because their company elected to dep
 
 In all reality, jobs in the space have stayed relatively stable in relation to other IT jobs. For example, if you look at the trends over the past 10 years, systems administration and software engineering jobs have followed a similar course:
 
-![Software Engineer — source: indeed.com/jobtrendsSoftware Engineer - source: indeed.com/jobtrends](https://cdn-images-1.medium.com/max/800/0*EBUXlEjssojnM5xl.png)
-Software Engineer — source: indeed.com/jobtrends![Systems Administrator — source: indeed.com/jobtrendsSystems Administrator - source: indeed.com/jobtrends](https://cdn-images-1.medium.com/max/800/0*YR8yS6hQQ8EPOO_X.png)
+![Software Engineer — source: indeed.com/jobtrendsSoftware Engineer - source: indeed.com/jobtrends](/img/0_EBUXlEjssojnM5xl.png)
+Software Engineer — source: indeed.com/jobtrends![Systems Administrator — source: indeed.com/jobtrendsSystems Administrator - source: indeed.com/jobtrends](/img/0_YR8yS6hQQ8EPOO_X.png)
 Systems Administrator — source: indeed.com/jobtrends
 
 See how similar they are? People aren’t being replaced — in fact, these graphs are a little disingenuous as the ‘overall percentage of matching job postings’ includes most job posts on the internet, which are, of course, exploding. The point, however, is that we’re seeing the same general trends in both systems and software engineering. What did people do? They adapted, they translated existing skills into new platforms, they learned new chunks of knowledge to handle what was coming their way.

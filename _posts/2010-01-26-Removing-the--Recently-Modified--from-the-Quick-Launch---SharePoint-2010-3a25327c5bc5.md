@@ -34,7 +34,7 @@ I’m getting married in June — my fiance has been using [my SharePoint 20
 
 Anyway, a basic team site uses the Wiki Page template for new pages, so we had a problem — this ‘Recently Modified’ web part that would appear above the quick launch on wiki pages (I stole this image from [wssdemo.com](http://wssdemo.com), since I already took it off of mine).
 
-![image](https://cdn-images-1.medium.com/max/800/0*IA9oObSPoBeOT98b.png)
+![image](/img/0_IA9oObSPoBeOT98b.png)
 
 After some searching, no one seemed to have had this issue before, so I went digging around to see what I could find. After looking through the master pages, content types, and page layouts, I decided to head into the 14 folder (program files\\common files\\microsoft shared\\web server extensions\\14) in search of relief.
 

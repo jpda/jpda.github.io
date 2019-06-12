@@ -19,4 +19,4 @@ I’m not going to get into the specifics of the implementation, as it’s just 
 
 More to come.
 
-![image](https://cdn-images-1.medium.com/max/800/0*v1p1r9pqYcf9ScU9.png)
+![image](/img/0_v1p1r9pqYcf9ScU9.png)

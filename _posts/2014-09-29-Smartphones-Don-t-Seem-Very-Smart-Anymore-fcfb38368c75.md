@@ -15,7 +15,7 @@ I’ve flown the Windows Phone banner since 2011, when I first got a Samsung Foc
 
 \[caption id=”attachment\_311" align=”aligncenter” width=”632"\]
 
-![lumia900cyan](https://cdn-images-1.medium.com/max/800/0*POkltFy0bGuAlVQg.jpg)
+![lumia900cyan](/img/0_POkltFy0bGuAlVQg.jpg)
 
 How slick is that? Great design, amazing to hold and looked fantastic.\[/caption\]
 
@@ -27,7 +27,7 @@ The release of WP8 promised even more awesome stuff. We saw new tile sizes, BitL
 
 \[caption id=”attachment\_312" align=”aligncenter” width=”638"\]
 
-![The future. Credit: virtuaniz.com](https://cdn-images-1.medium.com/max/800/0*A1O0pBs0GYLsNUJR.png)
+![The future. Credit: virtuaniz.com](/img/0_A1O0pBs0GYLsNUJR.png)
 
 The future. Credit: virtuaniz.com\[/caption\]
 

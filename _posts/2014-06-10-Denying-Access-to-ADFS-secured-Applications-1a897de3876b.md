@@ -40,7 +40,7 @@ First thing — let’s create a new claim that we can use to stuff our valu
 
 Here’s mine.
 
-![claim](https://cdn-images-1.medium.com/max/800/0*2a9RJuUTXf6JGz5X.png)
+![claim](/img/0_2a9RJuUTXf6JGz5X.png)
 
 #### To the relying party!
 
@@ -72,6 +72,6 @@ In ADFS 3, you don’t even get sent to the relying party, you just get shut dow
 
 Here’s my goofy ADFS login screen when my _extensionAttribute1_ is set to false:
 
-![denied](https://cdn-images-1.medium.com/max/800/0*_i5P3ZeodcQHsRga.png)
+![denied](/img/0__i5P3ZeodcQHsRga.png)
 
 You can, of course, get _crazy_ with your rules, but remember, you’re going to AD for this — and these rules don’t appear to be terribly ‘optimized’ in the sense that AD queries aren’t batched or anything. If you’re a high-volume identity shop, make sure your farm is well equipped to handle the extra load you can _possibly_ put on your infra with complex rules. Next up — dealing with RPs that don’t understand _Deny._

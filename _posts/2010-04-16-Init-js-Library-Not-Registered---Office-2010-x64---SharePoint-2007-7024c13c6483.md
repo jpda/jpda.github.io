@@ -14,11 +14,11 @@ Seems there’s a little something wrong with the Name ActiveX Control that Shar
 
 Does this look familiar?
 
-![image](https://cdn-images-1.medium.com/max/800/0*nbGrPeXbQNMmZMaT.png)
+![image](/img/0_nbGrPeXbQNMmZMaT.png)
 
 Debugging the page gives a bit more insight, but not much:
 
-![image](https://cdn-images-1.medium.com/max/800/0*52q5_9DVwPPsWPdj.png)
+![image](/img/0_52q5_9DVwPPsWPdj.png)
 
 So we know it’s the IM Presence Control — (on a side note, this is why internet-facing SharePoint sites you may come ask you to run ‘Name ActiveX Control’).
 
@@ -30,7 +30,7 @@ I’m running Windows 7 x64, and the x64 Office 2010 clients. Where does this le
 
 Hit your start menu and type ‘internet explorer 64’ — you should see it pop up in the menu.
 
-![image](https://cdn-images-1.medium.com/max/800/0*3uLGN4IkO4R7-ViR.png)
+![image](/img/0_3uLGN4IkO4R7-ViR.png)
 
 Fire this up, and browse to your SharePoint site — you’ll notice an error-free interface — no JS errors — meaning any of your additional scripts (like the one we use for navigation) will work properly.
 
@@ -52,8 +52,8 @@ regsvr32 name.dll
 
 Hit enter — you should get a notification that DllRegisterServer succeeded:
 
-![image](https://cdn-images-1.medium.com/max/800/0*0OSY5Eu7eUz5u4UN.png)
+![image](/img/0_0OSY5Eu7eUz5u4UN.png)
 
 Kill all of your Internet Explorer windows, and open the 32-bit version (the default) back up. Open up the IE Add-Ons, the previously-absent NameCtrl ActiveX control should now be listed…open your SharePoint site and enjoy.
 
-![image](https://cdn-images-1.medium.com/max/800/0*Q-Xt-kCEORGeuvSb.png)
+![image](/img/0_Q-Xt-kCEORGeuvSb.png)

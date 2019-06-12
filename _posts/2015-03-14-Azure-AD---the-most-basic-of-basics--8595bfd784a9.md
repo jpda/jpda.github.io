@@ -27,7 +27,7 @@ I found a _rad_ image from the late 90s (I especially love that hot-pink starbur
 
 \[caption id=”attachment\_373" align=”aligncenter” width=”500"\]
 
-![Kerberos circa 2000. Credit: MSDN](https://cdn-images-1.medium.com/max/800/0*yyfiS2wvxXFotKbr.gif)
+![Kerberos circa 2000. Credit: MSDN](/img/0_yyfiS2wvxXFotKbr.gif)
 
 Kerberos circa 2000. Credit: MSDN\[/caption\]
 
@@ -37,7 +37,7 @@ Now let’s look at a modern federated identity platform and how it works:
 
 \[caption id=”attachment\_374" align=”aligncenter” width=”441"\]
 
-![Federated Identity cloud design pattern. Source: https://msdn.microsoft.com/en-us/library/dn589790.aspx](https://cdn-images-1.medium.com/max/800/0*Jn7eYCHIoxWWtIy1.png)
+![Federated Identity cloud design pattern. Source: https://msdn.microsoft.com/en-us/library/dn589790.aspx](/img/0_Jn7eYCHIoxWWtIy1.png)
 
 Federated Identity cloud design pattern. Source: [https://msdn.microsoft.com/en-us/library/dn589790.aspx\[/caption\]](https://msdn.microsoft.com/en-us/library/dn589790.aspx[/caption])
 

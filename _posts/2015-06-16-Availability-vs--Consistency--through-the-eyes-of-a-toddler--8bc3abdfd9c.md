@@ -7,7 +7,7 @@ keywords: []
 slug: /availability-vs-consistency-through-the-eyes-of-a-toddler-8bc3abdfd9c
 ---
 
-![Fred.Fred.](https://cdn-images-1.medium.com/max/800/0*5Cg24j-6Z0Doy7gs.jpg)
+![Fred.Fred.](/img/0_5Cg24j-6Z0Doy7gs.jpg)
 Fred.
 
 _More cloud patterns in real life — this one, while a little silly, illustrates availability, geographic redundancy, rolling upgrades and consistency. Enjoy._
@@ -59,5 +59,5 @@ But not all data needs that — if I don’t see your Facebook post the abso
 
 Other patterns produce similar requirements, with different outcomes — for example, Patrick’s newest trick is to take _all three_ Freds to bed. This presents a problem: FaaS availability is now dependent upon all three being available, not the individual availability of each Fred instance. Now our SLA is almost certainly destined for the tank. Redundancy patterns should consider the level of required consistency when building out both replication and failover strategies. For example, perhaps synchronous writes to 3+ storage providers, while the remainder of writes happen asynchronously for failover only.
 
-![A boy and his FredA boy and his Fred](https://cdn-images-1.medium.com/max/800/0*-Wd2MOeI8rmwAUxo.jpg)
+![A boy and his FredA boy and his Fred](/img/0_-Wd2MOeI8rmwAUxo.jpg)
 A boy and his Fred

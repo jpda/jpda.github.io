@@ -73,7 +73,7 @@ Fire up EasyBCD. When you do that on XP, it’ll ask you if you want to open an 
 
 Once you do this, go to the Add\\Remove Entries screen in EasyBCD. A tab should say Virtual Disk. Click here. Give it a name, and point it to the VHD you copied from your Windows 7 machine.
 
-![image](https://cdn-images-1.medium.com/max/800/0*HH8Vr1Q_Sblzpfnh.png)
+![image](/img/0_HH8Vr1Q_Sblzpfnh.png)
 
 Save that bad boy and get to rebooting.
 

@@ -15,8 +15,8 @@ The PowerBook is somewhat of a dog — it’s a 12”, all aluminum notebook
 
 The Power Mac is a step up — dual PowerPC 970s at 1.8Ghz, 2GB DDR, Radeon 9600 and a 320GB sata disk. For a machine that’s five years old, those specs are pretty nice. The Power Mac G5 moniker is somewhat misleading — the PowerPC 970 is the little brother to the Power4 chip, not the Power5.
 
-![powerpc-970](https://cdn-images-1.medium.com/max/800/0*rdBE2U2nLi52b6nv.jpg)
-![Power4 _mod2fn](https://cdn-images-1.medium.com/max/800/0*FYhxbjD4N-bLJEFY.jpg)
+![powerpc-970](/img/0_rdBE2U2nLi52b6nv.jpg)
+![Power4 _mod2fn](/img/0_FYhxbjD4N-bLJEFY.jpg)
 
 The biggest problem with these machines is simple — they both use IBM’s PowerPC architecture. The last version of Windows compiled to PPC was Windows NT 3.5.1. As of Mac OSX 10.6 (Snow Leopard), Apple dropped support for PowerPC. Oddly enough, it has been Apple in the past that has ‘pledged dedication to the platform,’ which, in retrospect, was most likely a ploy to keep people buying PPC machines to clear way for the Intel-based Macs.
 
@@ -24,7 +24,7 @@ Anyway, I’ve gone off topic. I decided that while OS X 10.5.8 is fine for the 
 
 ### Installing Linux — the setup for failure
 
-![geeko](https://cdn-images-1.medium.com/max/800/0*ILRbOvJTl46oMZuE.jpg)
+![geeko](/img/0_ILRbOvJTl46oMZuE.jpg)
 
 openSuse was the first I tried, putting it on the Power Mac G5. Novell has also dropped PPC support with their latest version (11.2), so I used 11.1.
 
@@ -42,7 +42,7 @@ The final slap in the face came when I told suse to setup yaboot for my Mac part
 
 So long suse.
 
-![jaustin_saturated_full_logo_021_trans](https://cdn-images-1.medium.com/max/800/0*-dblnW8fiP_ANR_w.png)
+![jaustin_saturated_full_logo_021_trans](/img/0_-dblnW8fiP_ANR_w.png)
 
 Next I decided I’d try _Volkslinux,_ Ubuntu — linux ‘for the people.’ I’ve used Ubuntu plenty before, so I thought I’d put their no frills Live CD installer to the test. I downloaded the community-maintained 9.10 PPC distro. Rebooted, killed the suse partitions and fired up the installer. Luckily, this time, Ubuntu found my graphics drivers and both of my monitors. I have two DVI monitors — a 25” HF257, and a 23” Samsung. The HF257 goes through DVI → HDMI, and the Samsung goes ADC (one of the dumbest things I’ve seen) –> DVI. I tried to setup the two monitors to be next to each other, but it didn’t work — they were just clones. I figured I’d tinker after it was installed.
 

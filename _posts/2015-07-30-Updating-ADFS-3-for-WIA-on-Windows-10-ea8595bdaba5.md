@@ -23,5 +23,5 @@ In version 3, ADFS tries to intelligently present a user experience that’s app
 
 This means you can now design a login page for non WIA devices that might include your logo, some disclaimers or legal text.
 
-![iOS 8 + ADFS 3IMG_0001](https://cdn-images-1.medium.com/max/800/0*sOYJ2ZLs3Xi7GcdU.png)
+![iOS 8 + ADFS 3IMG_0001](/img/0_sOYJ2ZLs3Xi7GcdU.png)
 iOS 8 + ADFS 3

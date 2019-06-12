@@ -15,7 +15,7 @@ Thinking this was less-than-desirable, since we now have another VM to manage, I
 
 #### VSO Hosted Build
 
-![1800COLLECT](https://cdn-images-1.medium.com/max/800/0*DDDojPMvJDmTVN2e.jpg)
+![1800COLLECT](/img/0_DDDojPMvJDmTVN2e.jpg)
 
 The easiest, fastest way to get going with CI or CD builds, or even just builds in general with VSO is to use the hosted build controller. [You get 60 minutes a month for ‘free’](http://azure.microsoft.com/en-us/pricing/details/visual-studio-online/) — I say that because anyone who actually has to buy VSO recognizes that $20/head isn’t particularly cheap, especially when it’s a requirement for backlog access. MSDN subscribers get access for free, so if you’re not a full-blown project management shop and all your people have MSDN, this might not be a big deal. Beyond that, you can buy some more, at a rate of a nickel per minute up until 21 hours, and a penny a minute after that (_why does this feel like an impromptu 1–800-COLLECT ad?_). What do you get for your hard-earned nickel per minute?
 

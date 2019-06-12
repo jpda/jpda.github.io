@@ -9,4 +9,4 @@ slug: /the-buick-century-fleetwood-deville-1cfa0cf5ffb6
 
 I saw this in our parking lot. It’s a Buick Century with the ragtop from a Cadillac. That’s all well and good, except that they _left the Caddy emblem_ on. See below.
 
-![image](https://cdn-images-1.medium.com/max/800/0*7SATDgXl1ffXnBak.png)
+![image](/img/0_7SATDgXl1ffXnBak.png)

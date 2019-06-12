@@ -7,7 +7,7 @@ keywords: []
 slug: /azure-site-to-site-on-unifi-security-gateway-1f701c201d03
 ---
 
-![It can be done. A little painful, but doable.It can be done. A little painful but not bad.](https://cdn-images-1.medium.com/max/800/0*7ulwBkZt6e6CXP81.jpg)
+![It can be done. A little painful, but doable.It can be done. A little painful but not bad.](/img/0_7ulwBkZt6e6CXP81.jpg)
 It can be done. A little painful, but doable.
 
 Recently decided to upgrade from my Netgear SRX5308 here at home to a shiny new [Unifi Security Gateway (v3)](https://www.ubnt.com/unifi-switching-routing/usg/). Quieter, much less power consumption, but most importantly, higher WAN-to-LAN throughput than the Netgear, which his a requirement now that ATT and Google have brought 1Gbps+ fiber to Charlotte.

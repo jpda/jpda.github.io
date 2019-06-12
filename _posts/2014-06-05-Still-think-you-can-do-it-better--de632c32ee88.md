@@ -27,13 +27,13 @@ I took these screenshots, undoctored, last night, 6/4/14.
 
 > Last installed: **8/18/12.**
 
-![omg](https://cdn-images-1.medium.com/max/800/0*UDQCWfpv5Q9hQHLn.png)
+![omg](/img/0_UDQCWfpv5Q9hQHLn.png)
 
 But then it got really awful.
 
 > No updates available.
 
-![omg2](https://cdn-images-1.medium.com/max/800/0*UyLLAAXBSksCxH3S.png)
+![omg2](/img/0_UyLLAAXBSksCxH3S.png)
 
 Let’s review — you can’t get updates from anyone except for your employer, but your employer obviously has people managing your systems who aren’t capable. It’s another reason that people, humans, end up getting in the way, be it hubris or ignorance. It’s dangerous, and in all honesty, Microsoft shouldn’t allow this to continue. There really should be some kind of dead man’s switch to allow people to get updates when a WSUS operator has effectively gone dead.
 

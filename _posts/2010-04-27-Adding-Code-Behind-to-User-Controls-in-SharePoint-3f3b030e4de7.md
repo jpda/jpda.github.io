@@ -15,11 +15,11 @@ First, get your ascx ready. This is a two step process:
 
 Remove the ‘CodeBehind=’ declaration in the top of your ascx.
 
-![code1](https://cdn-images-1.medium.com/max/800/0*WXqZS4ujjSJk6s79.png)
+![code1](/img/0_WXqZS4ujjSJk6s79.png)
 
 Next, make sure your classes and namespaces are named properly.
 
-![code2](https://cdn-images-1.medium.com/max/800/0*qclIse7xeXIRkUlo.png)
+![code2](/img/0_qclIse7xeXIRkUlo.png)
 
 Build the project.
 
@@ -29,11 +29,11 @@ Drop your built, signed assembly somewhere (probably the GAC, or wherever else y
 
 In this example, we’re changing the DefaultTemplates.ascx file — probably a good idea to back this file up first.
 
-![code3](https://cdn-images-1.medium.com/max/800/0*fKSfL-oooC-It1Nz.png)
+![code3](/img/0_fKSfL-oooC-It1Nz.png)
 
 Go to the template you’re modifying, and add your controls appropriately, with a Register tag in the top and the standard ASCX markup (i.e, <TagPrefix:MyControl runat=”server” />).
 
 Hit your page and your control should appear without issue.
 
-![code4](https://cdn-images-1.medium.com/max/800/0*TxK7DtWefY_IAqpW.png)
-![code5](https://cdn-images-1.medium.com/max/800/0*vbAUyqNYgsi-9kfY.png)
+![code4](/img/0_TxK7DtWefY_IAqpW.png)
+![code5](/img/0_vbAUyqNYgsi-9kfY.png)
