@@ -60,8 +60,9 @@ Our modern, federated identity patterns follow a similar pattern — a trust
 
 Your cloud app does the same thing — an exchange between identity provider and relying party establishes a trust and a public key; incoming data is then signed with the private key, which can be decrypted and verified with the public key of the IdP.
 
-![Federated Identity pattern @ MSDN [https://msdn.microsoft.com/en-us/library/dn589790.aspx](https://msdn.microsoft.com/en-us/library/dn589790.aspx)Federated Identity pattern. Source: MSDN https://msdn.microsoft.com/en-us/library/dn589790.aspx](/img/0_jaXFuXKDxAkn-hjg.png)
-Federated Identity pattern @ MSDN [https://msdn.microsoft.com/en-us/library/dn589790.aspx](https://msdn.microsoft.com/en-us/library/dn589790.aspx)
+![Federated Identity pattern. Source: MSDN https://msdn.microsoft.com/en-us/library/dn589790.aspx](/img/0_jaXFuXKDxAkn-hjg.png)
+
+*Federated Identity pattern @ MSDN [https://msdn.microsoft.com/en-us/library/dn589790.aspx](https://msdn.microsoft.com/en-us/library/dn589790.aspx)*
 
 #### PreCheck? Preferred? SkyPriority? Priority Queuing
 
@@ -77,10 +78,9 @@ Anyway, your code can follow a lot of these patterns as well — for critica
 
 Similarly, for priority-but-not-critical messages, or for priority messages that are rare, shared processors can check the priority queue before doing any standard queue processing. This allows for priority message processing, but not critical, real-time message processing. For example, if your worker is working on a long-running standard message, your priority queue item may wait before being processed, but would be guaranteed to be next in line.
 
-\[caption id="attachment\_410" align="aligncenter" width="649"]
+![Simple priority queue processing. Source MSDN https://msdn.microsoft.com/en-us/library/dn589794.aspx](/img/0_pauy60Gp6CB5i9YH.png)
 
-![Simple priority queue processing @ MSDN [https://msdn.microsoft.com/en-us/library/dn589794.aspx](https://msdn.microsoft.com/en-us/library/dn589794.aspx)Simple priority queue processing. Source MSDN https://msdn.microsoft.com/en-us/library/dn589794.aspx](/img/0_pauy60Gp6CB5i9YH.png)
-Simple priority queue processing @ MSDN [https://msdn.microsoft.com/en-us/library/dn589794.aspx](https://msdn.microsoft.com/en-us/library/dn589794.aspx)
+*Simple priority queue processing @ MSDN [https://msdn.microsoft.com/en-us/library/dn589794.aspx](https://msdn.microsoft.com/en-us/library/dn589794.aspx)*
 
 #### Start Looking Around…
 
