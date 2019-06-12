@@ -4,7 +4,7 @@ description: ''
 date: '2012-04-05T22:52:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/windows-8-metro-apps-store-windows-update-wsus-c8180246f227
+slug: /windows-8-metro-apps-store-windows-update-wsus-c8180246f227
 ---
 
 I’ve been building Windows 8 apps for my current employer, so I’ve been running Windows 8 since the developer preview. Consumer Preview brought us the App Store — but I noticed that after some AD moves, I could no longer access the store. Turns out it’s restricted via Windows Update…so this has some large implications.

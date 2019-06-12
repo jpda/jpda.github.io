@@ -4,7 +4,7 @@ description: ''
 date: '2010-02-26T03:43:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/sharepoint-2010-rc-user-profile-struggles-32f1ceb2324b
+slug: /sharepoint-2010-rc-user-profile-struggles-32f1ceb2324b
 ---
 
 I finally got around to installing the RC of SharePoint 2010 yesterday, which spilled over into today. There were a lot of issues surrounding the User Profile Sync service in the beta 2, so much so that extremely detailed walkthrough has been posted on MSDN and other various sites about it.

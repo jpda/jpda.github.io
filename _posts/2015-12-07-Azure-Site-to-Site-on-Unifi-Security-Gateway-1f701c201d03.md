@@ -4,7 +4,7 @@ description: ''
 date: '2015-12-07T02:25:27.000Z'
 categories: []
 keywords: []
-slug: /@jpda/azure-site-to-site-on-unifi-security-gateway-1f701c201d03
+slug: /azure-site-to-site-on-unifi-security-gateway-1f701c201d03
 ---
 
 ![It can be done. A little painful, but doable.It can be done. A little painful but not bad.](https://cdn-images-1.medium.com/max/800/0*7ulwBkZt6e6CXP81.jpg)

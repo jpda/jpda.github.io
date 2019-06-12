@@ -4,7 +4,7 @@ description: ''
 date: '2010-02-23T20:16:45.000Z'
 categories: []
 keywords: []
-slug: /@jpda/sharepoint-2010-on-windows-server-2008-r2-core-4633929b403f
+slug: /sharepoint-2010-on-windows-server-2008-r2-core-4633929b403f
 ---
 
 Got a new development machine today at work. Installed Server 2008 R2 Core as the underlying OS, planning to load a bunch of VMs for whatever I might need.

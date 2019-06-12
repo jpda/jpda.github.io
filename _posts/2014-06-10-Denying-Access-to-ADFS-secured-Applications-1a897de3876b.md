@@ -4,7 +4,7 @@ description: ''
 date: '2014-06-10T01:59:32.000Z'
 categories: []
 keywords: []
-slug: /@jpda/denying-access-to-adfs-secured-applications-1a897de3876b
+slug: /denying-access-to-adfs-secured-applications-1a897de3876b
 ---
 
 I’m going to have to make this a two-parter, because _some company \*ahem\*_ Yammer — doesn’t appear to handle the Deny (http://schemas.microsoft.com/authorization/claims/deny) claim very well. By very well, I mean _at all._

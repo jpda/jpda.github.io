@@ -4,7 +4,7 @@ description: ''
 date: '2013-03-08T07:28:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/mvc-or-existing-web-apps-with-sharepoint-apps-aafd5c938f1e
+slug: /mvc-or-existing-web-apps-with-sharepoint-apps-aafd5c938f1e
 ---
 
 I’ve seen a bit of search traffic heading this way about adding an MVC project or an existing web app to a SharePoint app — good news: it’s easy.

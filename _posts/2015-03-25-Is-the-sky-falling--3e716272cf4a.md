@@ -4,7 +4,7 @@ description: ''
 date: '2015-03-25T01:55:23.000Z'
 categories: []
 keywords: []
-slug: /@jpda/is-the-sky-falling-3e716272cf4a
+slug: /is-the-sky-falling-3e716272cf4a
 ---
 
 Today [was a neat day in the Azure space](http://weblogs.asp.net/scottgu/announcing-the-new-azure-app-service) — Azure Websites has grown up and found itself. We’ve got new units of functionality that can build fully functional apps and workflows, interacting with different systems and moving data around (e.g., BizTalk), through a _designer_ on a web page! Amazing. I came here tonight to dig in and share my thoughts on the new services, but I got sidetracked.

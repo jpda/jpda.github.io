@@ -4,7 +4,7 @@ description: ''
 date: '2011-06-29T02:31:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/im-an-expert-3f6e3b4bbf2a
+slug: /im-an-expert-3f6e3b4bbf2a
 ---
 
 A little blip came up on the Microsoft radar a couple of weeks ago; an application (well, really a few applications) all bundled together called ‘IM an Expert.’ The whole premise is ‘people helping people’ via intelligent, context-sensitive matchmaking.

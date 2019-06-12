@@ -4,7 +4,7 @@ description: ''
 date: '2012-09-01T17:18:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/currently-chrome-extension-noaa-fix-790bb645d2d8
+slug: /currently-chrome-extension-noaa-fix-790bb645d2d8
 ---
 
 **UPDATE — the original creators have updated their extension to use wunderground. I’ll be taking mine down today, you can get their original one below.**

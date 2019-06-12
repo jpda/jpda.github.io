@@ -4,7 +4,7 @@ description: 'Recently, I had an interesting question come across my desk from a
 date: '2018-10-23T14:20:35.971Z'
 categories: []
 keywords: []
-slug: /@jpda/geo-replicating-azure-service-bus-with-guaranteed-ordering-ac8d97e4fb11
+slug: /geo-replicating-azure-service-bus-with-guaranteed-ordering-ac8d97e4fb11
 ---
 
 ![Photo by [Slava Bowman](https://unsplash.com/@slavab?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](img/0__eAcdrF5a1HTPad7v.)

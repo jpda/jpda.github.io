@@ -4,7 +4,7 @@ description: ''
 date: '2011-02-15T03:35:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/pivoting-sharepoint-search-results-488a7499f879
+slug: /pivoting-sharepoint-search-results-488a7499f879
 ---
 
 I’ve spent some time recently working on a side, pet project for SharePoint search results. I haven’t had nearly the time to dedicate to it that I’d like, but I figured I’d share anyway.

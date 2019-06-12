@@ -6,7 +6,7 @@ description: >-
 date: '2018-08-09T16:23:14.293Z'
 categories: []
 keywords: []
-slug: /@jpda/generic-listadapter-for-xamarin-android-recyclerview-e215e28248f8
+slug: /generic-listadapter-for-xamarin-android-recyclerview-e215e28248f8
 ---
 
 I’ll preface this to say I know literally nothing about Android (or mobile, in general) development. I’ve used Xamarin for about 7 hours now and I think it’s neat, but my only goal is to get up a stub of an app to act as a client for the real work, which is a bunch of Azure stuff. This might be useful to someone or it could be a complete [Dunning-Kruger](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect) moment for me, only time will tell. Proceed with caution.

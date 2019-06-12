@@ -4,7 +4,7 @@ description: ''
 date: '2014-07-29T14:48:06.000Z'
 categories: []
 keywords: []
-slug: /@jpda/azure-admins-vs-azure-ad-admins-f1bd996f64a4
+slug: /azure-admins-vs-azure-ad-admins-f1bd996f64a4
 ---
 
 This is a point that’s a bit ambiguous. I’m an Azure Service administrator, so I should be able to access the Azure AD associated with that tenant, right?

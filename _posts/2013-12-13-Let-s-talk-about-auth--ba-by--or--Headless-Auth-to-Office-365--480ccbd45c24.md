@@ -4,7 +4,7 @@ description: ''
 date: '2013-12-13T19:29:14.000Z'
 categories: []
 keywords: []
-slug: /@jpda/lets-talk-about-auth-ba-by-or-headless-auth-to-office-365-480ccbd45c24
+slug: /lets-talk-about-auth-ba-by-or-headless-auth-to-office-365-480ccbd45c24
 ---
 
 Authentication in SharePoint Online…now that’s a topic that’s been beaten all over the internet. The premier source for doing-what-you-need not doing-what-you’re-told​ is probably Wictor Wilen’s work on SharePoint Online, active authentication and [yanking cookies off of requests.](http://www.wictorwilen.se/Post/How-to-do-active-authentication-to-Office-365-and-SharePoint-Online.aspx) This is perfect for client/mobile/non-browser apps that need to do things with SharePoint Online.

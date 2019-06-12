@@ -4,7 +4,7 @@ description: ''
 date: '2010-12-15T23:10:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/gawker-account-breach-checker-158d4bddef9d
+slug: /gawker-account-breach-checker-158d4bddef9d
 ---
 
 So — worried your email was one of the over 1m breached earlier this week?

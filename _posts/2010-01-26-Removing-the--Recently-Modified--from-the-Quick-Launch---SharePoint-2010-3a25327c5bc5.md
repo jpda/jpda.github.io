@@ -5,7 +5,7 @@ date: '2010-01-26T02:25:00.000Z'
 categories: []
 keywords: []
 slug: >-
-  /@jpda/removing-the-recently-modified-from-the-quick-launch-sharepoint-2010-3a25327c5bc5
+  /removing-the-recently-modified-from-the-quick-launch-sharepoint-2010-3a25327c5bc5
 ---
 
 Update (7/29): Now that SP2010 has gone RTM, editing files directly on the filesystem is not a best practice — in fact, it runs a lot of risks — at best, you’ll lose your changes after an update or a service pack, at worst you’ll screw up your entire installation.

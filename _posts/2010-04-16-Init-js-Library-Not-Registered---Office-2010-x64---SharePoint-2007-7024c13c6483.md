@@ -5,7 +5,7 @@ date: '2010-04-16T17:07:00.000Z'
 categories: []
 keywords: []
 slug: >-
-  /@jpda/init-js-library-not-registered-office-2010-x64-sharepoint-2007-7024c13c6483
+  /init-js-library-not-registered-office-2010-x64-sharepoint-2007-7024c13c6483
 ---
 
 So I’ve been running Office 2010 x64 for quite some time now — through alpha, beta and the RC. Now, I’m waiting for RC with the hopes that this has been fixed.

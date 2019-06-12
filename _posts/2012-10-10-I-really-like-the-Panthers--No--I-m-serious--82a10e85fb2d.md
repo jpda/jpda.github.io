@@ -4,7 +4,7 @@ description: ''
 date: '2012-10-10T03:40:28.000Z'
 categories: []
 keywords: []
-slug: /@jpda/i-really-like-the-panthers-no-im-serious-82a10e85fb2d
+slug: /i-really-like-the-panthers-no-im-serious-82a10e85fb2d
 ---
 
 ![WP_000015 (1)](https://cdn-images-1.medium.com/max/800/0*A1Df4s0vMpMMMhz1.jpg)

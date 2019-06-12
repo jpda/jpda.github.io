@@ -4,7 +4,7 @@ description: ''
 date: '2014-09-29T01:32:48.000Z'
 categories: []
 keywords: []
-slug: /@jpda/smartphones-dont-seem-very-smart-anymore-fcfb38368c75
+slug: /smartphones-dont-seem-very-smart-anymore-fcfb38368c75
 ---
 
 That headline may come across as rather spoiled, a la Louis CK’s always entertaining rant against people complaining about wifi on airplanes (you’re in a chair. **_In the air_**). The recent release of the giant iPhone got me reconsidering what I want in a phone, and it made me realize that Microsoft’s mobile offering is brilliantly ahead of its time, while its recent pivot is incredibly disappointing.

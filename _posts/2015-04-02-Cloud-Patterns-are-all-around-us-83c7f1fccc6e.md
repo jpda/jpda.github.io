@@ -4,7 +4,7 @@ description: ''
 date: '2015-04-02T03:24:08.000Z'
 categories: []
 keywords: []
-slug: /@jpda/cloud-patterns-are-all-around-us-83c7f1fccc6e
+slug: /cloud-patterns-are-all-around-us-83c7f1fccc6e
 ---
 
 I’ve been spending quite a bit of time in Tampa recently — most recently Cardinal’s first annual Innovation Summit for our Tampa service. I like flying to Tampa because the airport has been done just right — going from curbside to gate can routinely take only around 10–15 minutes, especially if you have precheck. Even this morning, when pretty busy, it was only about 10 minutes from curb to gate. Charlotte is always crazy and busy, but it’s generally efficient as well, especially with the volume of people going through there — but I think Tampa’s maximized their efficiency even more by putting more services closer to where and when they are needed or consumed (I think you see where this is going).

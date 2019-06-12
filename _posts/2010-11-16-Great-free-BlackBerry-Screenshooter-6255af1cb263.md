@@ -4,7 +4,7 @@ description: ''
 date: '2010-11-16T00:30:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/great-free-blackberry-screenshooter-6255af1cb263
+slug: /great-free-blackberry-screenshooter-6255af1cb263
 ---
 
 I was looking for a quick way to take screenshots of my BlackBerry 9700. I don’t have a miniUSB cable, since someone at work swiped it, so I needed an alternative to BBScreenShooter. While I think this is something that should be baked into the OS, I don’t have time for what should have been.

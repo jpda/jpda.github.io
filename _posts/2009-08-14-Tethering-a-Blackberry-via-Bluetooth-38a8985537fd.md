@@ -4,7 +4,7 @@ description: ''
 date: '2009-08-14T21:19:41.000Z'
 categories: []
 keywords: []
-slug: /@jpda/tethering-a-blackberry-via-bluetooth-38a8985537fd
+slug: /tethering-a-blackberry-via-bluetooth-38a8985537fd
 ---
 
 Last Friday, we made our summer pilgrimage to Michigan to visit family. This year we were heading up (farther) north to visit some extended family.

@@ -4,7 +4,7 @@ description: ''
 date: '2010-06-21T12:58:50.000Z'
 categories: []
 keywords: []
-slug: /@jpda/saving-grooveshark-offline-songs-from-an-iphone-1b9a94920dcf
+slug: /saving-grooveshark-offline-songs-from-an-iphone-1b9a94920dcf
 ---
 
 I probably shouldn’t write this, as I love the Grooveshark service and happily paid my $36 for the year. Got the desktop client, the iPhone client & the BlackBerry client. Today, I started wondering how and where the offline songs were stored — mainly because I’m on a slow connection and would love to get these tracks on my PC, where I can add them to my iPod for true, offline listening.

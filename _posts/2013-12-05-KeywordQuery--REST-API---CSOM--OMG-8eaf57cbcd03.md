@@ -4,7 +4,7 @@ description: ''
 date: '2013-12-05T00:00:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/keywordquery-rest-api-csom-omg-8eaf57cbcd03
+slug: /keywordquery-rest-api-csom-omg-8eaf57cbcd03
 ---
 
 A weird issue passed across my desk today — people searches done via REST work fine, but done through CSOM return no results. It sounds permissions based almost immediately, but I decided to look.

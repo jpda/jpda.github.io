@@ -4,7 +4,7 @@ description: ''
 date: '2013-01-08T04:50:04.000Z'
 categories: []
 keywords: []
-slug: /@jpda/tweaking-tokenhelper-for-facebook-part-2-6407673fca4
+slug: /tweaking-tokenhelper-for-facebook-part-2-6407673fca4
 ---
 
 We’re here for the last piece of scandalous social connectivity puzzle. Modifying TokenHelper & the SharePoint context filter to get ’em right with facebook.

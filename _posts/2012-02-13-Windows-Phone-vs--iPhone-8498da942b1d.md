@@ -4,7 +4,7 @@ description: ''
 date: '2012-02-13T03:30:18.000Z'
 categories: []
 keywords: []
-slug: /@jpda/windows-phone-vs-iphone-8498da942b1d
+slug: /windows-phone-vs-iphone-8498da942b1d
 ---
 
 I have two phones. An iPhone 4 & a Samsung Focus (the first one, without the front camera). Both have come from my job; paid for, I can’t complain. I got my Focus at launch; my company was just piloting iPhones so ActiveSync was open for anyone. Once the iPhone project moved from pilot to ‘real project,’ ActiveSync got stuffed behind the barrier of a mobile device management gateway — a gateway that would only work for iPhone (so I guess I should say an ‘iPhone management gateway,’ but I digress), leaving me out in the cold with my Windows Phone & corporate email.

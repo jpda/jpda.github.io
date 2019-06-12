@@ -4,7 +4,7 @@ description: ''
 date: '2012-05-01T16:11:04.000Z'
 categories: []
 keywords: []
-slug: /@jpda/developers-grow-up-bae4fcdeb56f
+slug: /developers-grow-up-bae4fcdeb56f
 ---
 
 I’m spending my day at Microsoft’s Charlotte campus for a Windows 8 Dev camp. Doing Windows 8 Metro dev at work got me interested so I decided to take a day and see what I can do to make my Metro app better.

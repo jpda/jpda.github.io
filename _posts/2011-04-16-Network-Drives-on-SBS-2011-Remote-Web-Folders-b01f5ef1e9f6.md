@@ -4,7 +4,7 @@ description: ''
 date: '2011-04-16T06:31:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/network-drives-on-sbs-2011-remote-web-folders-b01f5ef1e9f6
+slug: /network-drives-on-sbs-2011-remote-web-folders-b01f5ef1e9f6
 ---
 
 I installed Small Business Server last weekend here at the house in an attempt to consolidate some boxes and clear some clutter in preparation for the impending move. A really sweet part of SBS is the Remote Web Workspace, which gives you links to all of the internal resources SBS publishes — you get links to OWA, SharePoint, Shared Folders & Remote Desktops. Plus, it’s all extensible, so you can write your own providers to publish whatever data and widgets you want up to your users.

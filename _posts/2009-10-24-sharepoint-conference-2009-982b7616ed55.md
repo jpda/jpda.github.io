@@ -4,7 +4,7 @@ description: ''
 date: '2009-10-24T04:37:56.000Z'
 categories: []
 keywords: []
-slug: /@jpda/sharepoint-conference-2009-982b7616ed55
+slug: /sharepoint-conference-2009-982b7616ed55
 ---
 
 I just got back from a week in Las Vegas at SharePoint Conference 2009. To say the very least, it was an incredible experience — tons of new SharePoint 14 stuff, lots of new people, and a couple of experiences that will last a long time.

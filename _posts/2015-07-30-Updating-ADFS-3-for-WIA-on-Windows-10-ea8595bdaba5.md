@@ -4,7 +4,7 @@ description: ''
 date: '2015-07-30T15:49:33.000Z'
 categories: []
 keywords: []
-slug: /@jpda/updating-adfs-3-for-wia-on-windows-10-ea8595bdaba5
+slug: /updating-adfs-3-for-wia-on-windows-10-ea8595bdaba5
 ---
 
 **\*\*Updated 7/30/15\*\***

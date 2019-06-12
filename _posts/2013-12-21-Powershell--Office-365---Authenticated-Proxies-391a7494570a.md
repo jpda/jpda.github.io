@@ -4,7 +4,7 @@ description: ''
 date: '2013-12-21T00:58:11.000Z'
 categories: []
 keywords: []
-slug: /@jpda/powershell-office-365-authenticated-proxies-391a7494570a
+slug: /powershell-office-365-authenticated-proxies-391a7494570a
 ---
 
 It’s the Friday before Christmas so I’m about to get outta here like the fat kid in dodgeball, but this came across my desk @ WTFHQ today. Using CSOM from behind an authenticated proxy? With events added in PS 2.0, it’s easy.

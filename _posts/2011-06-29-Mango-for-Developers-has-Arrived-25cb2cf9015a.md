@@ -4,7 +4,7 @@ description: ''
 date: '2011-06-29T21:58:21.000Z'
 categories: []
 keywords: []
-slug: /@jpda/mango-for-developers-has-arrived-25cb2cf9015a
+slug: /mango-for-developers-has-arrived-25cb2cf9015a
 ---
 
 In case that rock you’ve been living under is particularly dense, the Windows Phone Mango beta 2 update has arrived for registered developers, along with the 2nd beta of the Windows Phone Developer Tools.

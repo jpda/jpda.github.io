@@ -4,7 +4,7 @@ description: ''
 date: '2013-11-19T22:17:47.000Z'
 categories: []
 keywords: []
-slug: /@jpda/cross-site-collections-with-sharepointcontextprovider-e14cb16e04e
+slug: /cross-site-collections-with-sharepointcontextprovider-e14cb16e04e
 ---
 
 SharePoint apps are pretty site-scoped — from the installation mechanism to the programming guidelines, it’s all pretty geared towards Joe in Accounting installing an app that’ll let him process expense reports faster or Sue in sales being able to track client contact faster. Which is fine. And a bit boring.

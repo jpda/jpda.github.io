@@ -5,7 +5,7 @@ date: '2014-01-14T03:17:25.000Z'
 categories: []
 keywords: []
 slug: >-
-  /@jpda/shared-workstations-adfs-sso-or-just-who-the-hell-do-you-think-i-am-c5a753e4137
+  /shared-workstations-adfs-sso-or-just-who-the-hell-do-you-think-i-am-c5a753e4137
 ---
 
 An interesting problem came across my desk at WTFHQ this week. Then it asked me to drop trau and cough.

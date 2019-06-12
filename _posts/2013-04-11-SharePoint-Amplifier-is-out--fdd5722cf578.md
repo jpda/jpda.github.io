@@ -4,7 +4,7 @@ description: ''
 date: '2013-04-11T05:29:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/sharepoint-amplifier-is-out-fdd5722cf578
+slug: /sharepoint-amplifier-is-out-fdd5722cf578
 ---
 
 This post is a bit delayed, but SharePoint Amplifier is now in the SharePoint Store! ​You can find it [here](http://office.microsoft.com/en-us/store/sharepoint-amplifier-WA104041489.aspx) for $10. What is SharePoint Amplifier, you ask? Quite simply, it’s the _easiest_ way to syndicate your SharePoint blog out to your followers on Twitter, LinkedIn & Facebook (including Facebook Pages)!

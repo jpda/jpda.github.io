@@ -4,7 +4,7 @@ description: ''
 date: '2015-06-16T03:23:02.000Z'
 categories: []
 keywords: []
-slug: /@jpda/availability-vs-consistency-through-the-eyes-of-a-toddler-8bc3abdfd9c
+slug: /availability-vs-consistency-through-the-eyes-of-a-toddler-8bc3abdfd9c
 ---
 
 ![Fred.Fred.](https://cdn-images-1.medium.com/max/800/0*5Cg24j-6Z0Doy7gs.jpg)

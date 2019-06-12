@@ -4,7 +4,7 @@ description: ''
 date: '2012-10-14T02:48:26.000Z'
 categories: []
 keywords: []
-slug: /@jpda/naked-domains-cnames-596e536a56e0
+slug: /naked-domains-cnames-596e536a56e0
 ---
 
 If you’ve recently started building on the cloud, you’ll come across a problem pretty quickly — making the root of your domain point to your cloud-hosted service. It’s a real problem, something that has a variety of solutions. But just what _is_ the problem?

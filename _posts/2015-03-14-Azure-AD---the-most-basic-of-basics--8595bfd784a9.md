@@ -4,7 +4,7 @@ description: ''
 date: '2015-03-14T00:51:03.000Z'
 categories: []
 keywords: []
-slug: /@jpda/azure-ad-the-most-basic-of-basics-8595bfd784a9
+slug: /azure-ad-the-most-basic-of-basics-8595bfd784a9
 ---
 
 I’ve been speaking about Azure AD + cloud identity a lot recently, mostly at [DevCamps along the east coast](https://msdn.microsoft.com/en-us/clouddevcamps.aspx) (which, by the way, if you’re near one you should come spend the day with us — I’ll be in Raleigh 3/17 and Charlotte 4/1).

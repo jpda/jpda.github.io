@@ -4,7 +4,7 @@ description: ''
 date: '2013-06-13T22:36:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/sharepoint-api-json-chrome-extension-a80c6ff1d60b
+slug: /sharepoint-api-json-chrome-extension-a80c6ff1d60b
 ---
 
 We poke around the SharePoint API a lot here at WTFHQ. Unfortunately, unless you explicitly set the accepts header, SharePoint sends everything back as XML…which is cool, if you’re 407 years old.

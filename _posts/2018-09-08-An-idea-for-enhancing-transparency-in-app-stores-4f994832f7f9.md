@@ -6,7 +6,7 @@ description: >-
 date: '2018-09-08T03:17:34.105Z'
 categories: []
 keywords: []
-slug: /@jpda/an-idea-for-enhancing-transparency-in-app-stores-4f994832f7f9
+slug: /an-idea-for-enhancing-transparency-in-app-stores-4f994832f7f9
 ---
 
 ![[Original source](https://www.flickr.com/photos/gabeandchry/9318305000), [CC-BY 2.0](https://creativecommons.org/licenses/by/2.0/)](img/1__M8dXB74OyChr7EWmGwmgJQ.jpeg)

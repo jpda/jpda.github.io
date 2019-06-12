@@ -5,7 +5,7 @@ date: '2015-11-30T21:57:31.000Z'
 categories: []
 keywords: []
 slug: >-
-  /@jpda/adding-your-valuable-partner-as-azure-digital-partner-of-record-8110d05b1157
+  /adding-your-valuable-partner-as-azure-digital-partner-of-record-8110d05b1157
 ---
 
 The Partner of Record program allows Microsoft partners to get a cut of customers’ spend in various online services. Office 365 and Azure are two of the big services offering partner programs like this, but until recently, qualification for credit was done differently for each platform. Azure required a subscription ID, the GUID that uniquely identifies the subscription. Office 365 has a richer experience directly in the Office 365 Admin Portal, which was customer-initiated; e.g., customers declared their partner rather than partners asking for Subscription IDs.

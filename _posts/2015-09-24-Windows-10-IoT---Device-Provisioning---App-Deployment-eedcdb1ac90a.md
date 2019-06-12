@@ -4,7 +4,7 @@ description: ''
 date: '2015-09-24T22:16:39.000Z'
 categories: []
 keywords: []
-slug: /@jpda/windows-10-iot-device-provisioning-app-deployment-eedcdb1ac90a
+slug: /windows-10-iot-device-provisioning-app-deployment-eedcdb1ac90a
 ---
 
 Windows 10 IoT — the promise of a universal app that can run, quite literally, anywhere. This includes tiny, cheap computers like the Raspberry Pi and Minnowboard MAX.

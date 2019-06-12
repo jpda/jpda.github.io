@@ -4,7 +4,7 @@ description: ''
 date: '2010-09-16T04:32:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/ie9-web-app-jump-lists-b4455b9824d3
+slug: /ie9-web-app-jump-lists-b4455b9824d3
 ---
 
 The first IE9 beta was released today! That said, [go grab it](http://www.microsoft.com/ie) and try out some of the new stuff.

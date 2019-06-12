@@ -4,7 +4,7 @@ description: ''
 date: '2012-01-12T05:13:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/kinect-windows-8-metro-part-1-the-backstory-2680303c8b0e
+slug: /kinect-windows-8-metro-part-1-the-backstory-2680303c8b0e
 ---
 
 _This is part one of a series (_[_part two_](http://jpd.ms/post/2012/01/12/Kinect-Windows-8-Metro–Part-2-The-First-Iteration.aspx)_); most of the technical detail will be in the last post. Between NDAs and work disclosure, I can’t release any code, but I can discuss concepts, caveats and successes in the hopes that it helps someone else as much as the open source Kinect projects & the Kinect for Windows community has helped me._

@@ -4,7 +4,7 @@ description: ''
 date: '2014-06-10T03:17:49.000Z'
 categories: []
 keywords: []
-slug: /@jpda/denying-access-through-adfs-yammer-180667656530
+slug: /denying-access-through-adfs-yammer-180667656530
 ---
 
 _Start_ [_here_](http://jpd.ms/denying-access-to-adfs-secured-applications/ "Denying Access to ADFS-secured Applications") _if you haven’t already._

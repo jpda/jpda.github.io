@@ -6,7 +6,7 @@ description: >-
 date: '2018-10-05T21:14:50.686Z'
 categories: []
 keywords: []
-slug: /@jpda/smartthings-chamberlain-liftmaster-myq-and-lowes-iris-b07e804e5a
+slug: /smartthings-chamberlain-liftmaster-myq-and-lowes-iris-b07e804e5a
 ---
 
 I’ve been on paternity for a bit now so taking time to tackle some home projects. Today’s was a Z-Wave Garage Door remote for SmartThings. The kids are constantly leaving the garage door open so I thought it’d be nice to both be able to see the status and change the status.

@@ -4,7 +4,7 @@ description: ''
 date: '2010-08-21T02:23:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/commenting-on-engadget-the-humor-c29bcd0e6c2f
+slug: /commenting-on-engadget-the-humor-c29bcd0e6c2f
 ---
 
 Engadget is a great site. I get the RSS feed plunked into Outlook, so I read most of what comes down the wire. While the articles are usually pretty good, the commenters are the best. Flame wars, comment trolls, the whole deal — it’s the whole package. For a long time, it was a simple uprank\\downrank comment system. Then they changed things, and introduced a new, slick interface (that didn’t work with IE8). Shortly thereafter, they decided to go to Disqus (which just happens to be what I use here — too much spam).

@@ -5,7 +5,7 @@ date: '2015-04-08T05:45:48.000Z'
 categories: []
 keywords: []
 slug: >-
-  /@jpda/lol-late-nights-with-azure-search-and-attributes-for-index-metadata-547b10200080
+  /lol-late-nights-with-azure-search-and-attributes-for-index-metadata-547b10200080
 ---
 
 I’m working with a client right now on modernizing and simplifying their search to use the new Azure Search service. Sure, the examples online are fine, but I wanted to decorate my data classes with attributes dictating the indexing settings for each field. Needless to say, I ended up with something just shy of mad:

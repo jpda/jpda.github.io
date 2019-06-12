@@ -4,7 +4,7 @@ description: ''
 date: '2014-07-17T02:33:20.000Z'
 categories: []
 keywords: []
-slug: /@jpda/docusign-sharepoint-online-c2bf29b8a207
+slug: /docusign-sharepoint-online-c2bf29b8a207
 ---
 
 Document signing + SharePoint Online with non-licensed users flew across my desk at WTFHQ today. Here’s the basic requirement:

@@ -4,7 +4,7 @@ description: ''
 date: '2014-05-31T01:48:25.000Z'
 categories: []
 keywords: []
-slug: /@jpda/sharepoint-online-irm-external-users-366d6967950e
+slug: /sharepoint-online-irm-external-users-366d6967950e
 ---
 
 Since I can’t seem to find _anything_ online regarding external users + IRM secured lists, I decided I should put it up here. In short,

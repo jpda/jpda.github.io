@@ -4,7 +4,7 @@ description: ''
 date: '2014-06-05T18:03:13.000Z'
 categories: []
 keywords: []
-slug: /@jpda/still-think-you-can-do-it-better-de632c32ee88
+slug: /still-think-you-can-do-it-better-de632c32ee88
 ---
 
 My wife’s work laptop is a joke. Although she has no administrative rights, it recently got infected with one of those ransomware-type viruses. I tried to help her out — what I found was pretty awful.

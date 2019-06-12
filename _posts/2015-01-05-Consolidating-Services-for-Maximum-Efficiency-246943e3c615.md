@@ -4,7 +4,7 @@ description: ''
 date: '2015-01-05T22:42:08.000Z'
 categories: []
 keywords: []
-slug: /@jpda/consolidating-services-for-maximum-efficiency-246943e3c615
+slug: /consolidating-services-for-maximum-efficiency-246943e3c615
 ---
 
 Every day we’re bombarded with vendors, providers and \*ahem\* consultants telling us we need to break up our apps for maximum scalability & availability for the cloud. This is true — one of the keys to maximizing efficiency is breaking your applications down into units of work that can be scaled independently. This comes at a cost, however — imagine your Azure cloud project is made up of a dozen web services all spread out over a dozen web roles? That gets pretty expensive pretty quickly, especially if you’re targeting SLA — 24 instances for a dozen services?

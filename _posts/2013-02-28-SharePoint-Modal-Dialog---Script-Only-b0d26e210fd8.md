@@ -4,7 +4,7 @@ description: ''
 date: '2013-02-28T06:25:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/sharepoint-modal-dialog-script-only-b0d26e210fd8
+slug: /sharepoint-modal-dialog-script-only-b0d26e210fd8
 ---
 
 This is a personal favorite. Dead simple to implement but really allows for SharePoint customization while keeping it familiar. You can see it on the home page of this very blog.

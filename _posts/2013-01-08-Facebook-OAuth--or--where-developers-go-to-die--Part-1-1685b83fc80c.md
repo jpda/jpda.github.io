@@ -4,7 +4,7 @@ description: ''
 date: '2013-01-08T04:24:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/facebook-oauth-or-where-developers-go-to-die-part-1-1685b83fc80c
+slug: /facebook-oauth-or-where-developers-go-to-die-part-1-1685b83fc80c
 ---
 
 Well well, Facebook. If you read my [last post](/Blog/Post/4/Connecting-to-OAuth-Services-from-a-SharePoint-App), I’m attempting to get a SharePoint app connected to different services for blog syndication. Twitter & LinkedIn were walks in the park. Facebook was a walk in the park as well, however I suspect it is the kind of park with large spikes & vicious animals.

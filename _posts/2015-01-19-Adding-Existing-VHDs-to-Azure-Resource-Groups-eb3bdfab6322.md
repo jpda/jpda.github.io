@@ -4,7 +4,7 @@ description: ''
 date: '2015-01-19T04:00:21.000Z'
 categories: []
 keywords: []
-slug: /@jpda/adding-existing-vhds-to-azure-resource-groups-eb3bdfab6322
+slug: /adding-existing-vhds-to-azure-resource-groups-eb3bdfab6322
 ---
 
 Azure Resource Groups. Simultaneously the most exciting and most frustrating part of Azure vNext. While powerful, today they’re quite inflexible — no API is exposed to allow editing info (like names), moving resources from one to another, really any management at all. And the sprawl_— the sprawl!_ It’s awful. So many auto-generated resource groups. With a finite number allowed per account, actually _using them_ appropriately is priority.

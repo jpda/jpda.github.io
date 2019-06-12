@@ -4,7 +4,7 @@ description: ''
 date: '2015-07-07T01:56:15.000Z'
 categories: []
 keywords: []
-slug: /@jpda/economics-of-vso-build-vs-agents-cc461b237320
+slug: /economics-of-vso-build-vs-agents-cc461b237320
 ---
 
 I’m looking into build agents for VSO for a client this week. If you haven’t noticed in your VSO tenant, the build.vNext system is now available in most of them. In fact, it’s not even called build.preview anymore, even though I’m pretty sure it’s still preview. It’s much better than before, now with tasks that are more straightforward and easier to use. No more VS requirement for designing builds, you can do it all in the browser. There’s a lot more, but that’s not really the point of this post.

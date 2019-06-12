@@ -4,7 +4,7 @@ description: ''
 date: '2011-10-04T00:31:32.000Z'
 categories: []
 keywords: []
-slug: /@jpda/sharepoint-conference-2011-day-1-9ba1088ad8d1
+slug: /sharepoint-conference-2011-day-1-9ba1088ad8d1
 ---
 
 I’m at the SharePoint Conference in sunny Anaheim CA this week. First day of sessions is in the books. Keynote and most sessions are heavy on cloud services (particularly Office 365) and end-user empowerment. Not seeing a whole lot of developer-specific sessions this time around. Attendance is similar to the last trip through, around 7500.

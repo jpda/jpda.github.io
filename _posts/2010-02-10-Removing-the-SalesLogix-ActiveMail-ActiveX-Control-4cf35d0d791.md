@@ -4,7 +4,7 @@ description: ''
 date: '2010-02-10T13:30:26.000Z'
 categories: []
 keywords: []
-slug: /@jpda/removing-the-saleslogix-activemail-activex-control-4cf35d0d791
+slug: /removing-the-saleslogix-activemail-activex-control-4cf35d0d791
 ---
 
 Made the mistake of installing the SalesLogix ActiveMail ActiveX Control? Kicking yourself because there’s no entry in Add\\Remove Programs? Screwed up your Outlook with recklessly coded add-ins? Fret not, there is a way.

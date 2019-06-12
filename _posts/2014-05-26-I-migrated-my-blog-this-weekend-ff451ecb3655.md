@@ -4,7 +4,7 @@ description: ''
 date: '2014-05-26T04:55:52.000Z'
 categories: []
 keywords: []
-slug: /@jpda/i-migrated-my-blog-this-weekend-ff451ecb3655
+slug: /i-migrated-my-blog-this-weekend-ff451ecb3655
 ---
 
 Needless to say, you’ve made it. I decided to move both johndandison.com/blog & wtfsharepoint.com here _and_ to consolidate the content. There’s still some stuff lagging behind, but I think for the most part my links are properly sending 301s so _hopefully_ it won’t be too bad. I decided to use BlogEngine.net a long time ago, thinking I was familiar with .net and might extend it one day. Three years later and all I did was change the theme…

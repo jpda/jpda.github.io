@@ -6,7 +6,7 @@ description: >-
 date: '2018-06-04T18:46:53.267Z'
 categories: []
 keywords: []
-slug: /@jpda/getting-your-bigquery-refresh-token-for-azure-datafactory-f884ff815a59
+slug: /getting-your-bigquery-refresh-token-for-azure-datafactory-f884ff815a59
 ---
 
 Over here at WTF HQ, I’ve now had a couple data scientist friends ask about getting this wired up — so let’s dig in.

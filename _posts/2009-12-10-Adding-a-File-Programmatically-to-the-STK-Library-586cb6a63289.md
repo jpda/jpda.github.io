@@ -4,7 +4,7 @@ description: ''
 date: '2009-12-10T18:33:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/adding-a-file-programmatically-to-the-stk-library-586cb6a63289
+slug: /adding-a-file-programmatically-to-the-stk-library-586cb6a63289
 ---
 
 ![STK_Image_1](https://cdn-images-1.medium.com/max/800/0*7RZ1_RbMgVyDZTo8.png)

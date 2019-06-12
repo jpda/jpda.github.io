@@ -4,7 +4,7 @@ description: ''
 date: '2009-12-18T17:08:14.000Z'
 categories: []
 keywords: []
-slug: /@jpda/bing-for-iphone-is-here-989c646a6832
+slug: /bing-for-iphone-is-here-989c646a6832
 ---
 
 Bing for iPhone is here. It rocks.

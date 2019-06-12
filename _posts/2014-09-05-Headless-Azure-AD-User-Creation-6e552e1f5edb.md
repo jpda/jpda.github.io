@@ -4,7 +4,7 @@ description: ''
 date: '2014-09-05T01:17:52.000Z'
 categories: []
 keywords: []
-slug: /@jpda/headless-azure-ad-user-creation-6e552e1f5edb
+slug: /headless-azure-ad-user-creation-6e552e1f5edb
 ---
 
 If you’ve spent any time with the Azure Graph API, it’s pretty sweet. Federated identity for the masses, with almost _zero_ drama. Up until now I was mostly doing logins, queries, etc. with Azure AD, but for my latest project, I need to create both new domains _and_ new users in those domains. I haven’t tackled creating new domains yet, because that looks like it’s going to be a royal PITA (automating powershell? ick) — but I kicked down the user path today. Went pretty well, until I got stopped cold adding a user.

@@ -5,7 +5,7 @@ date: '2015-03-22T04:06:36.000Z'
 categories: []
 keywords: []
 slug: >-
-  /@jpda/using-organizational-accounts-for-azure-subscription-administration-8df027cd146c
+  /using-organizational-accounts-for-azure-subscription-administration-8df027cd146c
 ---
 
 Here’s one we get frequently — no one wants their enterprise Azure account administered by someone’s Xbox Gamertag. ‘noobslayer@hotmail.com’ doesn’t look great during a review of admins, nor is it easy to immediately know who the slayer of noobs may be. Organizational accounts are so much better for management and control over who’s handling your subscription.

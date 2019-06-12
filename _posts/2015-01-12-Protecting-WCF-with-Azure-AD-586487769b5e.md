@@ -4,7 +4,7 @@ description: ''
 date: '2015-01-12T20:06:26.000Z'
 categories: []
 keywords: []
-slug: /@jpda/protecting-wcf-with-azure-ad-586487769b5e
+slug: /protecting-wcf-with-azure-ad-586487769b5e
 ---
 
 Mobile services. MVC Web APIs. They’re all over and ubiquitous now. In some cases though, WCF is still the platform of choice for service developers. Sometimes it’s interoperability with other services, sometimes it’s just not wanting to rewrite old code — or perhaps a large part of your architecture requires service hosts + factories — whatever the reason, it’s not feasible to rewrite or rearchitect large swaths of systems just to add authentication.

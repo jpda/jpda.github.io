@@ -4,7 +4,7 @@ description: ''
 date: '2010-09-01T03:20:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/modifying-screensavers-in-ubuntu-10-04-cc82f2161347
+slug: /modifying-screensavers-in-ubuntu-10-04-cc82f2161347
 ---
 
 This may not be the best way to do this, but it’s the way I found. Suggestions are always welcome.

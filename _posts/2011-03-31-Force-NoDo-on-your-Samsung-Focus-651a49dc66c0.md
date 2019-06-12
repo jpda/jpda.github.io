@@ -4,7 +4,7 @@ description: ''
 date: '2011-03-31T04:42:16.000Z'
 categories: []
 keywords: []
-slug: /@jpda/force-nodo-on-your-samsung-focus-651a49dc66c0
+slug: /force-nodo-on-your-samsung-focus-651a49dc66c0
 ---
 
 This is more of an obligatory blog post, as I’m more interested in sharing my experience rather than the specifics of the hack.

@@ -4,7 +4,7 @@ description: ''
 date: '2013-04-11T05:53:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/power-management-in-windows-7-8-a049369e0c34
+slug: /power-management-in-windows-7-8-a049369e0c34
 ---
 
 Recently, my laptop has been frustrating me, quite considerably. If I stopped using it for a couple of minutes, it would go to sleep. Monitors off, network connection dead, completely off. I set my sleep timers to never. Same thing — two minutes in, completely asleep.

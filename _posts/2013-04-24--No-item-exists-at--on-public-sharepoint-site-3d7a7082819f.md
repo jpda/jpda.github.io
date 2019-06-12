@@ -4,7 +4,7 @@ description: ''
 date: '2013-04-24T06:21:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/no-item-exists-at-on-public-sharepoint-site-3d7a7082819f
+slug: /no-item-exists-at-on-public-sharepoint-site-3d7a7082819f
 ---
 
 Here at WTFHQ, I’ve been working on building a SharePoint based public website for our company, dressed to the nines — master page, page layouts, themes, the works. I noticed, however, that I couldn’t edit or view properties of damn near _anything_. So I did what any SharePoint person does when confronted with a ​problem — I deleted the site collection.

@@ -4,7 +4,7 @@ description: ''
 date: '2013-02-28T03:48:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/visual-studio-hang-developing-sharepoint-hosted-app-3e0a8c4152ef
+slug: /visual-studio-hang-developing-sharepoint-hosted-app-3e0a8c4152ef
 ---
 
 Over here at WTF HQ, we’re trying out some App Parts. Great, except that my normally patient & docile colleague is _literally moments_ away from plunging his fist knuckle deep into his monitor.

@@ -4,7 +4,7 @@ description: ''
 date: '2014-05-27T15:24:21.000Z'
 categories: []
 keywords: []
-slug: /@jpda/azure-storage-queue-names-400s-536cac5c7a6a
+slug: /azure-storage-queue-names-400s-536cac5c7a6a
 ---
 
 Keep ’em lowercase. They’re DNS names, so while the _should_ be case-insensitive, they are, in fact not. So if you’re getting 400s creating queues (since Bad Request is so helpful, an all) — make sure all of your queue names are lowercase.

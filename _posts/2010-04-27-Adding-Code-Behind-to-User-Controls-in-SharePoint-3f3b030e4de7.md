@@ -4,7 +4,7 @@ description: ''
 date: '2010-04-27T19:49:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/adding-code-behind-to-user-controls-in-sharepoint-3f3b030e4de7
+slug: /adding-code-behind-to-user-controls-in-sharepoint-3f3b030e4de7
 ---
 
 This question came from SharePoint Overflow ([http://sharepointoverflow.com](http://sharepointoverflow.com)). The question was — using the control templates that dictate layout of assorted forms, how can we add custom code to them?

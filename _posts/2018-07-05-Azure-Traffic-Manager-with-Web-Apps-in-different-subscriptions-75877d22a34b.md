@@ -7,7 +7,7 @@ date: '2018-07-05T21:26:47.748Z'
 categories: []
 keywords: []
 slug: >-
-  /@jpda/azure-traffic-manager-with-web-apps-in-different-subscriptions-75877d22a34b
+  /azure-traffic-manager-with-web-apps-in-different-subscriptions-75877d22a34b
 ---
 
 We get some strange and interesting requests over here at WTF HQ and today’s is no different. From a colleague:

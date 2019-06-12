@@ -4,7 +4,7 @@ description: ''
 date: '2011-04-12T05:04:04.000Z'
 categories: []
 keywords: []
-slug: /@jpda/office-communicator-events-4ac3d266f531
+slug: /office-communicator-events-4ac3d266f531
 ---
 
 I needed a breather Friday, so I started playing with the Office Communicator Automation API. Basically, you can sign in, get contacts, modify contact lists, etc. It is an automation API, so the client needs to be installed (or so I saw).

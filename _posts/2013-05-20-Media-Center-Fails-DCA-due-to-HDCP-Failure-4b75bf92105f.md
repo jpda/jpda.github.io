@@ -4,7 +4,7 @@ description: ''
 date: '2013-05-20T23:02:27.000Z'
 categories: []
 keywords: []
-slug: /@jpda/media-center-fails-dca-due-to-hdcp-failure-4b75bf92105f
+slug: /media-center-fails-dca-due-to-hdcp-failure-4b75bf92105f
 ---
 
 My desktop at home has an ATI Radeon 6770. I recently moved into a new office at home & decided TV would be best, since it’s a bit larger now, so I wanted to setup my desktop to use the HDHomeRun Prime that runs the TV downstairs. This requires running the infamous ‘Digital Cable Advisor’ in Media Center.

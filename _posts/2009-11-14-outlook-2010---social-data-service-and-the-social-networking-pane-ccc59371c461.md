@@ -5,7 +5,7 @@ date: '2009-11-14T02:30:58.000Z'
 categories: []
 keywords: []
 slug: >-
-  /@jpda/outlook-2010-social-data-service-and-the-social-networking-pane-ccc59371c461
+  /outlook-2010-social-data-service-and-the-social-networking-pane-ccc59371c461
 ---
 
 I’ve been using the tech preview of Office 14 (2010) since early this year. One of the things I noticed is Outlook attempting to access the UserProfileService, (\_vti\_bin/UserProfileService.asmx) with a user-agent of Microsoft Outlook Social Connector (14.0.4514) MsoStatic (14.0.4514). It would throw a ‘not found’ exception, thus triggering an email — so I saw it a lot.

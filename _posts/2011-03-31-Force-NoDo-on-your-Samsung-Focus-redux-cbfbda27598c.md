@@ -4,7 +4,7 @@ description: ''
 date: '2011-03-31T05:00:58.000Z'
 categories: []
 keywords: []
-slug: /@jpda/force-nodo-on-your-samsung-focus-redux-cbfbda27598c
+slug: /force-nodo-on-your-samsung-focus-redux-cbfbda27598c
 ---
 
 Per the norm, ATT is bringing up the rear in consumer appreciation, leaving us waiting indefinitely for the March WP7 update. I got my wife an HD7 for Valentine’s Day and T-Mobile is already sending out the update to those…

@@ -4,7 +4,7 @@ description: ''
 date: '2013-01-08T03:11:24.000Z'
 categories: []
 keywords: []
-slug: /@jpda/apps-for-sharepoint-mvc-oauth-identity-hell-65320d7ef147
+slug: /apps-for-sharepoint-mvc-oauth-identity-hell-65320d7ef147
 ---
 
 Ok, so it’s not really that bad. Just being a little dramatic. But it does suck.

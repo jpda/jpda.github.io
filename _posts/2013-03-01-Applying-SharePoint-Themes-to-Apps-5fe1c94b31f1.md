@@ -4,7 +4,7 @@ description: ''
 date: '2013-03-01T19:44:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/applying-sharepoint-themes-to-apps-5fe1c94b31f1
+slug: /applying-sharepoint-themes-to-apps-5fe1c94b31f1
 ---
 
 Using the [SharePoint Chrome Control​](http://msdn.microsoft.com/en-us/library/fp179916.aspx) to get style in your app for SharePoint is all well and good, but it only does so much. You’ll get CSS imported, but there are, unfortunately, a few things that base CSS leaves out. Plus, you’ll also need to make sure & tag things appropriately so they pick up the styles. Here are a few examples:

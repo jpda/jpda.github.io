@@ -4,7 +4,7 @@ description: ''
 date: '2010-02-25T21:44:13.000Z'
 categories: []
 keywords: []
-slug: /@jpda/boot-to-windows-7-vhd-with-a-portable-usb-bcd-bootloader-cfb120726ec6
+slug: /boot-to-windows-7-vhd-with-a-portable-usb-bcd-bootloader-cfb120726ec6
 ---
 
 My machine at work has a cracked case, so I had to send it back in for service today. This leaves me without a machine for the next seven business days. I got a loaner T410 from one of the guys which was, unfortunately, loaded with the standard image — Windows XP SP3. I’ve been using Windows 7 now since last summer, so I was less than thrilled to do without Windows 7.

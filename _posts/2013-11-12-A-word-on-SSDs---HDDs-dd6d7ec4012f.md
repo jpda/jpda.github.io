@@ -4,7 +4,7 @@ description: ''
 date: '2013-11-12T00:19:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/a-word-on-ssds-hdds-dd6d7ec4012f
+slug: /a-word-on-ssds-hdds-dd6d7ec4012f
 ---
 
 New PCs shouldn’t come with single HDDs, period. The now incremental cost of SSDs is so small that it’s really not a big deal at all. I understand that ‘lots of people wouldn’t even realize the difference’ and blah blah blah, but does your mom \*really\* need a 3TB drive (running at 5400 rpm, no less) for stalking you on facebook & sending emails like ‘FW:FW:FW:FW:FW:FW: OBAMACARE DEATH PANELS — WHAT THE LIBERAL MEDIA DOESN’T WANT YOU TO KNOW?’

@@ -4,7 +4,7 @@ description: ''
 date: '2014-06-10T19:16:09.000Z'
 categories: []
 keywords: []
-slug: /@jpda/azure-cloud-service-endpoint-acls-6f74969ee121
+slug: /azure-cloud-service-endpoint-acls-6f74969ee121
 ---
 
 Recently, Azure VMs got endpoint ACLs — this is a great addition and one of the biggest things I missed from AWS’ security groups. Using them on VMs is great and all, but what about cloud services? Since VMs are instances within a cloud service, it’s certainly _possible,_ but how can we configure them as such? Fortunately it’s pretty easy.

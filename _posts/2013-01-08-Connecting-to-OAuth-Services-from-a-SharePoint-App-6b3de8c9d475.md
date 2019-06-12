@@ -4,7 +4,7 @@ description: ''
 date: '2013-01-08T04:05:29.000Z'
 categories: []
 keywords: []
-slug: /@jpda/connecting-to-oauth-services-from-a-sharepoint-app-6b3de8c9d475
+slug: /connecting-to-oauth-services-from-a-sharepoint-app-6b3de8c9d475
 ---
 
 One of the first things I’m working on in this new SharePoint App world is an auto-syndicator to publish your SharePoint blog posts to Facebook, LinkedIn & Twitter. Sounds simple, in theory…

@@ -4,7 +4,7 @@ description: ''
 date: '2009-12-18T21:50:00.000Z'
 categories: []
 keywords: []
-slug: /@jpda/installing-linux-on-two-powerpc-macs-995c4743fe2f
+slug: /installing-linux-on-two-powerpc-macs-995c4743fe2f
 ---
 
 As anyone who regularly reads, I’m a Microsoft kinda guy — I use Windows, Office, SQL Server, IIS, Visual Studio and SharePoint. Staying within a single ecosystem makes it easy — things work together, are made for each other and it creates a very seamless experience. But that doesn’t mean I discriminate.

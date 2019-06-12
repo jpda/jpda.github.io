@@ -4,7 +4,7 @@ description: ''
 date: '2010-09-01T03:48:49.000Z'
 categories: []
 keywords: []
-slug: /@jpda/set-url-for-xscreensaver-in-ubuntu-8673c1f8a25c
+slug: /set-url-for-xscreensaver-in-ubuntu-8673c1f8a25c
 ---
 
 The phosphor screensaver, part of the xscreensaver-data package, is a screensaver that emulates an old terminal — it’s pretty sweet, and I like to have the feed from the National Hurricane Center running during the summer.
