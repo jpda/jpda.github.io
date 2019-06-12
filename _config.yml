@@ -1,3 +1,9 @@
+title: "jpda.dev"
+description: "bits and bobs"
+author_name: "jpda"
+logo_url: https://avatars2.githubusercontent.com/u/5932293?v=4
+
+
 remote_theme: heiswayi/the-plain
 url: https://jpda.dev
 permalink: /:title
