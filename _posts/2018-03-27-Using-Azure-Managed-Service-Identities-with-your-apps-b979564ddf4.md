@@ -6,7 +6,7 @@ description: >-
 date: '2018-03-27T22:04:16.852Z'
 categories: []
 keywords: []
-slug: /@jpda/using-azure-managed-service-identities-with-your-apps-b979564ddf4
+slug: /using-azure-managed-service-identities-with-your-apps-b979564ddf4
 ---
 
 If we want to access protected resources from our apps, we usually have to ship a key and secret in our app. This traditionally meant registering an application/service principal in Azure AD, getting an id + secret, then granting permissions to that principal in things like Key Vault. At runtime, our code would use that ID + secret to authenticate to AAD and get an access token to use to connect to the other service.
@@ -17,8 +17,8 @@ The docs cover a lot of frequent use cases — accessing [Azure Storage](htt
 
 I’m using Azure Functions, but this will work in full App Service, as well as Azure VMs and VM Scale Sets. It’s actually pretty simple. Here’s our simple landscape:
 
-*   Function app 1: msi-func, MSI-enabled App Service
-*   Function app 2: aad-func, Azure AD registered application
+* Function app 1: msi-func, MSI-enabled App Service
+* Function app 2: aad-func, Azure AD registered application
 
 ### aad-func
 
@@ -57,12 +57,12 @@ We’re ready! Go back to your MSI function and click Run — you should get
 
 I removed a few for brevity, but here are some important ones:
 
-*   aud(ience): this is our AAD app’s ID, so this token is valid for our app
-*   iss(uer): this was issued by our AAD tenant, so we can trust the source
-*   appid: this is the ID of the application that requested the token, in our case it matches our MSI’s app ID (not object ID)
-*   identityprovider: also our tenant
-*   roles: here’s our role — DoAll
-*   nameidentifier: the MSI app’s object ID (not app ID)
-*   tenantid: our tenant again, just in case
+* aud(ience): this is our AAD app’s ID, so this token is valid for our app
+* iss(uer): this was issued by our AAD tenant, so we can trust the source
+* appid: this is the ID of the application that requested the token, in our case it matches our MSI’s app ID (not object ID)
+* identityprovider: also our tenant
+* roles: here’s our role — DoAll
+* nameidentifier: the MSI app’s object ID (not app ID)
+* tenantid: our tenant again, just in case
 
 And all without shipping a secret in our code! Try out MSI today.
