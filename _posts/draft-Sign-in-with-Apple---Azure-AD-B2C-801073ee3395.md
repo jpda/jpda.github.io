@@ -9,11 +9,11 @@ keywords: []
 slug: ''
 ---
 
-Last week at WWDC, Apple announced [Sign in with Apple](https://developer.apple.com/sign-in-with-apple/), a privacy-focused identity provider for your mobile apps & websites. 
+Last week at WWDC, Apple announced [Sign in with Apple](https://developer.apple.com/sign-in-with-apple/), a privacy-focused identity provider for your mobile apps & websites.
 
 Clearly, with anything new, we should throw caution to the wind and get cracking. Let’s go.
 
-Overall, we’re going to 
+Overall, we’re going to
 
 * register an app with apple’s idp
 * add apple as an idp in a b2c tenant

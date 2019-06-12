@@ -11,15 +11,13 @@ I’ve been building Windows 8 apps for my current employer, so I’ve been runn
 
 First, if you’re getting shut out of the store ("Can’t connect to the Store right now" kind of messages) & on a corporate, managed machine (you’ll see ‘Managed by your system administrator’ in Windows Update) — plus getting stuff like this:
 
-1: Fault bucket -1485561316, type 5
-
-2: Event Name: WindowsUpdateFailure2
+`Fault bucket -1485561316, type 5`
+`Event Name: WindowsUpdateFailure2`
 
 in your event viewer whenever you try to install apps, here’s the fix:
 
-1: \[HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\]
-
-2: "DisableWindowsUpdateAccess"=dword:00000000
+`[HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]`
+`"DisableWindowsUpdateAccess"=dword:00000000`
 
 Either copy/paste that text into a text file, save it as BobLoblaw.reg & run it, or navigate to that tree & change the DWORD from 1 to 0. Next, go into services.msc & restart the Windows Update service.
 

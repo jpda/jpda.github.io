@@ -7,8 +7,8 @@ keywords: []
 slug: /geo-replicating-azure-service-bus-with-guaranteed-ordering-ac8d97e4fb11
 ---
 
-![Photo by [Slava Bowman](https://unsplash.com/@slavab?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](img/0__eAcdrF5a1HTPad7v.)
-Photo by [Slava Bowman](https://unsplash.com/@slavab?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)
+![Photo by [Slava Bowman](https://unsplash.com/@slavab)](img/0_eAcdrF5a1HTPad7v.jpg)
+*Photo by [Slava Bowman](https://unsplash.com/@slavab?utm_source=medium&utm_medium=referral)*
 
 Recently, I had an interesting question come across my desk from a customer:
 
