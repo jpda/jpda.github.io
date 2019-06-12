@@ -22,6 +22,8 @@ For a more concrete example, let’s say I’m tracking a lot of shipments. I ha
 
 Here’s some data:
 
+{% gist b740dbb6baca0c21fc52c5b85a959d56 %}
+
 However, if I have multiple packages, I don’t really care if package A or package B has its statuses updated in my backend system first, as long as the order of the status messages for each specific package stays consistent.
 
 Another example — change-data-capture out of a database system. If I run an INSERT after a DELETE, even though the DELETE happened first, my data isn’t going to be correct.

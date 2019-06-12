@@ -34,6 +34,8 @@ Note the `allowedMemberType of Application — this creates a scope assignab
 
 Now we’ll give our function a little bit of code — nothing too exciting here.
 
+{% gist b50d4341f23c2e435cf9d17813a898ed %}
+
 ### msi-func
 
 In our MSI function, we want to enable MSI first.
@@ -43,7 +45,11 @@ Platform Features → Managed service identity → Turn on
 
 Next we’ll add a bit of code. A bit more than our other one, but still not much.
 
+{% gist 06c61c3db03377414e2b6eab8282c837 %}
+
 We’ll need to add a package.json too, to pull in the magic assembly that handles asking the local MSI endpoint for a token:
+
+{% gist 6266cb676147a29493560e08041a9ce6 %}
 
 [Or call the endpoint manually](https://docs.microsoft.com/en-us/azure/app-service/app-service-managed-service-identity#rest-protocol-examples) with `HttpClient` or whatever in your language of choice.
 
@@ -53,7 +59,11 @@ Lastly, let’s get our app added to the appRole we created earlier. This is opt
 
 Crack open Azure AD Powershell v2
 
+{% gist b34a852f1b7575cc98203d5d4c359078 %}
+
 We’re ready! Go back to your MSI function and click Run — you should get a set of claims returned in the response. Let’s take a look:
+
+{% gist 2f53f4fee3472b11a2df74bfaed270d6 %}
 
 I removed a few for brevity, but here are some important ones:
 

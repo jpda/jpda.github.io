@@ -29,6 +29,8 @@ What’s the first thing we need to do? Get these things installed + provisioned
 
 I’m not going to get into the gory details of setting up remote Powershell access, you can [read all about that here](http://ms-iot.github.io/content/en-US/win10/samples/PowerShell.htm). We’re just going to extrapolate that out a bit. Take a look:
 
+{% gist 375707054983fbdb429e %}
+
 Pretty straightforward. Not a lot happening there — you could wrap this in a foreach loop and call it for each device you’ve got on your network.
 
 #### App Deployment
@@ -116,6 +118,8 @@ Specifically, let’s talk about multipart boundary identifiers. From the [spec:
 I think we’ve found one of those implementations. But there is a larger issue here — .net’s inconsistency with how it applies these headers. Why would the boundary be in quotes in the declaration but naked in the usage? I understand that per spec, web servers _should_ accept either as the same, but it’s just opening the door for trouble when the standard implementation rolls the dice on _every request._ What else have we learned? The little WebB.exe web server in Windows 10 IoT doesn’t implement the spec properly either — it should _only_ be looking for a CRLF and two dashes for the boundary ID, not checking explicitly. Let’s get to the code. You’ll see an explicit drop/re-add of the **Content-Type** header with my boundary ID so it matches; it’s really about the best workaround I could find.
 
 #### Multi-Deployment PowerShell
+
+{% gist 5c114b83e229075ed062 %}
 
 #### What have we learned?
 

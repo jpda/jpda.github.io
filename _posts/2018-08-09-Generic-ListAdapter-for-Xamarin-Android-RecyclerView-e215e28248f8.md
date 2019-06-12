@@ -37,7 +37,11 @@ If we look at the ContactsAdapter, we see a lot of the same thing:
 
 That’s really about it. Take a look:
 
+{% gist 082552dbe75062980fd9760161e2ed99 %}
+
 Notice there’s really not a whole lot of specific stuff in here. Let’s look at the reusable one:
+
+{% gist ad3730c22ac666b0e50d85acf313e6c9 %}
 
 The only specific stuff we need to know about is
 
@@ -46,5 +50,7 @@ The only specific stuff we need to know about is
 *   `Action<T,V>` — a method that takes our item and our viewholder and binds them
 
 Let’s look at usage — you’ll notice we really just pushed some code around to different places. Here’s our usage in something like MainActivity.cs. Our binding logic has moved to the anonymous method, and we’re explicitly telling our `ListAdapter` the type of our collection and our `ViewHolder`.
+
+{% gist 349d06a233f8382000c68f46813724c8 %}
 
 So far I think Xamarin is pretty neat. I don’t foresee a career shift to mobile development anytime soon but this is at least making it a lot easier! More to come on the Azure bits we’re wiring up here soon.
