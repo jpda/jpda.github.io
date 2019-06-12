@@ -38,8 +38,9 @@ Flight — only ticketed passengers, who passed security, who are leaving fr
 
 As you can imagine, by the time you get to your gate, you can say with relative confidence that everyone there is only leaving within a small time window from that gate. This is very similar to a pipes and filters pattern, where the same task is repeated over and over again, but the entire process is broken down into discrete steps, which, when executed, process data appropriately and route to the final destination.
 
-![Pipes & filters @ MSDN: [https://msdn.microsoft.com/en-us/library/dn568100.aspx](https://msdn.microsoft.com/en-us/library/dn568100.aspx[/caption)Pipes & filters @ MSDN: https://msdn.microsoft.com/en-us/library/dn568100.aspx](/img/0_zLGbx7vwgquWykog.png)
-Pipes & filters @ MSDN: [https://msdn.microsoft.com/en-us/library/dn568100.aspx](https://msdn.microsoft.com/en-us/library/dn568100.aspx[/caption)
+![Pipes & filters @ MSDN: https://msdn.microsoft.com/en-us/library/dn568100.aspx](/img/0_zLGbx7vwgquWykog.png)
+
+*Pipes & filters @ MSDN: [https://msdn.microsoft.com/en-us/library/dn568100.aspx](https://msdn.microsoft.com/en-us/library/dn568100.aspx[/caption)*
 
 Think TSA is slow today? Imagine if it processed _every_ person through the airport, not just flying passengers. It would be a nightmare and horribly inefficient. By using multiple copies of the same service, closer to the consumer, you can distribute load across all of them, leading to significantly shorter wait times while still offering the same (or better) level of service.
 
