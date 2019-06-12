@@ -13,11 +13,9 @@ Mobile services. MVC Web APIs. They’re all over and ubiquitous now. In some ca
 
 Let’s look at a typical three-tier app — UI, service + data:
 
-\[caption id=”attachment\_355" align=”aligncenter” width=”837"\]
+![Firewalls keep everyone out except our web app.](/img/0_1vVk6yuur0aWneYj.png)
 
-![Firewalls keep everyone out except our web app.](https://cdn-images-1.medium.com/max/800/0*1vVk6yuur0aWneYj.png)
-
-Firewalls keep everyone out except our web app.\[/caption\]
+Firewalls keep everyone out except our web app.
 
 Here, we’ve got a web app which talks to an unauthenticated service, which talks to some data. Pretty simple stuff. The box indicates the internet permeability — if the web server is the only thing exposed to the internet, this is a generally OK approach. If nothing has access to the service except the target consumer, what could go wrong? _How hard could it be?_
 
@@ -29,7 +27,7 @@ But let’s extrapolate further. It’s 2015 — how many services only have
 
 \[caption id=”attachment\_356" align=”aligncenter” width=”808"\]
 
-![Our service now has to handle multiple clients - and they're not all coming from a trusted host.](https://cdn-images-1.medium.com/max/800/0*gr8TWRfOxDAfC67U.png)
+![Our service now has to handle multiple clients - and they're not all coming from a trusted host.](/img/0_gr8TWRfOxDAfC67U.png)
 
 Our service now has to handle multiple clients — and they’re not all coming from a trusted host.\[/caption\]
 
@@ -96,17 +94,25 @@ object; any mis-configuration here will cause validation to fail.
 
 Next we’ll need to create a service behavior, instructing WCF to apply our new MessageInspector to the MessageInspector collection.
 
+{% gist 68b8b669fcedc612551a %}
+
 #### BearerTokenExtensionElement.cs
 
 This is a simple class to add the service behavior to an extension that can be controlled via config.
+
+{% gist dd64e2935b0a5e646ee8 %}
 
 #### WcfErrorResponseData.cs
 
 This is a helper for returning error data in the result of a broken authentication call. We can return a WWW-Authenticate header here (in the case of a 401), instructing the caller where to retrieve a valid token.
 
+{% gist 4c3570ca72252564279f %}
+
 #### Service Configuration
 
 The last piece is updating the WCF service’s config to enable that message inspector:
+
+{% gist cbcbc45313f507a19742 %}
 
 #### Client Side
 
@@ -116,21 +122,31 @@ Now that our service is setup to both find and validate tokens, now we need our 
 
 The AuthorizationHeaderMessageInspector runs on a client and handles two things — acquiring the token and putting it in the proper header.
 
+{% gist 93daee736e3dcdbb866f %}
+
 #### AzureAdToken.cs
 
 This is a simple helper for acquiring the token using ADAL. You can modify this to pop a browser window and get user tokens, or using this code, it’s completely headless and an application-only token. ADAL also handles caching the tokens, so no need to fret about calling this on every request.
+
+{% gist 7824fe03daaac6ff86fd %}
 
 #### AuthorizationHeaderEndpointBehavior.cs
 
 A wrapper to add the AuthorizationHeaderMessageInspector to your outgoing messages.
 
+{% gist a532c993c75a2c97ef7e %}
+
 #### EndpointExtension.cs
 
 A simple extension method for adding the endpoint behavior to the service client.
 
+{% gist defafbe878ff2cab210f %}
+
 #### Usage
 
 Wrap it all together, here’s what we’ve got — a simple call to ServiceClient.Endpoint.AddAuthorizationEndpointBehavior() and our client is configured with a token. Your call out should include the header, which the service will consume and validate, sending you back some data. Easy, right?!
+
+{% gist 4370cc453eb93fbf1233 %}
 
 #### Configuring Azure AD
 
@@ -140,18 +156,16 @@ The last thing we need to do is configure Azure AD with our applications. Those 
 
 The app manifest is the master configuration of your application’s configuration. You can access it via the portal, using the ‘Manage Manifest’ in the menu of your app:
 
-![manifest](https://cdn-images-1.medium.com/max/800/0*1zBGWSUFM9uf5nev.png)
+![manifest](/img/0_1zBGWSUFM9uf5nev.png)
 
 Download your manifest and check it out. It’s likely pretty simple. We want to add a chunk to the oauth2Permissions block, then upload it back into the portal:
 
 What’s this doing, exactly? It’s allowing us to expose a specific permission to Azure AD, so we can grant that permission to other Azure AD applications. Head over to your client application’s Azure AD app record. Near the bottom of the ‘Configure’ section, we’ll see ‘Permissions to other applications’ — let’s find our service in this list. Once you’ve found it, you can grant specific permissions. Extrapolate this further, and you can see there’s certainly room for improvement. Perhaps other permission sets and permissions are available within our app? They can be exposed and granted here.
 
-\[caption id=”attachment\_366" align=”aligncenter” width=”869"\]
+![Ed note: It's finally out of preview!](/img/0_fDkVPn6c85iGCez1.png)
 
-![Ed note: It's finally out of preview!](https://cdn-images-1.medium.com/max/800/0*fDkVPn6c85iGCez1.png)
+Ed note: It’s finally out of preview!
 
-Ed note: It’s finally out of preview!\[/caption\]
-
-#### It’s a trap Wrap
+#### It’s a ~~trap~~ wrap
 
 What you’ve seen is a ready-to-go example of using Azure AD to authenticate your applications. We’ll dig into using user tokens at both the application and service levels in a later post, but in the meantime, you’ve now got a way that’s better than shared credentials or _\*gasp\*_ no authentication on your services.
