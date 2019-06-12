@@ -90,6 +90,8 @@ is fired after the WCF subsystem receives the request, but before it’s passed 
 does the heavy lifting here (it’s a NuGet package), handling the roundtrips to AAD to validate the token based on the configuration. Take note of the TokenValidationParameters  
 object; any mis-configuration here will cause validation to fail.
 
+{% gist 7c16c6958788ffaed3ab %}
+
 #### BearerTokenServiceBehavior.cs
 
 Next we’ll need to create a service behavior, instructing WCF to apply our new MessageInspector to the MessageInspector collection.
