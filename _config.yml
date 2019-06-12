@@ -8,7 +8,7 @@ theme_settings:
   title: jpda.dev
   avatar: assets/img/avatar.png
   favicon: assets/favicon.ico
-  gravatar: # Email MD5 hash
+  gravatar: f9cfe9ea4e10312747304b49caad1fcd
   description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
@@ -72,6 +72,4 @@ paginate: 5
 paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
-# markdown: kramdown
-# highlighter: rouge
 plugins: [jekyll-paginate]
