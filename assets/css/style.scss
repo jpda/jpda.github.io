@@ -1,7 +1,8 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import "main";
+@import "syntax";
 
 article {
     max-width: 1280px;
