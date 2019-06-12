@@ -12,7 +12,7 @@ An interesting problem came across my desk at WTFHQ this week. Then it asked me 
 
 #### Shared Workstations.
 
-Shared workstations. Used by those in the most chaotic of workplaces, medicine. Nurses & doctors going from patient to patient don’t have time to log out/log in to each machine they use, so in many cases, a ‘guest’ type user is logged on and everyone uses the browser to get stuff done. That’s all well and good, except when you’re talking about SSO & ADFS with Office 365. Whatever user you’re logged into the machine as is who ADFS will authenticate you as, regardless of what you type into the Office 365 login fields. You can see this for yourself — next time you login to O365, type HUGEWATERMELON@yourdomain.com — provided ‘yourdomain.com’ is correct, you’ll be redirected to your ADFS, at which point NTLM takes over and signs you in as whoever you’re signed into the machine as. Anyway, if you’re logged into a guest account, what do you think happens? If that guest account has a mailbox, you’ll go to the mailbox, which is almost certainly \*not\* what you wanted to do.
+Shared workstations. Used by those in the most chaotic of workplaces, medicine. Nurses & doctors going from patient to patient don’t have time to log out/log in to each machine they use, so in many cases, a ‘guest’ type user is logged on and everyone uses the browser to get stuff done. That’s all well and good, except when you’re talking about SSO & ADFS with Office 365. Whatever user you’re logged into the machine as is who ADFS will authenticate you as, regardless of what you type into the Office 365 login fields. You can see this for yourself — next time you login to O365, type HUGEWATERMELON@yourdomain.com — provided ‘yourdomain.com’ is correct, you’ll be redirected to your ADFS, at which point NTLM takes over and signs you in as whoever you’re signed into the machine as. Anyway, if you’re logged into a guest account, what do you think happens? If that guest account has a mailbox, you’ll go to the mailbox, which is almost certainly *not* what you wanted to do.
 
 #### Forms as far as the eye can see.
 
@@ -26,8 +26,7 @@ Here’s a simple example — I’m going to use reverse DNS to get the IP o
 
 Extrapolate that further and you could check if that PC is in a specific OU, or whatever. Alternatively, you could see if the user is a specific guest/service account and redirect that way.
 
-Anyway, once you’ve decided what to do with your request, either to let them login with Forms or through NTLM, you need to make sure you redirect and  
-_include the original query string._ This is quite important, as it’s just not going to work without.
+Anyway, once you’ve decided what to do with your request, either to let them login with Forms or through NTLM, you need to make sure you redirect and _include the original query string._ This is quite important, as it’s just not going to work without.
 
 #### Rx
 
@@ -35,6 +34,7 @@ In ADFS 2.0 and 2.1, all of these files are in IISROOT\\adfs\\ls\\FormsSignIn.as
 
 Send all requests to FormsSignIn.aspx by modifying the web.config to put Forms first.
 
+```xml
 <microsoft.identityServer.web>  
     <localAuthenticationTypes>  
         <add name="Forms" page="FormsSignIn.aspx" />  
@@ -44,10 +44,12 @@ Send all requests to FormsSignIn.aspx by modifying the web.config to put Forms f
     </localAuthenticationTypes>  
     ...  
 </microsoft.identityServer.web>
+```
 
 When the page loads, you need a way to differentiate requests based on \*some\* amount of information you have from the requesting party. This example used IP & reverse DNS, that’s kinda lame but you could get deep here and check AD for the computer’s OU, check the user for a group, etc.
 
-protected void Page\_Load(object sender, EventArgs e)  
+```c#
+protected void Page_Load(object sender, EventArgs e)  
 {  
     var ctx = System.Web.HttpContext.Current;  
     //get the query - this is critical, as it contains all the info ADFS needs to process the request  
@@ -64,10 +66,10 @@ protected void Page\_Load(object sender, EventArgs e)
     }  
     //there is no else, since they need to see the forms login page if they are on the shared workstation.  
 }
+```
 
 #### The ‘send my kids to college’ method
 
-If you really wanted to do this the right way (i.e., you could apply a service pack and not worry about it getting overwritten), you could write an HTTP handler that does all of your custom logic, which is exactly what Microsoft is doing with their integrated  
-handler.
+If you really wanted to do this the right way (i.e., you could apply a service pack and not worry about it getting overwritten), you could write an HTTP handler that does all of your custom logic, which is exactly what Microsoft is doing with their integrated handler.
 
 #### \*cough\*

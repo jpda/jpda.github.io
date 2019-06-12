@@ -14,17 +14,15 @@ There are two good options:
 
 If it’s only on a page or two, drop a Content Editor Web Part on the page and plug in this CSS (from RosalynA):
 
+```css
 <style>
 
 .s4-recentchanges
-
 {
-
-DISPLAY:none;
-
+  DISPLAY:none;
 }
-
 </style>
+```
 
 The other option would be to make the change with SharePoint Designer — this breaks the page from site definition, leaving the filesystem alone, and saves the changes in the database. If you ever need to go back to stock, you simply ‘reset to site definition’ and the page goes back to normal. This protects you from changes which occur during service packs or updates (thanks Scott).
 
@@ -40,4 +38,4 @@ After some searching, no one seemed to have had this issue before, so I went dig
 
 After a bit, I came across the ‘DocumentTemplates’ folder under 14\\template — you’ll find a wkpstd.aspx file in there. The page inherits from ‘Microsoft.SharePoint.WebPartPages.WikiEditPage,’ so that made me suspect I was onto something.
 
-Anyway, open that up and find the ‘SharePoint:RecentChangesMenu’ control. You could probably delete it, but being a server control, I figured just slapping a visible=”false” on the end of the tag should work. Added visible=”false”, saved the file, and refreshed my page — sure enough, no more ‘Recently Modified.’
+Anyway, open that up and find the ‘SharePoint:RecentChangesMenu’ control. You could probably delete it, but being a server control, I figured just slapping a visible="false" on the end of the tag should work. Added visible="false", saved the file, and refreshed my page — sure enough, no more ‘Recently Modified.’

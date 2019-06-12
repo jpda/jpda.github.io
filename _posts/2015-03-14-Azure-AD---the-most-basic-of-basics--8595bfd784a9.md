@@ -25,21 +25,17 @@ In Windows, this process is highly transparent to the user. When I sign into a d
 
 I found a _rad_ image from the late 90s (I especially love that hot-pink starburst) outlining the back-and-forth between a PC, service + Kerberos KDC:
 
-\[caption id=”attachment\_373" align=”aligncenter” width=”500"\]
-
 ![Kerberos circa 2000. Credit: MSDN](/img/0_yyfiS2wvxXFotKbr.gif)
 
-Kerberos circa 2000. Credit: MSDN\[/caption\]
+*Kerberos circa 2000. Credit: MSDN*
 
 #### ‘Modern’ Federated Identity
 
 Now let’s look at a modern federated identity platform and how it works:
 
-\[caption id=”attachment\_374" align=”aligncenter” width=”441"\]
-
 ![Federated Identity cloud design pattern. Source: https://msdn.microsoft.com/en-us/library/dn589790.aspx](/img/0_Jn7eYCHIoxWWtIy1.png)
 
-Federated Identity cloud design pattern. Source: [https://msdn.microsoft.com/en-us/library/dn589790.aspx\[/caption\]](https://msdn.microsoft.com/en-us/library/dn589790.aspx[/caption])
+*Federated Identity cloud design pattern. Source: [https://msdn.microsoft.com/en-us/library/dn589790.aspx](https://msdn.microsoft.com/en-us/library/dn589790.aspx)*
 
 In a federated identity system, we have a Secure Token Service that issues validatable tokens containing all of your claims (attributes — name, unique ID, UPN, etc). The service needing authentication is a **Relying Party** because it **Relies** on the STS for authentication. You, as the consumer, request a **token** (ticket) from the STS, which then in turn is used to authenticate to the remote service. The remote service trusts the STS and via a key exchange, can ensure the validity of the ticket. Sound familiar?
 

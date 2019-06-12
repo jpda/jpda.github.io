@@ -29,31 +29,35 @@ I copied the Phosphor saver, since I like it and it can be pointed to a web serv
 
 So I opened the copy and got to work. Here it is in it’s original form:
 
-\[Desktop Entry\]  
- Name=Phosphor  
- Exec=/usr/lib/xscreensaver/phosphor -root  
- TryExec=/usr/lib/xscreensaver/phosphor  
- Comment=Draws a simulation of an old terminal, with large pixels and long-sustain phosphor. On X11 systems, This program is also a fully-functional VT100 emulator! Written by Jamie Zawinski.  
- StartupNotify=false  
- Terminal=false  
- Type=Application  
- Categories=Screensaver  
- OnlyShowIn=GNOME;
+```bash
+[Desktop Entry]  
+Name=Phosphor  
+Exec=/usr/lib/xscreensaver/phosphor -root  
+TryExec=/usr/lib/xscreensaver/phosphor  
+Comment=Draws a simulation of an old terminal, with large pixels and long-sustain phosphor. On X11 systems, This program is also a fully-functional VT100 emulator! Written by Jamie Zawinski.  
+StartupNotify=false  
+Terminal=false  
+Type=Application  
+Categories=Screensaver  
+OnlyShowIn=GNOME;
+```
 
 Pretty simple, eh? Make your changes in here — I wanted to change the scale and the font of the text.
 
 So I made my changes — now it looked like this:
 
-\[Desktop Entry\]  
- Name=Phosphor Droid NHC  
- Exec=/usr/lib/xscreensaver/phosphor -root -scale 2 -font ‘Droid Sans’  
- TryExec=/usr/lib/xscreensaver/phosphor  
- Comment=Draws a simulation of an old terminal, with large pixels and long-sustain phosphor. On X11 systems, This program is also a fully-functional VT100 emulator! Written by Jamie Zawinski.  
- StartupNotify=false  
- Terminal=false  
- Type=Application  
- Categories=Screensaver  
- OnlyShowIn=GNOME;
+```bash
+[Desktop Entry]  
+Name=Phosphor Droid NHC  
+Exec=/usr/lib/xscreensaver/phosphor -root -scale 2 -font ‘Droid Sans’  
+TryExec=/usr/lib/xscreensaver/phosphor  
+Comment=Draws a simulation of an old terminal, with large pixels and long-sustain phosphor. On X11 systems, This program is also a fully-functional VT100 emulator! Written by Jamie Zawinski.  
+StartupNotify=false  
+Terminal=false  
+Type=Application  
+Categories=Screensaver  
+OnlyShowIn=GNOME;
+```
 
 But no matter what I did — including rebooting the machine and running dpkg-reconfigure did any good.
 

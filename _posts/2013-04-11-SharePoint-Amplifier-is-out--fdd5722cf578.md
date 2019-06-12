@@ -13,7 +13,7 @@ This post is a bit delayed, but SharePoint Amplifier is now in the SharePoint St
 
 ‘Social media.’ ‘Social intelligence.’ ‘Klout.’ ‘Tweep.’ ‘New media.’ ‘Death of journalism.’ ‘Scalable social media engagement strategic strategery.’ If you’re a small business, you’ve probably had someone say these words to you. It’s ok. We’ve all been there. Usually it’s easy enough to rid yourself of the annoyance (_Business Insider_ just posted a new infographic spelling Windows’ demise at the hands of blades of grass — go, look!), but there is _some_ truth to the madness. Keeping people engaged over social media — the right way — is key, especially if you’re looking to expand your online presence.
 
-#### Blog — and still get real work done.
+#### Blog — and still get real work done
 
 Our goal with SharePoint Amplifier was to make it as easy as possible to both blog/socialize/engage and get actual work done. Take a few minutes out of every day to drop your customers a note — it could be about a product you’re working on, a recent award or some awesome customer service story. Regardless, it’ll keep your site fresh with content, which keeps people coming back for more.
 
@@ -23,4 +23,4 @@ Content on your blog is great — it’ll keep your customers interested in 
 
 It’s pretty simple to use — install the app, connect your social networking accounts and…you’re done. Each time you post a new blog entry, it’ll automatically get posted to each network & page you’ve chosen. No more copying & pasting links from network to network — when you update, your network gets updated, all from a single click.
 
-Go get it — [_now_](http://office.microsoft.com/en-us/store/sharepoint-amplifier-WA104041489.aspx)_!_
+Go get it — [_now_](http://office.microsoft.com/en-us/store/sharepoint-amplifier-WA104041489.aspx)!

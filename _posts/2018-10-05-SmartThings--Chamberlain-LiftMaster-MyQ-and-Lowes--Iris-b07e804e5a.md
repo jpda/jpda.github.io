@@ -28,5 +28,5 @@ This was my first roadblock. I’d get the beeps and the lights (intended to war
 
 Instead, I decided to try mimicking the wall switch, by wiring the Z-Wave box directly into the switch buttons the wall switch presses. I have a LiftMaster 880 wall switch. Take it off the wall and there are two switches (left and right) near the top, directly underneath the large plastic open/close bar. On the contacts for these switches, solder on the downstream/bottom leads of one side (I used the right side). Close it up and you’re ready to go. No changes to the main opener, no cracking open the z-wave box, just wire the leads from the Z-Wave box into the switch in your wall switch.
 
-![](img/1__sgBus4jaMHhUFZnsiAJv5Q__2x.jpeg)
-![](img/1__kdvUwQEl7Gs4VHHAAy2THg__2x.jpeg)
+![a](img/1__sgBus4jaMHhUFZnsiAJv5Q__2x.jpeg)
+![a](img/1__kdvUwQEl7Gs4VHHAAy2THg__2x.jpeg)

@@ -9,8 +9,9 @@ slug: /powershell-office-365-authenticated-proxies-391a7494570a
 
 It’s the Friday before Christmas so I’m about to get outta here like the fat kid in dodgeball, but this came across my desk @ WTFHQ today. Using CSOM from behind an authenticated proxy? With events added in PS 2.0, it’s easy.
 
-#### C#.
+#### C#
 
+```c#
 var securePassword = new SecureString();  
 "sharepoint password".ToList().ForEach(securePassword.AppendChar);  
 var ctx = new ClientContext("https://sharepoint site") { Credentials = new SharePointOnlineCredentials("sharepoint UPN", securePassword) };  
@@ -23,9 +24,11 @@ ctx.ExecutingWebRequest += (s, e) =>
 var web = ctx.Web;  
 ctx.Load(web);  
 ctx.ExecuteQuery();
+```
 
 #### Powershell. Not that different.
 
+```powershell
 Add-Type -Path "C:\\Program Files\\Common Files\\Microsoft Shared\\Web Server Extensions\\15\\ISAPI\\Microsoft.SharePoint.Client.dll"  
 Add-Type -Path "C:\\Program Files\\Common Files\\Microsoft Shared\\Web Server Extensions\\15\\ISAPI\\Microsoft.SharePoint.Client.Runtime.dll"  
 $pwd = Read-Host -AsSecureString  
@@ -44,3 +47,4 @@ Register-ObjectEvent -InputObject $ctx -EventName ExecutingWebRequest -Action {
 $ctx.Load($ctx.Web)  
 $ctx.ExecuteQuery()  
 Write-Host $ctx.web.Title
+```

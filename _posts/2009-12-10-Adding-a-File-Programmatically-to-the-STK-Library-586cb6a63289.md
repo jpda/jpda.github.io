@@ -27,17 +27,17 @@ SPFile file = folder.Files\[destFullPath\];
 
 SPListItem fileItem = file.Item;
 
-fileItem\[“ContentTypeId”\] = “0x010100EFCD84CEB66ABF4E9F9CA8F6C94312F3”;
+fileItem\["ContentTypeId"] = "0x010100EFCD84CEB66ABF4E9F9CA8F6C94312F3";
 
 fileItem.Update();
 
 //set other properties and save
 
-fileItem\[“Content”\] = “Interactive”;
+fileItem\["Content"] = "Interactive";
 
-fileItem\[“Sequence”\] = “0”;
+fileItem\["Sequence"] = "0";
 
-**…**
+…
 
 fileItem.Update();
 

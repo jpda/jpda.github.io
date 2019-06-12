@@ -18,6 +18,7 @@ I was wrong. To say the least, this was a huge PITA. The UI has no support for s
 
 I spent the other night getting the tunnel up and running. This wasn’t that bad, really, just what you’d expect. Phase1/Phase2 config, some NAT config, etc. Tunnel connected — all was good outbound (house → Azure), but not inbound. Spent a couple of days fighting it and finally it dawned on me I was missing ACLs. Anyway — here’s the CLI config for the S2S tunnel:
 
+```bash
 set vpn ipsec esp-group azure-esp  
 set vpn ipsec esp-group azure-esp lifetime 3600  
 set vpn ipsec esp-group azure-esp pfs disable  
@@ -95,9 +96,9 @@ set firewall name WAN\_IN rule 2 action accept
 set firewall name WAN\_IN rule 2 description "azure-networks in"  
 set firewall name WAN\_IN rule 2 log disable  
 set firewall name WAN\_IN rule 2 protocol all  
-set firewall name WAN\_IN rule 2 source group network-group   
+set firewall name WAN\_IN rule 2 source group network-group
 \# OR - I'm using a network-group with the Azure subnets, if you're not just use the subnet directly  
-set firewall name WAN\_IN rule 2 source address   
+set firewall name WAN\_IN rule 2 source address
 delete firewall name WAN\_IN rule 2 state
 
 #this was previously rule 2 - your existing ones may be different so plan accordingly  
@@ -107,3 +108,4 @@ set firewall name WAN\_IN rule 3 state established disable
 set firewall name WAN\_IN rule 3 state invalid enable  
 set firewall name WAN\_IN rule 3 state new disable  
 set firewall name WAN\_IN rule 3 state related disable
+```

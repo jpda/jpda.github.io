@@ -13,10 +13,9 @@ This speaks to a larger issue — how frequently are we, as developers, usin
 
 I decided to build one that uses table storage. You’ll need a few things
 
-a) the source
+* the source
+* update your web.config to indicate the issuer registry type
 
-b) update your web.config to indicate the issuer registry type
-
-The VS solution is on github here: [https://github.com/johndandison/net-table-issuer-registry](https://github.com/johndandison/net-table-issuer-registry)
+The VS solution is on github here: [https://github.com/jpda/net-table-issuer-registry](https://github.com/jpda/net-table-issuer-registry)
 
 It’s dependent upon Azure configuration and Azure storage. Licensed under MIT, if you find it useful I’d just ask you drop me a line and let me know what neat thing you’re working on!

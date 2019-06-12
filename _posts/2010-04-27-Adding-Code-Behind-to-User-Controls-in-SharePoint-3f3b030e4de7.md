@@ -31,7 +31,7 @@ In this example, we’re changing the DefaultTemplates.ascx file — probabl
 
 ![code3](/img/0_fKSfL-oooC-It1Nz.png)
 
-Go to the template you’re modifying, and add your controls appropriately, with a Register tag in the top and the standard ASCX markup (i.e, <TagPrefix:MyControl runat=”server” />).
+Go to the template you’re modifying, and add your controls appropriately, with a Register tag in the top and the standard ASCX markup (i.e, <TagPrefix:MyControl runat="server" />).
 
 Hit your page and your control should appear without issue.
 

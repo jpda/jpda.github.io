@@ -27,7 +27,7 @@ I couldn’t replicate his troubles on my machine, but rather than lose a limb i
 
 #### First, Intellisense Is Cray
 
-I turned on fiddler & couldn’t get anything bad to happen…but then I started typing a <script> tag and this happened:
+I turned on fiddler & couldn’t get anything bad to happen…but then I started typing a `<script>` tag and this happened:
 
 Cool, huh? Not really. Especially since a good portion of those files _don’t even exist._ But that’s not what was causing the full-blown UI hangs…
 
@@ -35,20 +35,18 @@ Cool, huh? Not really. Especially since a good portion of those files _don’t e
 
 Writing in Office 365 is interesting, because you’re always bouncing back and forth between HTTP & HTTPS — HTTP on the public site, HTTPS on the private site _and_ when authenticated to the public site. Because of this, we use protocol-free script tags from CDNs. Like this one:
 
-<scriptsrc=”//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js”type=”text/javascript”>script>
+`<script src="//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"type="text/javascript"></script>`
 
 Note there’s no ‘http’ or ‘https’ listed — this way, the browser will use whatever protocol you’re currently connected on. This really _is_ cool and incredibly useful.
 
 #### WebDAV
 
-That is, of course, until you factor in WebDAV, that old creaky protocol for fetching files over the web. Some deeper inspection of our previous <script> tag Fiddler explosion above gave us some insight into what was going on — not only was Visual Studio trying HTTP, it was trying WebDAV, sending OPTIONS requests to the ASP.net CDN:
+That is, of course, until you factor in WebDAV, that old creaky protocol for fetching files over the web. Some deeper inspection of our previous `<script>` tag Fiddler explosion above gave us some insight into what was going on — not only was Visual Studio trying HTTP, it was trying WebDAV, sending OPTIONS requests to the ASP.net CDN:
 
 The fact that we’ve all been happily coding along in MVC for months/years without this ever happening leads me to believe it has something to do with the SharePoint project type, perhaps the fact that so many files _are_ available over WebDAV with SharePoint.
 
 #### Solution? There really isn’t one.
 
-a) Develop to a local SharePoint server, at least then the latency won’t be too annoying.
-
-b) Swap out http(s) with some server-side variables
-
-c) just use one or the other for debugging…but remember to change before publish!
+* Develop to a local SharePoint server, at least then the latency won’t be too annoying.
+* Swap out http(s) with some server-side variables
+* just use one or the other for debugging…but remember to change before publish!

@@ -35,7 +35,7 @@ Thanks to lots of googling, I found that the marvels over at [sevenforums](http:
 
 Pretty simple — head over to your registry (srsly, if you break something, I don’t want to hear about it) and dig down into:
 
-\[HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Power\\PowerSettings\\238C9FA8–0AAD-41ED-83F4–97BE242C8F20\\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0\]
+`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8–0AAD-41ED-83F4–97BE242C8F20\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0]`
 
 You can make sure you’re in the right place if you check the FriendlyName key — it’ll say something like ‘System unattended sleep timeout’ (or whatever it is in your language). Change the Attributes DWORD to 2, reopen Power Options (you may need to reboot) and you should see the option now available. It’ll probably something _completely silly_ like two minutes.
 

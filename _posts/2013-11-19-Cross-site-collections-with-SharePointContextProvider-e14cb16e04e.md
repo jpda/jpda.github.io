@@ -19,19 +19,21 @@ So yeah yeah, blah blah blah, enough yapping, give me what I’m here for —�
 
 In the SharePointContext abstract class, add this method:
 
+```c#
 public SharePointContextCreateSharePointContext(HttpRequestBase httpRequest, string targetWebUrl)  
 {  
  var ctx = CreateSharePointContext(httpRequest);  
  return CreateSharePointContext(new Uri(targetWebUrl), ctx.SPAppWebUrl, ctx.SPLanguage, ctx.SPClientTag, ctx.SPProductNumber, httpRequest);  
 }
+```
 
-Now you’re pretty much done  
-breaking modifying SharePointContext.
+Now you’re pretty much done ~~breaking~~ modifying `SharePointContext`.
 
 #### Usage is easy too.
 
 Instead of using SharePointContextProvider.Current.GetCurrentSharePointContext, you’re going to hit it with a SPCP.Current.CreateSharePointContext, sending in your HttpContext & the target host web URL:
 
+```c#
 public ActionResult DoSomethingInAnotherSiteCollection()  
 {  
   using (var superCtx = SharePointContextProvider.Current.CreateSharePointContext(HttpContext.Request, "https://jpda.sharepoint.com/sites/apps").CreateUserClientContextForSPHost())  
@@ -42,14 +44,15 @@ public ActionResult DoSomethingInAnotherSiteCollection()
     return Json(new { Result = "OK", Message = string.Format("Site collection {0} is at {1}...where are you?!", web.Title, web.Url) }, JsonRequestBehavior.AllowGet);  
   }  
 }
+```
 
 #### Before you flex your CTRL-C/CTRL-V muscle, there’s more.
 
-There is  
-_one_ more thing — since we’re creating an entirely new context, you’ll need all of the information that was on the original request — like Language, Host & App web urls and most importantly, the context token. Alternatively, you could override the CreateSharePointContext method and pass all that stuff in as strings — whatever floats your boat. I don’t like that, because lots of parameters make my head hurt.
+There is _one_ more thing — since we’re creating an entirely new context, you’ll need all of the information that was on the original request — like Language, Host & App web urls and most importantly, the context token. Alternatively, you could override the CreateSharePointContext method and pass all that stuff in as strings — whatever floats your boat. I don’t like that, because lots of parameters make my head hurt.
 
-Here’s a hacked (shitty) bit of javascript that calls my method with all of the headers. You could do this server side (I mean, to be pedantic, this \*is\* server side since it’s razor tokens but I digress — you get the point) — ultimately, your HttpContext.Request object needs to have all of these tokens in it or you need to add a method that accepts them all as strings.
+Here’s a hacked (shitty) bit of javascript that calls my method with all of the headers. You could do this server side (I mean, to be pedantic, this *is* server side since it’s razor tokens but I digress — you get the point) — ultimately, your HttpContext.Request object needs to have all of these tokens in it or you need to add a method that accepts them all as strings.
 
+```js
 var sph = "@SharePointContextProvider.Current.GetSharePointContext(HttpContext.Current).SPHostUrl";  
 var spa = "@SharePointContextProvider.Current.GetSharePointContext(HttpContext.Current).SPAppWebUrl";  
 var spl = "@SharePointContextProvider.Current.GetSharePointContext(HttpContext.Current).SPLanguage";  
@@ -70,6 +73,7 @@ $(function() {
     }  
 });  
 });
+```
 
 And here's what you'll see.
 

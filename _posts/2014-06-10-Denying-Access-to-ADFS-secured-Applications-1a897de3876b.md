@@ -7,7 +7,7 @@ keywords: []
 slug: /denying-access-to-adfs-secured-applications-1a897de3876b
 ---
 
-I’m going to have to make this a two-parter, because _some company \*ahem\*_ Yammer — doesn’t appear to handle the Deny (http://schemas.microsoft.com/authorization/claims/deny) claim very well. By very well, I mean _at all._
+I’m going to have to make this a two-parter, because _some company *ahem*_ Yammer — doesn’t appear to handle the Deny (`http://schemas.microsoft.com/authorization/claims/deny`) claim very well. By very well, I mean _at all._
 
 Here’s the scenario — you’re piloting an application, likely a cloud-based or service-based application, and it’s using ADFS to authenticate (think Office 365, Yammer, Salesforce, etc). The key word here is _pilot _— you have some users you want to deny access.
 
@@ -27,8 +27,8 @@ Let’s start simple. I want to toggle access to a specific ADFS application usi
 
 Anyway, so I’ve got this going on:
 
-*   Relying Party: Microsoft Office 365 Identity Platform (this is what you setup to federate with O365)
-*   AD Attribute: extensionAttribute1, value ‘false’
+* Relying Party: Microsoft Office 365 Identity Platform (this is what you setup to federate with O365)
+* AD Attribute: extensionAttribute1, value ‘false’
 
 Everything else is vanilla ADFS.
 
@@ -52,19 +52,23 @@ In my example, I want to deny access based on a user account’s _extensionAttri
 
 First, we need to get a value into our fresh claim. You’ll need to do a custom rule, but it’s pretty simple:
 
-> c:\[Type == “http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == “AD AUTHORITY”\]  
-> \=> issue(store = “Active Directory”, types = (“http://schemas.jpd.ms/unique/ad/Authorized"), query = “;extensionAttribute1;{0}”, param = c.Value);
+```text
+c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]  
+=> issue(store = "Active Directory", types = ("http://schemas.jpd.ms/unique/ad/Authorized"), query = ";extensionAttribute1;{0}", param = c.Value);
+```
 
 Let’s dissect that a bit. No regular expressions! There’s a quick win.
 
-We’re going to use AD to populate our new claim (http://schemas.jpd.ms/unique/ad/Authorized) from our _extensionAttribute1_ AD property. Simple right?
+We’re going to use AD to populate our new claim (`http://schemas.jpd.ms/unique/ad/Authorized`) from our _extensionAttribute1_ AD property. Simple right?
 
 Since rules are processed in order by the rules engine, this rule needs to come first. Now our subsequent rules can use the value of that claim (Authorized) to make decisions on token issuance.
 
 Here’s my next rule:
 
-> c:\[Type == “http://schemas.jpd.ms/unique/ad/Authorized", Value =~ “^(?i)true$”\]  
-> \=> issue(Type = “http://schemas.microsoft.com/authorization/claims/permit", Value = “PermitUsersWithClaim”);
+```text
+c:[Type == "http://schemas.jpd.ms/unique/ad/Authorized", Value =~ "^(?i)true$"]  
+=> issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "PermitUsersWithClaim");
+```
 
 This one is so easy though that you can ‘cheat’ — just use the Permit or Deny based on Claim Value template — pick your claim (in my case, Authorized), set the value it should be equal to and you’re done.
 

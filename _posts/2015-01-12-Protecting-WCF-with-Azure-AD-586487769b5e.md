@@ -25,7 +25,7 @@ In this model, your web app is handling authenticating clients, which then proxi
 
 But let’s extrapolate further. It’s 2015 — how many services only have a single web client anymore? Everything is connected and everything is slurping data from everything else. Not only are we going to have trusted hosts, we’re going to have mobile apps, perhaps we expose an API — there are lots of things to consider. Here’s how I’d expect our app to look from a modern looking glass:
 
-\[caption id=”attachment\_356" align=”aligncenter” width=”808"\]
+\[caption id="attachment\_356" align="aligncenter" width="808"]
 
 ![Our service now has to handle multiple clients - and they're not all coming from a trusted host.](/img/0_gr8TWRfOxDAfC67U.png)
 
@@ -39,23 +39,23 @@ So what are we to do? We can leverage OAuth server-to-server to secure our servi
 
 Our first option is:
 
-*   significantly better than no authentication
-*   somewhat better than static keys/shared credentials
-*   useful for locking-down an API, but not necessarily at a user-level
+* significantly better than no authentication
+* somewhat better than static keys/shared credentials
+* useful for locking-down an API, but not necessarily at a user-level
 
 This is application-only access, also known as two-legged OAuth. In this model, the server doesn’t need to know a specific _user_ principal, but an app principal. A principal token is required by the service and is requested by the client:
 
-*   STS-known client requests an OAuth token from STS (e.g., Azure AD)
-*   STS-known client sends token in header (Authorization: Bearer eQy…)
-*   Service expects header, retrieves token
-*   Service validates token with Azure AD
+* STS-known client requests an OAuth token from STS (e.g., Azure AD)
+* STS-known client sends token in header (Authorization: Bearer eQy…)
+* Service expects header, retrieves token
+* Service validates token with Azure AD
 
 #### User OAuth (aka 3-legged)
 
 This option is somewhat different — instead of using an application prinicipal to connect to our service, we’re going to be connecting on behalf of the user. This is useful for:
 
-*   applications that rely on a service to security-trim data returned
-*   services that are public or expected to have many untrusted clients
+* applications that rely on a service to security-trim data returned
+* services that are public or expected to have many untrusted clients
 
 In this model, users authenticate + authorize the application to act on his/her behalf, issuing an access token upon successful authentication. The application then uses that token for requesting resources. If you’ve ever used an app for Facebook or Twitter, you’ve been through a 3-legged OAuth model.
 
@@ -69,9 +69,9 @@ There are two pieces we need to build — a server-side Service Behavior tha
 
 We need to do three things:
 
-*   Update the WCF service with a message inspector that will inspect the current message
-*   Update the WCF client to request a token and include it in the outgoing message
-*   Update the WCF service’s Azure AD application manifest to expose that permission to other Azure AD applications
+* Update the WCF service with a message inspector that will inspect the current message
+* Update the WCF client to request a token and include it in the outgoing message
+* Update the WCF service’s Azure AD application manifest to expose that permission to other Azure AD applications
 
 #### Service Side
 

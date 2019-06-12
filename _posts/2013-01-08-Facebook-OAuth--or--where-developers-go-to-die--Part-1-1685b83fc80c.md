@@ -7,21 +7,21 @@ keywords: []
 slug: /facebook-oauth-or-where-developers-go-to-die-part-1-1685b83fc80c
 ---
 
-Well well, Facebook. If you read my [last post](/Blog/Post/4/Connecting-to-OAuth-Services-from-a-SharePoint-App), I’m attempting to get a SharePoint app connected to different services for blog syndication. Twitter & LinkedIn were walks in the park. Facebook was a walk in the park as well, however I suspect it is the kind of park with large spikes & vicious animals.
+Well well, Facebook. If you read my [last post](Connecting-to-OAuth-Services-from-a-SharePoint-App), I’m attempting to get a SharePoint app connected to different services for blog syndication. Twitter & LinkedIn were walks in the park. Facebook was a walk in the park as well, however I suspect it is the kind of park with large spikes & vicious animals.
 
 Anyway, let’s begin.
 
-I elected to use the Facebook C# SDK for Facebook. The examples made authentication look \*so\* easy that I was sold. In a classic ‘AdventureWorks’ scenario, where the sample really never dictates normal usage, I found myself face deep in facebook OAuth errors, almost all of them specific to the ‘redirect\_uri’ parameter:
+I elected to use the Facebook C# SDK for Facebook. The examples made authentication look \*so\* easy that I was sold. In a classic ‘AdventureWorks’ scenario, where the sample really never dictates normal usage, I found myself face deep in facebook OAuth errors, almost all of them specific to the ‘redirect_uri’ parameter:
 
-_Error validating verification code. Please make sure your redirect\_uri is identical to the one you used in the OAuth dialog request._
+_Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request._
 
 #### Problem?
 
 After getting trolled by facebook, I decided to try some things to fix this:
 
-*   Immediate window: redirect\_uris all matched.
-*   Fiddler + Notepad: redirect\_uris all matched.
-*   10 e14 different variations of Url.Encode
+* Immediate window: redirect_uris all matched.
+* Fiddler + Notepad: redirect_uris all matched.
+* 10 e14 different variations of Url.Encode
 
 Nada.
 

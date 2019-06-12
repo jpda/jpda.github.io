@@ -39,72 +39,49 @@ Here’s the snippet for linq2twitter. It’s pretty simple to implement.
 
 In the markup:
 
-< a  
- href=”@Url.Action(“ConnectToTwitter”, new { SPHostUrl = SharePointContext.Current.SPHostWebUrl, SPAppToken = SharePointContext.Current.ContextTokenString })”  
- …/>
+```c#
+<a href="@Url.Action("ConnectToTwitter", new { SPHostUrl = SharePointContext.Current.SPHostWebUrl, SPAppToken = SharePointContext.Current.ContextTokenString })"/>
+```
 
 And the controller:
 
-public  
- ActionResult ConnectToTwitter()
-
+```c#
+public ActionResult ConnectToTwitter()
 {
+    var credentials = new InMemoryCredentials();
 
-var credentials = new  
- InMemoryCredentials();
+    if (credentials.ConsumerKey == null || credentials.ConsumerSecret == null)
+    {
+        credentials.ConsumerKey = ConfigurationManager.AppSettings\["TwitterConsumerKey"];
+        credentials.ConsumerSecret = ConfigurationManager.AppSettings\["TwitterConsumerSecret"];
+    }
 
-if (credentials.ConsumerKey == null || credentials.ConsumerSecret == null)
+    var auth = new MvcAuthorizer { Credentials = credentials };
+    auth.CompleteAuthorization(Request.Url);
+    if (auth.IsAuthorized)
+    {
+        //You’ll have a SharePoint token, so get an SPContext from the SPContextFilter & query for the user
+    }
 
-{
-
-credentials.ConsumerKey = ConfigurationManager.AppSettings\[“TwitterConsumerKey”\];
-
-credentials.ConsumerSecret = ConfigurationManager.AppSettings\[“TwitterConsumerSecret”\];
-
+    if (!auth.IsAuthorized)
+    {
+        var specialUri = Request.Url;
+        return auth.BeginAuthorization(specialUri);
+    }
+    return RedirectToAction("Index", "Home");
 }
-
-var auth = new  
- MvcAuthorizer { Credentials = credentials };
-
-auth.CompleteAuthorization(Request.Url);
-
-if (auth.IsAuthorized)
-
-{
-
-//You’ll have a SharePoint token, so get an SPContext from the SPContextFilter & query for the user
-
-}
-
-if (!auth.IsAuthorized)
-
-{
-
-var specialUri = Request.Url;
-
-return auth.BeginAuthorization(specialUri);
-
-}
-
-return RedirectToAction(“Index”, “Home”);
-
-}
+```
 
 Why don’t you have to play with the tokens? Besides the fact it’ll make you go blind (or so I hear), the SharePointContextFilter is automatically adding the querystring parameters necessary — **SPAppToken** & **SPHostUrl.** We can verify in Fiddler. See all that mess down there? It’s the callback URL with all SharePoint-specific querystring properties encoded appropriately. On the return trip, my app has a SharePoint token, so it can figure out what SharePoint user you are, but it also has your Twitter token as well, for making subsequent requests to Twitter. Pretty nifty.
 
-GET /oauth/request\_token HTTP/1.1
-
-OAuth oauth\_callback=”
-
-https%3A%2F%2Flocalhost%3A44308%2FIdentity%2FConnectToTwitter%3F
-
+```text
+GET /oauth/request_token HTTP/1.1
+OAuth oauth_callback="%3A%2F%2Flocalhost%3A44308%2FIdentity%2FConnectToTwitter%3F
 **SPHostUrl**%3D%26
-
-**SPAppToken**%”,
-
-oauth\_consumer\_key=””,
-
-…other\_oauth\_headers…
+**SPAppToken**%",
+oauth_consumer_key="",
+…other_oauth_headers…
+```
 
 #### LinkedIn
 
@@ -112,27 +89,17 @@ LinkedIn is pretty similar. Not too much drama, although DNOA exposes more of th
 
 Kinda like this:
 
-public  
- ActionResult ConnectToLinkedIn()
-
+```c#
+public ActionResult ConnectToLinkedIn()
 {
-
-var redirectParams = string.Format(“?SPAppToken={0}&SPHostUrl={1}”, SharePointContext.Current.ContextTokenString, SharePointContext.Current.SPHostWebUrl);
-
-var serviceProvider = Utility.GetLinkedInServiceDescription();
-
-var consumer = new  
- WebConsumer(serviceProvider, \_tokenManager);
-
-var authUrl = new  
- Uri(string.Format(“{0}://{1}{2}/{3}”, Request.Url.Scheme, Request.Url.Authority, ConfigurationManager.AppSettings\[“LinkedInCallback”\], redirectParams));
-
-consumer.Channel.Send(consumer.PrepareRequestUserAuthorization(authUrl, new  
- Dictionary< string, string>() { { “scope”, “rw\_nus” } }, null));
-
-return  
- null;
-
+    var redirectParams = string.Format("?SPAppToken={0}&SPHostUrl={1}", SharePointContext.Current.ContextTokenString, SharePointContext.Current.SPHostWebUrl);
+    var serviceProvider = Utility.GetLinkedInServiceDescription();
+    var consumer = new WebConsumer(serviceProvider, _tokenManager);
+    var authUrl = new Uri(string.Format("{0}://{1}{2}/{3}", Request.Url.Scheme, Request.Url.Authority, ConfigurationManager.AppSettings\["LinkedInCallback"], redirectParams));
+    consumer.Channel.Send(consumer.PrepareRequestUserAuthorization(authUrl, new  
+    Dictionary<string, string>() { { "scope", "rw_nus" } }, null));
+    return null;
 }
+```
 
 But that’s really about it. You can use (at least for LinkedIn & Twitter) pretty standard methods for connecting users to your app. Facebook is…facebook, and requires another post for the drama it took to get working. Coming up.

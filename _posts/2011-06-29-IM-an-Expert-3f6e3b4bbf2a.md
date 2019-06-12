@@ -11,11 +11,11 @@ A little blip came up on the Microsoft radar a couple of weeks ago; an applicati
 
 Here is the basic workflow:
 
-*   Guy says ‘hey, I need help with X.’
-*   Magic happens, finding expert to match with query. Lots of unicorn dust in here (after review, it’s a lot less magical — virtually no dust at all, unless you consider SQL full-text indexing to be ‘magical.’ I do not.)
-*   Expert says, ‘I am an X expert, I’ll be happy to help.’
-*   Conversation is recorded and people can check it out on a website.
-*   People can also register to be experts on this site.
+* Guy says ‘hey, I need help with X.’
+* Magic happens, finding expert to match with query. Lots of unicorn dust in here (after review, it’s a lot less magical — virtually no dust at all, unless you consider SQL full-text indexing to be ‘magical.’ I do not.)
+* Expert says, ‘I am an X expert, I’ll be happy to help.’
+* Conversation is recorded and people can check it out on a website.
+* People can also register to be experts on this site.
 
 Pretty simple, eh? There is an indexer & web crawler as well, which will go out to the wild wild west of the internet and crawl content you’ve marked as relevant to you, as well as your SharePoint My Site.
 

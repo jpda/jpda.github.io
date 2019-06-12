@@ -25,13 +25,11 @@ Before you get into any of this, remember, if you are in a production environmen
 
 #### Method A: Keeping it Simple
 
-Find the web.config — it is here: Program Files\\Windows Small Business Server\\Bin\\WebApp\\RemoteAccess
+Find the web.config — it is here: Program Files\Windows Small Business Server\Bin\WebApp\RemoteAccess
 
 Further down, you’ll find the storage provider (among a host of other providers):
 
-<wssg.storageProvider type="Microsoft.WindowsServerSolutions.Web.Storage.SBSStorageProvider,
-
-Wssg.Web.StorageProvider" />
+`<wssg.storageProvider type="Microsoft.WindowsServerSolutions.Web.Storage.SBSStorageProvider,Wssg.Web.StorageProvider" />`
 
 Which is the standard implementation in SBS 2011. Some investigating yielded that it inherited from IStorageInformationProvider.
 
@@ -41,9 +39,7 @@ That one would be the FileSystemBasedStorageInformationProvider, (in Web.Interna
 
 Switching to the FileSystemBasedStorageInformationProvider is simple enough — remove (or comment out) the original line, and add this one right beneath it:
 
-<wssg.storageProvider type="Microsoft.WindowsServerSolutions.Web.Storage.FileSystemBasedStorageInformationProvider,
-
-Wssg.Web.Internal" shares="\\\\servername\\sharename;\\\\servername2\\sharename;\\\\servername3\\sharename" />
+`<wssg.storageProvider type="Microsoft.WindowsServerSolutions.Web.Storage.FileSystemBasedStorageInformationProvider,Wssg.Web.Internal" shares="\servername\sharename;\\servername2\sharename;\\servername3\sharename" />`
 
 Editing the web.config will fire off a re-JIT, so you’ll have to re-sign in. If you did it correctly, you should now see your shares — but _only_ the ones you _explicitly_ added to the config file.
 
@@ -51,18 +47,18 @@ Editing the web.config will fire off a re-JIT, so you’ll have to re-sign in. I
 
 Since I had reflector out and I was already digging through Internal classes anyway, I decided to try and combine the output from both the configuration class and the SBSStorageProvider.
 
-Needless to say, collecting dependencies is always the worst part. First, install the Windows Server SDK (you can get that [here](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=105694e5-76bc-4820-b42c-6f4250b4f5be)). That will give you some of them. The rest you’ll have to grab out of the Program Files\\Windows Small Business Server\\Bin\\WebApp\\RemoteAccess\\Bin folder. Here are the ones you’ll need:
+Needless to say, collecting dependencies is always the worst part. First, install the Windows Server SDK (you can get that [here](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=105694e5-76bc-4820-b42c-6f4250b4f5be)). That will give you some of them. The rest you’ll have to grab out of the Program Files\Windows Small Business Server\Bin\WebApp\RemoteAccess\Bin folder. Here are the ones you’ll need:
 
-*   Wssg.Web (SDK)
-*   Wssg.Web.Internal (from the bin)
-*   Wssg.Web.StorageProvider (from the bin)
-*   StorageCommon (from the Small Business Server bin — Program Files\\Windows Small Business Server\\Bin)
+* `Wssg.Web` (SDK)
+* `Wssg.Web.Internal` (from the bin)
+* `Wssg.Web.StorageProvider` (from the bin)
+* `StorageCommon` (from the Small Business Server bin — Program Files\Windows Small Business Server\Bin)
 
-Unfortunately, the constructors for these are internal. There is probably a very good reason for this, but whatever — this meant I had to basically copy\\paste the disassembled code into my project to get constructors (gross). It is gross, and should have been yet another red flag that this was a bad idea. It was not.
+Unfortunately, the constructors for these are internal. There is probably a very good reason for this, but whatever — this meant I had to basically copy\paste the disassembled code into my project to get constructors (gross). It is gross, and should have been yet another red flag that this was a bad idea. It was not.
 
-Getting the config file reader to work was pretty much a cake walk. It is a simple implementation and didn’t take much to get into my project. The next one, however, was a bit more of a pain. The basic architecture is this: IStorageInformationProvider returns a generic List<IShareInfo>, which contains all of the information for the shares. The IShareInfo interface is pretty simple too. The concrete class StorageAPIBasedShareInfo, however, is not. It has dependencies all the way into the StorageCommon assembly, which is why it is referenced. Anyway, what these things do is pretty simple — get some shares, check some permissions, and, ultimately, return a generic List<IShareInfo>, which then gets returned out to whatever requesting consumer.
+Getting the config file reader to work was pretty much a cake walk. It is a simple implementation and didn’t take much to get into my project. The next one, however, was a bit more of a pain. The basic architecture is this: IStorageInformationProvider returns a generic `List<IShareInfo>`, which contains all of the information for the shares. The `IShareInfo` interface is pretty simple too. The concrete class `StorageAPIBasedShareInfo`, however, is not. It has dependencies all the way into the `StorageCommon` assembly, which is why it is referenced. Anyway, what these things do is pretty simple — get some shares, check some permissions, and, ultimately, return a generic `List<IShareInfo>`, which then gets returned out to whatever requesting consumer.
 
-I created my assembly, which you can download below. It basically calls the shamelessly copy\\pasted\\tweaked methods from the two StorageInformationProviders and combines them before sending them back out. All of the caching and permissions mechanisms are still in tow, but again — please test before using this in any kind of production environment. I doubt it’s terribly kosher with the SBS peeps either.
+I created my assembly, which you can download below. It basically calls the shamelessly copy\pasted\tweaked methods from the two `StorageInformationProviders` and combines them before sending them back out. All of the caching and permissions mechanisms are still in tow, but again — please test before using this in any kind of production environment. I doubt it’s terribly kosher with the SBS peeps either.
 
 ![image](/img/0_D8epqnvGGcKkZ5X8.png)
 
@@ -72,15 +68,13 @@ Download this assembly: [http://jpd.ms/stuff/sbs/johndandison.SBS.StorageProvide
 
 Or get the C# source here: [http://jpd.ms/stuff/sbs/SBSAndConfigBasedStorageInformationProvider.cs.txt](http://jpd.ms/stuff/sbs/SBSAndConfigBasedStorageInformationProvider.cs.txt)
 
-Start in this folder on your SBS machine: Program Files\\Windows Small Business Server\\Bin\\WebApp\\RemoteAccess\\
+Start in this folder on your SBS machine: Program Files\Windows Small Business Server\Bin\WebApp\RemoteAccess\
 
 Copy the assembly to the bin folder.
 
 Drop this line into your web.config:
 
-<wssg.storageProvider type="johndandison.SBSAndConfigBasedStorageInformationProvider, johndandison.WSS.StorageProvider"
-
-shares="\\\\server\\share;\\\\server\\share" />
+`<wssg.storageProvider type="johndandison.SBSAndConfigBasedStorageInformationProvider, johndandison.WSS.StorageProvider" shares="\server\share;\\server\share" />`
 
 That should be about it. Your box will need to re-JIT, but it shouldn’t take but a few seconds.
 

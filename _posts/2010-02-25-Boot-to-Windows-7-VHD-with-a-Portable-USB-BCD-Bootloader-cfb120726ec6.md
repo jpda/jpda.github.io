@@ -47,7 +47,7 @@ From here, start diskpart.
 
 In diskpart, type these commands:
 
-create vdisk file=”<PUT YER FILE NAME HERE>” maximum=”<MAX VHD FILE SIZE>” mode=”FIXED or EXPANDABLE”
+create vdisk file="*PUT YER FILE NAME HERE*" maximum="*MAX VHD FILE SIZE*" mode="FIXED or EXPANDABLE"
 
 Hit Enter. Your new vdisk will be created. Now type:
 
@@ -85,10 +85,10 @@ I couldn’t change the system I was using, so this was a good workaround for me
 
 The shortened version:
 
-*   Build BCD database on USB key.
-*   Make key bootable.
-*   Create VHD with Windows 7 installation.
-*   Copy VHD to target machine.
-*   Add entry to USB-key BCD database for VHD-based Windows 7 install.
+* Build BCD database on USB key.
+* Make key bootable.
+* Create VHD with Windows 7 installation.
+* Copy VHD to target machine.
+* Add entry to USB-key BCD database for VHD-based Windows 7 install.
 
 Enjoy.

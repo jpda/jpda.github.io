@@ -13,9 +13,9 @@ This got me thinking as I plodded through the airport (top tip: airports aren’
 
 Let’s look at what typical major airports have to deal with:
 
-*   Large numbers of inbound and outbound traffic, for a variety of different (but known) tasks
-*   Many gates, capable of moving large numbers of people and planes in and out, spread out across…
-*   …multiple smaller, distributed buildings (airsides/concourses), with a small number of gates per building
+* Large numbers of inbound and outbound traffic, for a variety of different (but known) tasks
+* Many gates, capable of moving large numbers of people and planes in and out, spread out across…
+* …multiple smaller, distributed buildings (airsides/concourses), with a small number of gates per building
 
 Here’s a map of Tampa, which shows this
 
@@ -51,10 +51,10 @@ Anyone who’s ever heard one of my identity sessions knows I generally use an I
 
 In our airport case, upon arriving to the friendly TSA agent, I’m asked to produce some form of ID, plus a boarding pass. This combination of valid identity and time-sensitive token authenticate me to the agent, who then grants access to the terminal. The key here, however, is that the TSA agent has no idea who I am (well, at least I _hope_ not). He (the **relying party**) _relies_ (see how that works) on
 
-*   an external, trusted third party, like the Secretary of State, in cases of a passport, or NCDMV for a driver’s license to vouch for my identity (e.g., an **identity provider**),
-*   a known set of anti-forgery tools, like UV-sensitive watermarks, specific microprinting, encoded data, RFID, etc. to ensure the identity document is valid (e.g., a **signature**), and
-*   some data points, like my picture, name, hair color, height, departing flight time, etc to validate I have access to what I’m requesting (e.g., **attributes** or **claims**, depending on the consumer, the requested access is generally to a **resource**)
-*   In addition, my driver’s license is only valid in some situations, like ID validation within the US. This roughly translates to an **audience**, or which targets the ID document has been issued for. This is an important security consideration — if someone steals my driver’s license, they can use it for whatever to validate their (my) identity. This doesn’t work outside of the states, however, so it’s only useful to spoof identity within a specific region (e.g., the US), which is the only place that document is valid.
+* an external, trusted third party, like the Secretary of State, in cases of a passport, or NCDMV for a driver’s license to vouch for my identity (e.g., an **identity provider**),
+* a known set of anti-forgery tools, like UV-sensitive watermarks, specific microprinting, encoded data, RFID, etc. to ensure the identity document is valid (e.g., a **signature**), and
+* some data points, like my picture, name, hair color, height, departing flight time, etc to validate I have access to what I’m requesting (e.g., **attributes** or **claims**, depending on the consumer, the requested access is generally to a **resource**)
+* In addition, my driver’s license is only valid in some situations, like ID validation within the US. This roughly translates to an **audience**, or which targets the ID document has been issued for. This is an important security consideration — if someone steals my driver’s license, they can use it for whatever to validate their (my) identity. This doesn’t work outside of the states, however, so it’s only useful to spoof identity within a specific region (e.g., the US), which is the only place that document is valid.
 
 Our modern, federated identity patterns follow a similar pattern — a trusted third party acts as the identity provider and validator, which is what prevents me from having to have a TSA-specific ID. Since TSA trusts NCDMV and SoS, that trust is extended to verifiable documents I possess.
 
@@ -77,7 +77,7 @@ Anyway, your code can follow a lot of these patterns as well — for critica
 
 Similarly, for priority-but-not-critical messages, or for priority messages that are rare, shared processors can check the priority queue before doing any standard queue processing. This allows for priority message processing, but not critical, real-time message processing. For example, if your worker is working on a long-running standard message, your priority queue item may wait before being processed, but would be guaranteed to be next in line.
 
-\[caption id=”attachment\_410" align=”aligncenter” width=”649"\]
+\[caption id="attachment\_410" align="aligncenter" width="649"]
 
 ![Simple priority queue processing @ MSDN [https://msdn.microsoft.com/en-us/library/dn589794.aspx](https://msdn.microsoft.com/en-us/library/dn589794.aspx)Simple priority queue processing. Source MSDN https://msdn.microsoft.com/en-us/library/dn589794.aspx](/img/0_pauy60Gp6CB5i9YH.png)
 Simple priority queue processing @ MSDN [https://msdn.microsoft.com/en-us/library/dn589794.aspx](https://msdn.microsoft.com/en-us/library/dn589794.aspx)

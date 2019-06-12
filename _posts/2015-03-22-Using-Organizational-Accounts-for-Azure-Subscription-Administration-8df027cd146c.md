@@ -16,17 +16,14 @@ To make it easier, let’s start with some definitions.
 
 #### Definitions
 
-a) Organizational account — also known as an Azure AD account. Ends in your own domain (like jpd.ms or cardinalsolutions.com) or the out-of-the-box managed domain (yourorg.onmicrosoft.com). **If you’re using Office 365 today, that’s an Azure AD/Organizational Account.**
-
-b) MSA — Microsoft Account, like someone@hotmail.com, @outlook.com, @live.com, etc.
-
-c) Tenant — organization, specific instance of Azure AD for your organization
+* Organizational account — also known as an Azure AD account. Ends in your own domain (like jpd.ms or cardinalsolutions.com) or the out-of-the-box managed domain (yourorg.onmicrosoft.com). **If you’re using Office 365 today, that’s an Azure AD/Organizational Account.**
+* MSA — Microsoft Account, like someone@hotmail.com, @outlook.com, @live.com, etc.
+* Tenant — organization, specific instance of Azure AD for your organization
 
 And the two scenarios for today:
 
-a) Administering your subscription with an account from your organization
-
-b) Administering another subscription with an account from your organization
+* Administering your subscription with an account from your organization
+* Administering another subscription with an account from your organization
 
 #### Subscriptions + Azure AD Tenants
 
@@ -102,7 +99,7 @@ You’ll see this message if you’re not using an account that’s an administr
 
 #### Add External Tenant user as Co-Administrator
 
-At this point, you should be able to follow the directions from “Adding an Organizational Administrator” above, but be sure to use the new user you just added (e.g., mark@sac.local). This will allow mark@sac.local to administer the Azure subscription linked to the @larsens.local Azure AD tenant.
+At this point, you should be able to follow the directions from "Adding an Organizational Administrator" above, but be sure to use the new user you just added (e.g., mark@sac.local). This will allow mark@sac.local to administer the Azure subscription linked to the @larsens.local Azure AD tenant.
 
 Confused yet?
 

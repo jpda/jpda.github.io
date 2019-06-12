@@ -19,7 +19,7 @@ And this assertion would be correct, except for one crucial detail — what 
 
 Look at systems engineering over the past 10 years or so. These poor souls have had all kinds of the-sky-is-falling moments. First it was virtualization, then the cloud. Then SaaS — Office 365, SharePoint Online, Exchange. If your job involved managing and monitoring servers and services for your company, your job has been under attack for a decade..
 
-But has it? How many people lost their jobs because their company elected to deploy Office 365? Many people adapted existing skills and learned new ones. I’ve yet to see “WILL ADMINISTER SHAREPOINT FOR FOOD” signs littering once-vibrant office parks. I once read that _if change isn’t something you’re interested in, technology is_ **_not_** _the industry for you._ That statement pretty much summarizes the majority of this post, so feel free to leave now if you’ve gotten what you came for.
+But has it? How many people lost their jobs because their company elected to deploy Office 365? Many people adapted existing skills and learned new ones. I’ve yet to see "WILL ADMINISTER SHAREPOINT FOR FOOD" signs littering once-vibrant office parks. I once read that _if change isn’t something you’re interested in, technology is_ **_not_** _the industry for you._ That statement pretty much summarizes the majority of this post, so feel free to leave now if you’ve gotten what you came for.
 
 In all reality, jobs in the space have stayed relatively stable in relation to other IT jobs. For example, if you look at the trends over the past 10 years, systems administration and software engineering jobs have followed a similar course:
 
@@ -39,7 +39,7 @@ Anyway — let’s get back to my original issue. Software engineering is al
 
 Who out there is impressed that I wrote a web app that had a nifty sliding progress bar? Anyone? Bueller? Bueller? That’s not impressive anymore. Years ago, when XMLHttpRequest was new, making a web call _without a postback_ was _amazing._ Mind = blown. Now there are dozens of frameworks that make many, many lines of code boil down to a single line:
 
-$(“thing”).progressBar();
+`$("thing").progressBar();`
 
 Are you going to put ‘implemented progressBar’ on your resume? It can sit right next to ‘managed to get both feet into shoes.’ I think not.
 

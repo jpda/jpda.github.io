@@ -27,7 +27,7 @@ Next, find your modem in Device Manager (Start à Run à devmgmt.msc à Modems �
 
 ![tether3](/img/0_27VdsTSnh1PYKz9j.png)
 
-Open the properties of your modem and click the ‘Advanced’ tab. Type this in (including quotes) to the Extra Initialization Commands box: +cgdcont=1,”IP”,”wap.cingular”
+Open the properties of your modem and click the ‘Advanced’ tab. Type this in (including quotes) to the Extra Initialization Commands box: +cgdcont=1,"IP","wap.cingular"
 
 ![tether4](/img/0_a11oWsFc8iaVdPRO.png)
 

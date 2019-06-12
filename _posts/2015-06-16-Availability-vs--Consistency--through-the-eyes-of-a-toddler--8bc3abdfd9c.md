@@ -46,8 +46,8 @@ FaaS (Fred as a Service) has worked well for us over the last 12 months or so, h
 
 Because of this, we now have a new problem — OG Fred != Fred B or Fred C. In fact, Fred B and Fred C have been used so infrequently compared to OG Fred that they are in much better (and thus, much different) shape. This presents two problems:
 
-*   Our Freds are now wildly inconsistent — operations to OG Fred haven’t been effectively replicated to Freds B and C.
-*   The longer we ignore the problem, the more inconsistent they become.
+* Our Freds are now wildly inconsistent — operations to OG Fred haven’t been effectively replicated to Freds B and C.
+* The longer we ignore the problem, the more inconsistent they become.
 
 How do we combat this? We need some way to keep our Freds consistent so that \*any\* Fred can be OG Fred. There are a couple of ways to combat this. At a minimum, all Freds need to be in regular rotation. It might hurt a bit at first, but it’s about the only way. Or perhaps we speed up the process with the effort of a one-time migration and wear them in a bit — ‘routine maintenance’ with an extra few spin cycles, some loss of stuffing, etc. followed by a reintroduction back into a more stringent rotation.
 
@@ -59,5 +59,5 @@ But not all data needs that — if I don’t see your Facebook post the abso
 
 Other patterns produce similar requirements, with different outcomes — for example, Patrick’s newest trick is to take _all three_ Freds to bed. This presents a problem: FaaS availability is now dependent upon all three being available, not the individual availability of each Fred instance. Now our SLA is almost certainly destined for the tank. Redundancy patterns should consider the level of required consistency when building out both replication and failover strategies. For example, perhaps synchronous writes to 3+ storage providers, while the remainder of writes happen asynchronously for failover only.
 
-![A boy and his FredA boy and his Fred](/img/0_-Wd2MOeI8rmwAUxo.jpg)
-A boy and his Fred
+![A boy and his Fred](/img/0_-Wd2MOeI8rmwAUxo.jpg)
+*A boy and his Fred*

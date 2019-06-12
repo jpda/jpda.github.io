@@ -15,9 +15,9 @@ This is so simple you’ll want to slap someone. Say you’ve already got a bitc
 
 When you create a new SharePoint app, you’re stuck with webforms by default. Webforms, that old man in the wheelchair who can say nothing, yet bury you in contempt. That’s cool though, because it’s easy to wheel that chair straight out the window.
 
-*   First, add a new project to your solution — MVC, whatever.
-*   Next, click the SharePoint App project (not the webforms project, the SharePoint app project itself — it’ll have AppManifest.xml) — and hit F4 (open the properties pane)
-*   Peep the last property on the page: Web Project — this little drop down will show you all the web projects in your solution, regardless of webforms or MVC. Check it out:
+* First, add a new project to your solution — MVC, whatever.
+* Next, click the SharePoint App project (not the webforms project, the SharePoint app project itself — it’ll have AppManifest.xml) — and hit F4 (open the properties pane)
+* Peep the last property on the page: Web Project — this little drop down will show you all the web projects in your solution, regardless of webforms or MVC. Check it out:
 
 #### Step Two: Binding your new (or existing) web project to the SharePoint App
 
@@ -25,11 +25,11 @@ The _real_ magic happens when you select the new web project. You’ll get a pro
 
 Remember our good friend TokenHelper.cs? This is how he gets in there, not to mention a few other key ingredients for our SharePoint project to F5-debug & publish. For instance, ClientId & ClientSecret get added to the web.config, plus the ~remoteAppUrl token in your AppManifest.xml will get populated properly (for provider-hosted apps).
 
-#### B-b-b-but you said I could use an existing app!
+#### You said I could use an existing app!
 
 Indeed you can — it’s essentially the same process. Open your existing web app’s solution (or create a new one, whatever) & add a SharePoint App project. Once it’s in there, open the properties pane & get to switchin’.
 
-### _One caveat!_
+### *One caveat!*
 
 Since SharePoint-hosted apps are just that — hosted in SharePoint, they’ve gotta be webforms. Sucks, I know, but _c’est la vie._
 

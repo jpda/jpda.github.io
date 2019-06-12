@@ -15,11 +15,11 @@ So…after killing the VM and starting fresh a couple times, I finally decided t
 
 Here’s the setup:
 
-*   Windows Server 2008 R2 Standard
-*   SharePoint 2010 RC
-*   Single service account with Replicate Domain Changes & Read access to the domain
-*   All Service Applications provisioned and installed.
-*   User Profile Synchronization service provisioned (i.e., ForeFront services started via Services on Server).
+* Windows Server 2008 R2 Standard
+* SharePoint 2010 RC
+* Single service account with Replicate Domain Changes & Read access to the domain
+* All Service Applications provisioned and installed.
+* User Profile Synchronization service provisioned (i.e., ForeFront services started via Services on Server).
 
 First, the Forefront Identity Manager is a new face to Microsoft Identity Integration Server (MIIS), which I was already mildly familiar with. By mildly, I mean totally unfamiliar and dangerous enough to do some REAL damage. I went looking in the event logs and other places, but it was a stonewall. I even tried running the miisclient.exe out of the %programfiles%\\Microsoft Office Servers\\14.0\\Synchronization Service\\UIShell\\ folder. That would give me a ‘Forefront cannot connect to server’ error.
 
@@ -27,9 +27,9 @@ That seemed easy to fix, I assumed, so I went looking around. Found the FIMOpera
 
 I found three management agents:
 
-*   ILMMA — FIM Service Management Agent
-*   MOSS-User-Profile-Service-Application — Extensible Connectivity
-*   MOSSAD-<name of your AD connection>
+* ILMMA — FIM Service Management Agent
+* MOSS-User-Profile-Service-Application — Extensible Connectivity
+* MOSSAD-*name of your AD connection*
 
 I tried to run the MOSSAD agent manually. This gave me a much more useful answer:
 

@@ -29,11 +29,11 @@ Environmental dependencies
 
 That sort of convenience relied on a ring of environmental factors, however — we needed, at a bare minimum:
 
-*   A domain controller
-*   A domain-joined Windows server
-*   IIS configured for WIA
-*   A desktop client that supported WIA (like Windows)
-*   A desktop client browser that supported WIA (like IE)
+* A domain controller
+* A domain-joined Windows server
+* IIS configured for WIA
+* A desktop client that supported WIA (like Windows)
+* A desktop client browser that supported WIA (like IE)
 
 That’s a lot of heavy dependencies, most of which are typically handled by human beings. A lot of places have even more they need to do — installing and managing agents on VMs, supporting infra like WSUS for patching, monitoring systems, all sorts of stuff. Most organizations have a map of processes for adding servers to domains, which can increase both the complexity and duration of those tasks dramatically. This is probably why the mean request-to-app-server-time among customers I visit is around 4 months. 4 months! 
 

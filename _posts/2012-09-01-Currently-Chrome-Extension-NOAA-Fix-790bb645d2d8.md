@@ -19,8 +19,8 @@ Also available in the Chrome Web Store here: [https://chrome.google.com/webstore
 
 Caveats:
 
-*   Probably US only (may switch to MSN weather api, but for now it’s NOAA data which I’m assuming is going to be US only)
-*   Requires latitude/longitude from geolocation should be fixed for using zip code/address. still US only.
-*   the F to C conversion doesn’t seem to be working properly (I suspect 72F != 1)
+* Probably US only (may switch to MSN weather api, but for now it’s NOAA data which I’m assuming is going to be US only)
+* Requires latitude/longitude from geolocation should be fixed for using zip code/address. still US only.
+* the F to C conversion doesn’t seem to be working properly (I suspect 72F != 1)
 
 If I can move to the MSN API & find a good zip-to-lat/lon converter, then I should be able to remedy those issues, although by then the original creators may have updated their extension.

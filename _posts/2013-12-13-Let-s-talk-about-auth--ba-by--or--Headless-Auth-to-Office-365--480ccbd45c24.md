@@ -27,11 +27,12 @@ It is exactly what it looks like — a username/password pair of SharePointO
 
 #### Usage
 
-Here’s a quick and dirty sample I threw together yesterday for some peeps at work. It’s so easy, a VB developer could do it:
+Here’s a quick and dirty sample I threw together yesterday for some peeps at work:
 
-var sharePointUrl = inputArgs\["Url"\];  
-var password = inputArgs\["Password"\];  
-var username = inputArgs\["Username"\];
+```c#
+var sharePointUrl = inputArgs\["Url"];  
+var password = inputArgs\["Password"];  
+var username = inputArgs\["Username"];
 
 Console.Write("Connecting to {0} as {1}...", sharePointUrl, username);
 
@@ -53,3 +54,4 @@ foreach (var l in ctx.Web.Lists.ToList())
 {  
   Console.WriteLine("List {0} has {1} items and was last modified at {2}.", l.Title, l.ItemCount, l.LastItemModifiedDate);  
 }
+```

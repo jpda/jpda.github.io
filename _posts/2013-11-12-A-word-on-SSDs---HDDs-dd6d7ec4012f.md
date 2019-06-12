@@ -15,26 +15,26 @@ Then I noticed it took \*literally forever\* to boot up. Which left me perplexed
 
 #### 7200 RPM 500GB platter drive (Dell claims this is a hybrid, I don’t believe it)
 
-*   Sequential read:
-*   IO Size: 65536
-*   Average throughput: **83.725 MB/s**
-*   Random Read:
-*   IO Size: 16384
-*   Average throughput: **1.62 MB/s**
+* Sequential read:
+* IO Size: 65536
+* Average throughput: **83.725 MB/s**
+* Random Read:
+* IO Size: 16384
+* Average throughput: **1.62 MB/s**
 
 Pretty dismal, huh?
 
 #### Crucial m4 128GB
 
-*   Sequential read:
-*   IO Size: 65536
-*   Average throughput: **503.837 MB/s**
-*   Random read:
-*   IO Size: 16834
-*   Average throughput: **372.29 MB/s**
+* Sequential read:
+* IO Size: 65536
+* Average throughput: **503.837 MB/s**
+* Random read:
+* IO Size: 16834
+* Average throughput: **372.29 MB/s**
 
 That’s 6x faster sequential and 232x faster random…and these aren’t even ‘great’ numbers by today’s SSD standards. This m4 is probably a year-old+. The M500s are even faster.
 
 #### Which brings me to my point. Why?
 
-Why would Dell sell something marketed as a ‘desktop replacement’ or ‘workstation’ and give it such an abysmal drive? Starting price on the i7 E6530 is **_$1588_** ($1111 with Dell’s ‘instant savings’ — whatever the hell that means) — and upgrading to a 128GB SSD is $84…so Dell, why not just throw it in? Why not make the SSD the default and let those with intense storage needs ‘splurge’ and buy a $50 500GB or 1TB HDD? Is abysmal performance at first run the kind of impression you want to leave on someone who just dropped upwards of $1500 on a ‘workstation?’ I could certainly understand this on the $249 Best Buy Black Friday special, but on a workstation? It completely undermines all of the other \*amazing\* internals.
+Why would Dell sell something marketed as a ‘desktop replacement’ or ‘workstation’ and give it such an abysmal drive? Starting price on the i7 E6530 is **_$1588_** ($1111 with Dell’s ‘instant savings’ — whatever the hell that means) — and upgrading to a 128GB SSD is $84…so Dell, why not just throw it in? Why not make the SSD the default and let those with intense storage needs ‘splurge’ and buy a $50 500GB or 1TB HDD? Is abysmal performance at first run the kind of impression you want to leave on someone who just dropped upwards of $1500 on a ‘workstation?’ I could certainly understand this on the $249 Best Buy Black Friday special, but on a workstation? It completely undermines all of the other *amazing* internals.

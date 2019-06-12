@@ -15,6 +15,7 @@ Adding a user with [ADALv2](http://www.nuget.org/packages/Microsoft.IdentityMode
 
 But I’m using ADGC, so here’s a quick snip of the required fields you’ll need to get a user created:
 
+```c#
 var gc = new GraphConnection(accessToken); //get this below  
 var pp = new PasswordProfile() //required  
 {  
@@ -41,10 +42,11 @@ catch (GraphException ex)
   Console.ForegroundColor = ConsoleColor.Red;  
   Console.WriteLine("{0}: {1}", ex.ErrorMessage, ex.ErrorResponse.Error.Message);  
 }
+```
 
 Pretty straightforward…until you get to
 
-gc.Add(u);
+`gc.Add(u);`
 
 chances are you’ll blow up with a 403 Forbidden. In fact, chances are high, like 100% this will happen (if it doesn’t let me know).
 
@@ -64,13 +66,15 @@ Fortunately, we can use the OAuth password grant\_type to request a token with o
 
 You’ll need a few things to get setup. I’m not going to go into much detail here, because if you’re encountering this issue chances are you’re already well setup. We need to request a token from the AAD STS, including both the user’s username/password, _as well as the client ID and secret_ of the app you’re developing. Here’s a sample:
 
+```c#
 var reqUri = "https://login.windows.net/YOUR TENANT ID OR NAME/oauth2/token";  
 var postData = "resource=00000002-0000-0000-c000-000000000000&client\_id={0}&grant\_type=password&username=john%40mytenant.onmicrosoft.com&password=nicetry&scope=openid&client\_secret={1}";  
 var wc = new WebClient();  
 wc.Headers.Add("Content-Type", "application/x-www-form-urlencoded");  
 var response = wc.UploadString(reqUri, "POST", string.Format(postData, AppId, EncodedKey));  
 var tokenData = JObject.Parse(response);  
-return tokenData\["access\_token"\].Value();
+return tokenData\["access\_token"].Value();
+```
 
 Let’s deconstruct this request a bit, shall we?
 
@@ -80,39 +84,15 @@ This is where we’re posting our token request
 
 #### PostData
 
-The main chunk of our request.  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-resourceThe resource you’re trying to access. In this case, it’s the graph, which always has this ID: 00000002–0000–0000-c000–000000000000client\_idyour app’s client IDclient\_secretImportant — make sure to URL encode your key before putting it heregrant\_typepasswordusernameyour UPN (e.g., blah@tenant.onmicrosoft.com)passwordthis should be obviousscopeGet data in the [OpenID Connect](http://openid.net/connect/) format: openid  
+The main chunk of our request.
+
+* `resource` The resource you’re trying to access. In this case, it’s the graph, which always has this ID: `00000002–0000–0000-c000–000000000000`
+* `client_id` your app’s client ID
+* `client_secret` Important — make sure to URL encode your key before putting it here
+* `grant_type` `password`
+* `username` your UPN (e.g., blah@tenant.onmicrosoft.com)
+* `password` this should be obvious
+* `scope` Get data in the [OpenID Connect](http://openid.net/connect/) format: openid  
 And make sure you URL encode the form/values before submitting, otherwise it’s 400s for you.
 
 #### And that’s it
@@ -123,7 +103,7 @@ Authorization: Bearer ...access token...
 
 or you can stuff that into
 
-new GraphConnection(accessToken)
+`new GraphConnection(accessToken)`
 
 if you’re using the Graph Client wrapper.
 

@@ -15,14 +15,16 @@ One of the sweetest parts of the Windows 7 taskbar is the Jump List. Jump Lists 
 
 So how do we do this? Simple. Drop this code into the tag of your site, customize the links, and you’re off. Everything’s in here — make as many links as you’d like. You can set the window’s initial size (msapplicaiton-window), the navigation button colors and icons (msapplication-navbutton-color), all kinds of stuff. I’m still getting into it, so as I discover more, I’ll post here.
 
-<meta name=”application-name” content=”johndandison.com” />   
-<meta name=”msapplication-tooltip” content=”c#, sharepoint and other pointy things” />   
-<meta name=”msapplication-window” content=”width=1024;height=768" />   
-<meta name=”msapplication-task” content=”name=Latest Posts;action-uri=./;icon-uri=/themes/illacrimo/favicon.ico” />   
-<meta name=”msapplication-task” content=”name=Archived Posts;action-uri=./archive.aspx;icon-uri=/themes/illacrimo/favicon.ico” />   
-<meta name=”msapplication-task” content=”name=Contact;action-uri=./contact.aspx;icon-uri=/themes/illacrimo/favicon.ico” />   
-<meta name=”msapplication-navbutton-color” content=”#003466" />   
-<meta name=”msapplication-starturl” content=”./” />
+```html
+<meta name="application-name" content="johndandison.com" />
+<meta name="msapplication-tooltip" content="c#, sharepoint and other pointy things" />
+<meta name="msapplication-window" content="width=1024;height=768" />
+<meta name="msapplication-task" content="name=Latest Posts;action-uri=./;icon-uri=/themes/illacrimo/favicon.ico" />
+<meta name="msapplication-task" content="name=Archived Posts;action-uri=./archive.aspx;icon-uri=/themes/illacrimo/favicon.ico" />
+<meta name="msapplication-task" content="name=Contact;action-uri=./contact.aspx;icon-uri=/themes/illacrimo/favicon.ico" />
+<meta name="msapplication-navbutton-color" content="#003466" />
+<meta name="msapplication-starturl" content="./" />
+```
 
 ![image](/img/0_QlnKMmNQNwtU2O1w.png)
 ![image](/img/0_m9XjyLHdPM32bQ7H.png)

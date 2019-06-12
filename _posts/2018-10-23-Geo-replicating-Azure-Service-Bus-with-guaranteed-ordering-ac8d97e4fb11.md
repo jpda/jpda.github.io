@@ -38,9 +38,9 @@ In a single Azure region this is no big deal. We have our Service Bus namespace 
 
 Let’s start with the code — it’s here: [https://github.com/jpda/azure-service-bus-active-rep](https://github.com/jpda/azure-service-bus-active-rep) — we’re going to use:
 
-*   Two Service Bus namespaces, in different regions.
-*   A [strongly-consistent Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels#consistency-levels) collection, as a message journal
-*   Message Sessions in our Service Bus queues
+* Two Service Bus namespaces, in different regions.
+* A [strongly-consistent Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels#consistency-levels) collection, as a message journal
+* Message Sessions in our Service Bus queues
 
 ### Send Availability
 
@@ -60,25 +60,24 @@ Receive availability gets tricky when you have multiple copies of the same messa
 
 Instead, our consumers follow a fairly simple (albeit chatty) pattern:
 
-*   Open a MessageSession
-*   Create new document with SessionId or SessionId\_MessageId as the Document ID
-*   If we succeed at creating the document, we then update the status in the document (e.g., Status: Working)
-*   If we get a 409 (Conflict), we pull the latest version of the document from Cosmos and check status
-*   If the status is Pending, we update the status to Working, attempt to write again, wait for 200
-*   If we succeed, then we start processing the message
-*   When we’re complete, we update the document again and Complete  
-     the Service Bus message.
+* Open a MessageSession
+* Create new document with SessionId or SessionId\_MessageId as the Document ID
+* If we succeed at creating the document, we then update the status in the document (e.g., Status: Working)
+* If we get a 409 (Conflict), we pull the latest version of the document from Cosmos and check status
+* If the status is Pending, we update the status to Working, attempt to write again, wait for 200
+* If we succeed, then we start processing the message
+* When we’re complete, we update the document again and Complete the Service Bus message.
 
 That’s a lot so we’ll break it down a bit.
 
-*   First we start receiving a `MessageSession`. This locks/hides all other messages with that `SessionID` in the specific queue, so we can be sure this consumer will process them in the order received.
-*   Before we start processing the message, we record in our journal (our Cosmos DB collection) the session ID or session/message ID composite. Because we’re using this as our document ID, if there is a conflict (e.g., another consumer has already created the document), Cosmos will return a `409 Conflict` — at which point we know another consumer has started reading the session in one of our queues.
-*   If that journal write is successful, we then attempt to update the document — updating a field called Status to Pending or Working.
-*   This update follows the same rules; if the document we have updated is older than what is in the database, Cosmos returns an error code — at which point we fetch the latest version, check status and decide from there.
-*   If the update to status succeeds (e.g., we’ve updated the status to Working) we can start to work.
-*   These two operations being discrete (instead of as a single operation) means we keep the window for changes small.
-*   When we’re done processing the message, we can Complete the message to remove it from the queue and begin processing the next.
-*   The other consumer in the secondary region will pull the document, see the status as ‘Working’ and Abandon the message; abandoning here will cause the message to unlock, and the next consumer will attempt to pick it up. When a consumer reads the message, checks status and sees a status of Completed, the message in the secondary queue will be Completed(note, in the code sample today, the consumers are not abandoning the messages, they are looping with a sleep/wait to recheck message status).
+* First we start receiving a `MessageSession`. This locks/hides all other messages with that `SessionID` in the specific queue, so we can be sure this consumer will process them in the order received.
+* Before we start processing the message, we record in our journal (our Cosmos DB collection) the session ID or session/message ID composite. Because we’re using this as our document ID, if there is a conflict (e.g., another consumer has already created the document), Cosmos will return a `409 Conflict` — at which point we know another consumer has started reading the session in one of our queues.
+* If that journal write is successful, we then attempt to update the document — updating a field called Status to Pending or Working.
+* This update follows the same rules; if the document we have updated is older than what is in the database, Cosmos returns an error code — at which point we fetch the latest version, check status and decide from there.
+* If the update to status succeeds (e.g., we’ve updated the status to Working) we can start to work.
+* These two operations being discrete (instead of as a single operation) means we keep the window for changes small.
+* When we’re done processing the message, we can Complete the message to remove it from the queue and begin processing the next.
+* The other consumer in the secondary region will pull the document, see the status as ‘Working’ and Abandon the message; abandoning here will cause the message to unlock, and the next consumer will attempt to pick it up. When a consumer reads the message, checks status and sees a status of Completed, the message in the secondary queue will be Completed(note, in the code sample today, the consumers are not abandoning the messages, they are looping with a sleep/wait to recheck message status).
 
 In a failure case, where one of the consumers has failed, we have two stages of failure:
 
@@ -94,8 +93,8 @@ Your choice of entity lock has some implications. If you choose to lock at the S
 
 If you go the session + message composite ID route, where you’re logging each message in a session, you’ll be able to keep your two queues in sync both at the session level and the message level. As messages change state within the primary queue, as the secondary processors pick up that change, they’ll dispose of the messages to mirror that (e.g., Session 1 Message A, primary has completed, journal updated, when Session 1 Message A secondary checks Cosmos with that ID and sees it is completed, it will complete the secondary message). The risk here is a potential out-of-order case where the secondary gets ahead of the primary, because of an unknown failure with the journal. I haven’t figured out a case where this would happen, as the messages should be in the same order in both queues, but theoretically:
 
-*   **Primary** Message 1 → Cosmos record written → Processing beginning
-*   **Secondary** Message 2 → No Cosmos record written → Processing beginning
+* **Primary** Message 1 → Cosmos record written → Processing beginning
+* **Secondary** Message 2 → No Cosmos record written → Processing beginning
 
 ### Load balancing
 

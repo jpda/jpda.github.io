@@ -19,9 +19,9 @@ You can do this at the Azure portal ([http://manage.windowsazure.com](http://man
 
 Your Azure AD administrator (if you’re the creator of the account, this should be you, otherwise it’s time to track down the admin) just needs to add you. You can add
 
-*   **A new account in your organization — **this creates a brand new account in your Azure AD tenant. No different from creating a new cloud-based user for O365.
-*   **An existing Microsoft Account** — for sharing with the plebs who don’t have an Office account
-*   **An existing organizational account in another directory **— for sharing with other organizations that use Azure AD (e.g., jpd.ms or cardinalsolutions.com).
+* **A new account in your organization — **this creates a brand new account in your Azure AD tenant. No different from creating a new cloud-based user for O365.
+* **An existing Microsoft Account** — for sharing with the plebs who don’t have an Office account
+* **An existing organizational account in another directory **— for sharing with other organizations that use Azure AD (e.g., jpd.ms or cardinalsolutions.com).
 
 Once the account is in Azure AD, you can set an access level. More info on access levels below.
 

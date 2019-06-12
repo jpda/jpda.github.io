@@ -11,28 +11,32 @@ I needed a breather Friday, so I started playing with the Office Communicator Au
 
 Instantiation and usage is really easy too:
 
+```c#
 public void SignIn()  
 {  
     if (connected) return;  
     if (communicator == null)  
     {  
         communicator = new CommunicatorAPI.Messenger();  
-        communicator.OnSignin +=   
+        communicator.OnSignin +=
             new DMessengerEvents\_OnSigninEventHandler  
                 (communicator\_OnSignin);  
-        communicator.OnMyStatusChange +=   
+        communicator.OnMyStatusChange +=
             new DMessengerEvents\_OnMyStatusChangeEventHandler  
                 (communicator\_OnMyStatusChange);  
     }  
     communicator.AutoSignin();  
 }
+```
 
 Basically, I want to do some stuff when I change my status. I’d really like to set my softphone up for forwarding, but that’s a different story for a different day. Wiring up the event is easy enough:
 
+```c#
 void communicator\_OnMyStatusChange(int hr, MISTATUS mMyStatus)  
 {  
     //do some stuff  
 }
+```
 
 Anyway, there’s a pretty glaring bug — events don’t fire whenever you reach ‘Inactive’ status.
 

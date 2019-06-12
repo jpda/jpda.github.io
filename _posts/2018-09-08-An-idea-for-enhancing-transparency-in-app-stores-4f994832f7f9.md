@@ -18,12 +18,12 @@ I’ll preface this to say I’m not really a mobile developer, I have hacked so
 
 I think it would be fairly straightforward, and could be done in a way similar to permission escalations today. Or similar to a browser extension (‘this app requires access to all sites, \*.somesite.com, etc):
 
-*   Developer publishes application in store
-*   Developer lists endpoints for outbound network communication, marking them as required/essential for functionality or optional/enhanced functionality
-*   For required endpoints, developers would need to certify or validate ownership
-*   Required endpoints would be approved via installing the app, no escalation required. Perhaps even shown in the app store listing
-*   Optional endpoints would require explicit user consent, similar to accessing photos or location or whatever
-*   Perhaps some integration with large analytics platforms, like HockeyApp, Firebase, etc, for simplifying app analytics and consent
-*   Being able to dynamically update endpoints and get just-in-time access consent
+* Developer publishes application in store
+* Developer lists endpoints for outbound network communication, marking them as required/essential for functionality or optional/enhanced functionality
+* For required endpoints, developers would need to certify or validate ownership
+* Required endpoints would be approved via installing the app, no escalation required. Perhaps even shown in the app store listing
+* Optional endpoints would require explicit user consent, similar to accessing photos or location or whatever
+* Perhaps some integration with large analytics platforms, like HockeyApp, Firebase, etc, for simplifying app analytics and consent
+* Being able to dynamically update endpoints and get just-in-time access consent
 
 I don’t think this is necessarily intended to _block_ traffic, at least not at the beginning, but about giving users enough information to make an informed decision. Just an idea. Tell me what you think!

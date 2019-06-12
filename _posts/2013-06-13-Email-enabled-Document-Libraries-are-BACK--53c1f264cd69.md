@@ -11,6 +11,6 @@ slug: /email-enabled-document-libraries-are-back-53c1f264cd69
 
 #### What do I get?!
 
-*   Email enabled libraries — you pick the address
-*   Email enabled folders — you can assign folders within libraries email addresses, making your workflow that much easier
-*   Assign the same address to multiple libraries — want to store multiple copies of the message? Set two or more folders/libraries to use the same address & all mail sent will be put in each folder with that address.
+* Email enabled libraries — you pick the address
+* Email enabled folders — you can assign folders within libraries email addresses, making your workflow that much easier
+* Assign the same address to multiple libraries — want to store multiple copies of the message? Set two or more folders/libraries to use the same address & all mail sent will be put in each folder with that address.

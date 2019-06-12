@@ -55,11 +55,11 @@ First, we need to get user consent to access a specific account (yours, in this 
 
 We need to:
 
-*   Generate a URL requesting consent
-*   GET that URL
-*   Grant consent
-*   Take the `authorization_code`that comes back from that GET and swap it out for an `access_token` we can use for actually accessing the BigQuery API.
-*   And, as a bonus, we need to get a `refresh_token` which is what Data Factory will use to request subsequent `access_token`s
+* Generate a URL requesting consent
+* GET that URL
+* Grant consent
+* Take the `authorization_code`that comes back from that GET and swap it out for an `access_token` we can use for actually accessing the BigQuery API.
+* And, as a bonus, we need to get a `refresh_token` which is what Data Factory will use to request subsequent `access_token`s
 
 ### Generating your consent URL
 
@@ -71,11 +71,11 @@ Here’s our template
 
 We’ll deconstruct that a bit:
 
-*   `client_id`— your client ID
-*   `redirect_uri`— the redirect URI you entered earlier. It’s a good idea to encode the URI. If you search Bing for URL encoder you’ll get one right at the top
-*   `response_type` —` code` is what tells Google we want an authorization code to get returned in the response, which we can use to ask for an `access_token`
-*   `access_type `— `offline` is what we need to ask for if we need a `refresh_token`(you’ll want this)
-*   `scope `— this is the target service we want to connect to (in our case, BigQuery). You can check out all available scopes [here](https://developers.google.com/identity/protocols/googlescopes). You’ll most likely want `https://www.googleapis.com/auth/bigquery`
+* `client_id`— your client ID
+* `redirect_uri`— the redirect URI you entered earlier. It’s a good idea to encode the URI. If you search Bing for URL encoder you’ll get one right at the top
+* `response_type` —` code` is what tells Google we want an authorization code to get returned in the response, which we can use to ask for an `access_token`
+* `access_type `— `offline` is what we need to ask for if we need a `refresh_token`(you’ll want this)
+* `scope `— this is the target service we want to connect to (in our case, BigQuery). You can check out all available scopes [here](https://developers.google.com/identity/protocols/googlescopes). You’ll most likely want `https://www.googleapis.com/auth/bigquery`
 
 When we’ve plunked everything in there, we should end up with a URL like this:
 
@@ -101,11 +101,11 @@ We’re going to build another URL and send in some data.
 
 Let’s deconstruct this one too:
 
-*   code — the code we got in the last response, which you should have copied off
-*   Client ID — same one as before
-*   Client Secret — the one generated when you created credentials earlier. We’re using this for the first time here — we need to authenticate our _application_ to Google for this request to use the authorization code, so we use the ID and secret to do that.
-*   Redirect URI — same as before
-*   Grant type — keep this at the string `authorization_code`, per the spec
+* code — the code we got in the last response, which you should have copied off
+* Client ID — same one as before
+* Client Secret — the one generated when you created credentials earlier. We’re using this for the first time here — we need to authenticate our _application_ to Google for this request to use the authorization code, so we use the ID and secret to do that.
+* Redirect URI — same as before
+* Grant type — keep this at the string `authorization_code`, per the spec
 
 Now for this we can’t do a GET in the browser, so crack open your HTTP POST tool of choice — Postman, curl, whatever.
 
@@ -120,10 +120,10 @@ I’ve also noticed the authorization codes have slashes and hashes in them, so 
 
 Once you get a successful result, you should get a JSON object in the response:
 
-*   `access_token` — this is what you (or, in our case, Data Factory) actually send to the API to make a request
-*   `token_type `— indicates the usage of the token — in this case, it’s a `Bearer` token, which gets used in the `Authorization` header by Data Factory when it calls the service.
-*   `expires_in `— the validity of the access token, in seconds. You’ll notice this is only 6 minutes — hence the importance of the next field…
-*   `refresh_token `— this is what we (Data Factory) will use to request subsequent access tokens whenever they’re needed. If you were writing your own app, you’d save off refresh\_token to somewhere secure and use it to re-access data without prompting your users.
+* `access_token` — this is what you (or, in our case, Data Factory) actually send to the API to make a request
+* `token_type `— indicates the usage of the token — in this case, it’s a `Bearer` token, which gets used in the `Authorization` header by Data Factory when it calls the service.
+* `expires_in `— the validity of the access token, in seconds. You’ll notice this is only 6 minutes — hence the importance of the next field…
+* `refresh_token `— this is what we (Data Factory) will use to request subsequent access tokens whenever they’re needed. If you were writing your own app, you’d save off refresh\_token to somewhere secure and use it to re-access data without prompting your users.
 
 If you don’t have a refresh token in your response, make sure your initial request includes `access_type=offline`!
 
@@ -139,6 +139,6 @@ If, for whatever reason, you’d like to get an access token from your refresh t
 
 And its deconstruction:
 
-*   `refresh_token` — the refresh token you saved **somewhere secure** since the last request
-*   `client_id`, `client_secret` and `redirect_uri`— the same ones we’ve been using
-*   `grant_type` — always the string `refresh_token` (not your actual refresh token)
+* `refresh_token` — the refresh token you saved **somewhere secure** since the last request
+* `client_id`, `client_secret` and `redirect_uri`— the same ones we’ve been using
+* `grant_type` — always the string `refresh_token` (not your actual refresh token)

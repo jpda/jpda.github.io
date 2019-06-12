@@ -15,13 +15,15 @@ It’s pretty simple and you can implement it without any server-side code. All 
 
 It starts with the [SP.UI.ModalDialog object](http://msdn.microsoft.com/en-us/library/ff410058%28v=office.15%29.aspx). It’s super simple to implement a vanilla modal. Here’s the example from MSDN:
 
+```js
 var options = new {  
                       title: "Modal Title",  
                       width: 300,  
                       height: 150,  
                       url: "/Lists/Posts/NewPost.aspx"  
-                     };   
+                     };
    SP.UI.ModalDialog.showModalDialog(options);
+```
 
 Which is great, but now we need to wire it up to _do_ something. While we’re at it, let’s add some flexibility.
 
@@ -29,6 +31,7 @@ Which is great, but now we need to wire it up to _do_ something. While we’re a
 
 At this point, we should make this a little more reusable. Perhaps something you can stick in a master page, if you’d like. Add some parameters & now you’ve got an easy, one-line function you can call from wherever.
 
+```js
 function showSharePointModal(title, url){  
     var options = new {  
         title: title,  
@@ -40,22 +43,23 @@ function showSharePointModal(title, url){
   }
 
 showSharePointModal("Dialog Title", "google.com");  
-  
+```
+
 So now we've got an easy way to show a modal, but even this is too much work. We need to find the deepest depths of our inner laziness.
 
 A Selector
 
 First, figure out a good jQuery selector to mark the anchor links with that you want to have open in the dialog. I'll use 'open-me-in-modal' for this example.
 
-IsDlg=1
+`IsDlg=1`
 
-This query string is your friend, whether you know it or not. It tells SharePoint that, when opening this link, it needs to strip off the primary chrome, because the page is getting stuffed into a dialog.  
-_Neat._
+This query string is your friend, whether you know it or not. It tells SharePoint that, when opening this link, it needs to strip off the primary chrome, because the page is getting stuffed into a dialog. _Neat._
 
 Going A Bit Wild
 
 Which leads us to this. We're heading off the reservation here, but it'll be fun.
 
+```js
 //wire up the event handler to bind to your selector  
   $(document).ready(function() {   
     $("a.open-me-in-modal").on("click", function(e){  
@@ -79,27 +83,30 @@ Which leads us to this. We're heading off the reservation here, but it'll be fun
       //read more about why this is so important. srsly, it's like five lines down.  
     });  
   });
+```
 
 And to use it, you just need an anchor like this:
 
 [Click me](/SiteAssets/BadIdeas.jpg)
 
-At this point, any and all anchor tags with class="open-me-in-modal" will open in your SharePoint dialog, keeping users on your pages longer.
+At this point, any and all anchor tags with `class="open-me-in-modal"` will open in your SharePoint dialog, keeping users on your pages longer.
 
-Check out the MSDN page for how to do callbacks (like OK\\Cancel). It's just another option to implement:
+Check out the MSDN page for how to do callbacks (like OK\Cancel). It's just another option to implement:
 
-dialogReturnValueCallback: function(dialogResult, returnValue) {   
-  thingsAndStuff();  
- }
+```js
+dialogReturnValueCallback: function(dialogResult, returnValue) {
+  thingsAndStuff();
+}
+```
 
 #### Why This Rocks — Graceful Degradation
 
 This is good because it looks good & research shows users interact with dialogs more than links to other pages. But besides all of that, it's got mad graceful degradation - because it's just an anchor. Putting
 
-e.preventDefault();
+`e.preventDefault();`
 
 at the end of the method means that if anything blows up _before_ the
 
-preventDefault()
+`preventDefault()`
 
 then the link will just act normally & take the user to that page. Great for the Googlebot, too.

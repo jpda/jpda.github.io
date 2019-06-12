@@ -13,11 +13,9 @@ That headline may come across as rather spoiled, a la Louis CK’s always entert
 
 I’ve flown the Windows Phone banner since 2011, when I first got a Samsung Focus. I had an iPhone 4 for work and while it was fine, the freshness of WP was irresistible. I still have that Focus, actually. Sure it was limited at first — not many apps, some rather glaring omissions (copy/paste, anyone)? But the live tiles were excellent, the integration with other Microsoft services was top notch and the hubs were _excellent._ In fact, the hubs were what sold me on Windows Phone. All of my social stuff in one interface? Music? Pictures? Each one had its own hub, dedicated to the function it was supposed to do. I even bought my wife one, an HTC HD7, for Valentine’s Day, plus a Zune Pass. It was great. Time went on, and more phones were released, some of which I bought, like the bright blue Lumia 900. That thing was a beast. Carolina Panthers blue, amazing screen and the fastest WP money could buy.
 
-\[caption id=”attachment\_311" align=”aligncenter” width=”632"\]
-
 ![lumia900cyan](/img/0_POkltFy0bGuAlVQg.jpg)
 
-How slick is that? Great design, amazing to hold and looked fantastic.\[/caption\]
+*How slick is that? Great design, amazing to hold and looked fantastic.*
 
 Fast forward to now, I’ve gone through a few more, Lumia 920, 925, 1020 and (my current phone), a 1520, each one better than the one before.
 
@@ -25,11 +23,9 @@ The release of WP8 promised even more awesome stuff. We saw new tile sizes, BitL
 
 #### Enter WP 8.1
 
-\[caption id=”attachment\_312" align=”aligncenter” width=”638"\]
-
 ![The future. Credit: virtuaniz.com](/img/0_A1O0pBs0GYLsNUJR.png)
 
-The future. Credit: virtuaniz.com\[/caption\]
+*The future. Credit: virtuaniz.com*
 
 WP 8.1 ushered in a new era of ‘completeness’ for WP. IE11 is onboard, including much broader HTML5 compatibility, plus support for all kinds of new sizes, internals and some pretty slick interface tweaks. Not to mention the Notification Center, and of course, Cortana.
 
@@ -59,7 +55,7 @@ Go do a quick web search for ‘Xbox Music WP8.1’ — I’ll wait. Back? I
 
 But Windows Phone’s strength was always in context-awareness. The hubs focused on what you _wanted_ to do, and surfaced relevant data and actions. The tiles, when pinned, were updated with relevant information based on what you wanted to do — want to pin a specific stock in your portfolio? Cool, pin away. Chat was unified between SMS, Windows Live, Facebook — seems familiar, eh Google Hangouts? WP had this _in 2011._
 
-Me tile notifications centered all of your social updates (retweets, wall posts, linkedin (lol) interactions) into a single feed. “I want to see what’s happening with my network,” you’d say, and the Me tile & people hub delivered.
+Me tile notifications centered all of your social updates (retweets, wall posts, linkedin (lol) interactions) into a single feed. "I want to see what’s happening with my network," you’d say, and the Me tile & people hub delivered.
 
 Cortana takes context sensitivity to the next level:
 

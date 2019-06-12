@@ -24,17 +24,17 @@ There is a lot to unpack in that statement. I’d argue some of that is inaccura
 
 But let’s start fresh and try to crack this nut. We’ll need:
 
-*   Two Azure subscriptions of whatever flavor
-*   Two Azure App Services (web apps), one in each subscription. Make sure your App Service plans are Shared or higher, for using Custom Domains; Basic or higher if you need TLS/SSL (as you should, it is 2018)
-*   a Traffic Manager namespace in either sub
-*   A custom domain and access to your DNS for that domain
+* Two Azure subscriptions of whatever flavor
+* Two Azure App Services (web apps), one in each subscription. Make sure your App Service plans are Shared or higher, for using Custom Domains; Basic or higher if you need TLS/SSL (as you should, it is 2018)
+* a Traffic Manager namespace in either sub
+* A custom domain and access to your DNS for that domain
 
 My resources are named…
 
-*   web app 1 is **test-multi-sub-1.azurewebsites.net**
-*   web app 2 is **test-multi-sub-2.azurewebsites.net**
-*   Traffic Manager DNS name is **test-multi-sub.trafficmanager.net**
-*   Target hostname for users to access the app: **test-multi-sub.eastus3.com**
+* web app 1 is **test-multi-sub-1.azurewebsites.net**
+* web app 2 is **test-multi-sub-2.azurewebsites.net**
+* Traffic Manager DNS name is **test-multi-sub.trafficmanager.net**
+* Target hostname for users to access the app: **test-multi-sub.eastus3.com**
 
 ### First web app
 
@@ -56,10 +56,10 @@ Now that we’ve got our two endpoints in Traffic Manager, we can move on to con
 
 In my example, the ultimate name users will use to connect to my webapp is [http://test-multi-sub.eastus3.com](http://test-multi-sub.eastus3.com) — we need to
 
-*   add `test-multi-sub.eastus3.com` to each web app as a custom hostname
-*   add `test-multi-sub.trafficmanager.net` to our external webapp endpoint as a custom hostname
-*   In DNS, add a CNAME for `**test-multi-sub.eastus3.com**` that points to `**test-multi-sub.trafficmanager.net**`.
-*   e.g., `test-multi-sub IN CNAME test-multi-sub.trafficmanager.net`
+* add `test-multi-sub.eastus3.com` to each web app as a custom hostname
+* add `test-multi-sub.trafficmanager.net` to our external webapp endpoint as a custom hostname
+* In DNS, add a CNAME for `**test-multi-sub.eastus3.com**` that points to `**test-multi-sub.trafficmanager.net**`.
+* e.g., `test-multi-sub IN CNAME test-multi-sub.trafficmanager.net`
 
 This is, again, pretty straightforward, but will be a bit of a shell game. To verify a custom hostname in an Azure Web App, you need to add some DNS records to verify you own the custom host name. There are two ways to do this, we’re going to use the `awverify` method, which lets us verify a domain without actually pointing the domain itself to the App Service. Instead, we create TXT records with some pertinent info.
 
@@ -67,11 +67,11 @@ This is, again, pretty straightforward, but will be a bit of a shell game. To ve
 
 Get your DNS console open — Azure DNS, Route 53, GoDaddy, whoever — and add a TXT record for your first web app, using this syntax:
 
-*   Hostname —` awverify.targethostname.yourdomain.com` — in my case, `awverify.test-multi-sub.eastus3.com`you probably won’t need to add the full root domain name (e.g., eastus3.com) in your record creation, but that depends on your DNS provider’s interface.
-*   Set type = TXT
-*   value = <yourwebappname>.azurewebsites.net
-*   e.g., `test-multi-sub-1.azurewebsites.net`
-*   TTL — short. Like seconds or minutes.
+* Hostname — `awverify.targethostname.yourdomain.com` — in my case, `awverify.test-multi-sub.eastus3.com`you probably won’t need to add the full root domain name (e.g., eastus3.com) in your record creation, but that depends on your DNS provider’s interface.
+* Set type = TXT
+* value = `<yourwebappname>.azurewebsites.net`
+* e.g., `test-multi-sub-1.azurewebsites.net`
+* TTL — short. Like seconds or minutes.
 
 Here’s what that looks like in the Azure DNS console:
 
@@ -84,11 +84,11 @@ Keep the DNS window open because we’re going to need it again in a minute. Ope
 
 Open your Web App, go to Custom Domains in the nav bar. This is pretty standard, how you would add a custom domain to any web app.
 
-![](img/1__FNZOEGkh6pYMVzdCU7Xzhg.png)
+![a](img/1__FNZOEGkh6pYMVzdCU7Xzhg.png)
 
 Next we’ll add a hostname
 
-![](img/1__QoyGD4cFUbVU80w03b4zyA.png)
+![a](img/1__QoyGD4cFUbVU80w03b4zyA.png)
 
 Put in the target hostname users will use to access your app. Remember, we need the web app to respond to requests that come in on that hostname, since that hostname is what we’re going to be using with traffic manager.
 
@@ -116,7 +116,7 @@ Add the same target domain as the custom hostname here too.
 
 Remember, use the same DNS host name as before — the one your users will use to actually access the app. In my case, `test-multi-sub.eastus3.com`. You’ll notice you get validated green checkboxes again; you’ll get a successful ‘Add hostname’ notification as well.
 
-![](img/1____yWSThttkTictZwcWUbbXg.png)
+![a](img/1____yWSThttkTictZwcWUbbXg.png)
 
 What you won’t see is your hostname in the UI, at least not initially. My only assumption (and you know what [they say about assumptions](https://xkcd.com/1339/)) is that this is failing some validation, but not enough to stave off actually committing the change.
 

@@ -17,28 +17,18 @@ Here’s the gist — Facebook returns the state parameter, so now we gotta 
 
 Here’s the code that starts it off. Controller side:
 
-var state = Convert.ToBase64String(Encoding.UTF8.GetBytes(\_fb.SerializeJson(new { returnUrl = returnUrl, csrf = csrfToken, SPAppToken = spAppToken, SPHostUrl = spHostUrl })));
-
-var redirectUri = new  
- Uri(Request.Url.Scheme + “://” + Request.Url.Authority + ConfigurationManager.AppSettings\[“FacebookCallback”\]);
-
-var fbLoginUrl = \_fb.GetLoginUrl(
-
-new
-
-{
-
-client\_id = ConfigurationManager.AppSettings\[“FacebookKey”\],
-
-client\_secret = ConfigurationManager.AppSettings\[“FacebookSecret”\],
-
-redirect\_uri = redirectUri.ToString(),
-
-response\_type = “code”,
-
-scope = “user\_about\_me,publish\_actions,read\_stream,manage\_pages”, state
-
-});
+```c#
+var state = Convert.ToBase64String(Encoding.UTF8.GetBytes(_fb.SerializeJson(new { returnUrl = returnUrl, csrf = csrfToken, SPAppToken = spAppToken, SPHostUrl = spHostUrl })));
+var redirectUri = new Uri(Request.Url.Scheme + "//" + Request.Url.Authority + ConfigurationManager.AppSettings["FacebookCallback"]);
+var fbLoginUrl = _fb.GetLoginUrl(
+    new {
+        client_id = ConfigurationManager.AppSettings["FacebookKey"],
+        client_secret = ConfigurationManager.AppSettings["FacebookSecret"],
+        redirect_uri = redirectUri.ToString(),
+        response_type = "code",
+        scope = "user_about_me,publish_actions,read_stream,manage_pages", state
+    });
+```
 
 The return side is where we have to get our hands dirty, namely, in the TokenHelper.
 
@@ -50,63 +40,41 @@ Since the HttpRequest.Params & QueryString collections are read-only, you’ll h
 
 First, change GetContextTokenFromRequest. Since HttpRequest is just a specialized NameValueCollection, I created a new method called GetTokenFromNameValueCollection. This could, in theory, be just an overload of GetContextTokenFromRequest.
 
-public  
- static  
- string GetContextTokenFromRequest(HttpRequest request)
-
+```c#
+public static string GetContextTokenFromRequest(HttpRequest request)
 {
-
-if (request.Params.AllKeys.Contains(“state”))
-
-{
-
-return GetContextTokenFromState(request);
-
+    if (request.Params.AllKeys.Contains("state"))
+    {
+        return GetContextTokenFromState(request);
+    }
+    return GetTokenFromNameValueCollection(request.Params);
 }
-
-return GetTokenFromNameValueCollection(request.Params);
-
-}
+```
 
 Next, here’s GetTokenFromNameValueCollection.
 
-public  
- static  
- string GetTokenFromNameValueCollection(NameValueCollection nvc)
-
+```c#
+public static string GetTokenFromNameValueCollection(NameValueCollection nvc)
 {
-
-string\[\] paramNames = { “AppContext”, “AppContextToken”, “AccessToken”, “SPAppToken” };
-
-return (from paramName in paramNames where !string.IsNullOrEmpty(nvc\[paramName\]) select nvc\[paramName\]).FirstOrDefault();
-
+    string[] paramNames = { "AppContext", "AppContextToken", "AccessToken", "SPAppToken" };
+    return (from paramName in paramNames where !string.IsNullOrEmpty(nvc[paramName]) select nvc[paramName]).FirstOrDefault();
 }
+```
 
 Here’s the real meat of what we want to do — we want to get the ContextToken out of the State parameter, which is a base64 string. Since we can’t modify the HttpRequest, we need to copy it to a new NameValueCollection, then we get read/write & can tack on our new stuff.
 
-public  
- static  
- string GetContextTokenFromState(HttpRequest request)
-
+```c#
+public static string GetContextTokenFromState(HttpRequest request)
 {
-
-var state = Encoding.UTF8.GetString(Convert.FromBase64String(HttpContext.Current.Request.Params\[“state”\]));
-
-dynamic stuff = JsonConvert.DeserializeObject(state);
-
-var nvc = new  
- NameValueCollection(request.Params)
-
-{
-
-{“SPHostUrl”, stuff.SPHostUrl.Value},
-
-{“SPAppToken”, stuff.SPAppToken.Value}
-
-};
-
-return GetTokenFromNameValueCollection(request.Params);
-
+    var state = Encoding.UTF8.GetString(Convert.FromBase64String(HttpContext.Current.Request.Params["state"]));
+    dynamic stuff = JsonConvert.DeserializeObject(state);
+    var nvc = new NameValueCollection(request.Params) 
+    {
+        {"SPHostUrl", stuff.SPHostUrl.Value},
+        {"SPAppToken", stuff.SPAppToken.Value}
+    };
+    return GetTokenFromNameValueCollection(request.Params);
 }
+```
 
 As I’ll probably be refactoring this in the next few days, I may update this code. Primarily to be a bit more robust — just looking for a ‘state’ parameter is a little dangerous. It might be best to check some of the other request values (like, whether the requested URL matches what I know to be my facebook oauth receiver).

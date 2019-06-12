@@ -15,8 +15,8 @@ Clearly, with anything new, we should throw caution to the wind and get cracking
 
 Overall, we’re going to 
 
-*   register an app with apple’s idp
-*   add apple as an idp in a b2c tenant
+* register an app with apple’s idp
+* add apple as an idp in a b2c tenant
 
 ### Apple Developer Portal app configuration
 

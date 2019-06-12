@@ -22,18 +22,18 @@ Anyway, I have two collection types for my stub app, Contacts and Conversations.
 
 I went though the Xamarin blog post, adapting what was there to my needs and types. I’ve got:
 
-*   [Contact ](https://gist.github.com/jpda/4ccc9cf61210970753925262eca42954#file-contact-cs)— my actual entity, in this case `Name` and `Email`
-*   [ContactsListRow ](https://gist.github.com/jpda/4ccc9cf61210970753925262eca42954#file-contactlistrow-axml)— the axml item template markup
-*   [ContactsAdapter ](https://gist.github.com/jpda/4ccc9cf61210970753925262eca42954#file-contactsadapter-cs)— the adapter that actually inflates the view and binds the data
-*   [ContactAdapterViewHolder ](https://gist.github.com/jpda/4ccc9cf61210970753925262eca42954#file-contactadapterviewholder-cs)— a holder object that keeps references to the views within the `RecyclerView` template (e.g., the `TextView`)
+* [Contact](https://gist.github.com/jpda/4ccc9cf61210970753925262eca42954#file-contact-cs)— my actual entity, in this case `Name` and `Email`
+* [ContactsListRow](https://gist.github.com/jpda/4ccc9cf61210970753925262eca42954#file-contactlistrow-axml)— the axml item template markup
+* [ContactsAdapter](https://gist.github.com/jpda/4ccc9cf61210970753925262eca42954#file-contactsadapter-cs)— the adapter that actually inflates the view and binds the data
+* [ContactAdapterViewHolder](https://gist.github.com/jpda/4ccc9cf61210970753925262eca42954#file-contactadapterviewholder-cs)— a holder object that keeps references to the views within the `RecyclerView` template (e.g., the `TextView`)
 
 As I started replicating this for a different collection, it dawned on me this is actually a lot of the same code.
 
 If we look at the ContactsAdapter, we see a lot of the same thing:
 
-*   A generic collection of our items
-*   Linking a `ViewHolder` to a layout
-*   Binding an entity item to a `ViewHolder`
+* A generic collection of our items
+* Linking a `ViewHolder` to a layout
+* Binding an entity item to a `ViewHolder`
 
 That’s really about it. Take a look:
 
@@ -45,9 +45,9 @@ Notice there’s really not a whole lot of specific stuff in here. Let’s look 
 
 The only specific stuff we need to know about is
 
-*   `T` — Type of collection
-*   `V` — Type of ViewHolder
-*   `Action<T,V>` — a method that takes our item and our viewholder and binds them
+* `T` — Type of collection
+* `V` — Type of ViewHolder
+* `Action<T,V>` — a method that takes our item and our viewholder and binds them
 
 Let’s look at usage — you’ll notice we really just pushed some code around to different places. Here’s our usage in something like MainActivity.cs. Our binding logic has moved to the anonymous method, and we’re explicitly telling our `ListAdapter` the type of our collection and our `ViewHolder`.
 

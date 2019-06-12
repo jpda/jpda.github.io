@@ -37,13 +37,13 @@ Pretty straightforward. Not a lot happening there — you could wrap this in
 
 We’ve written this nice Windows 10 Universal app and it’s time to deploy! Now what? …This is a long one. And irritating. Every official bit of guidance says (usually with too much excitement), ‘Deploy right from Visual Studio!’ — which is \*great\* for debugging…and completely horrible for deploying to more than one device. This is the internet of \*things\*, Microsoft. Not the internet of \*thing\* — but let’s look at that official guidance:
 
-*   Open project properties
-*   Choose Build
-*   Change to Remote Machine
-*   Type in name of remote machine, or grab the mouse (\*ew\*) and choose from the list
-*   Right-click project, Deploy…
-*   Deploy dependencies
-*   Deploy appx
+* Open project properties
+* Choose Build
+* Change to Remote Machine
+* Type in name of remote machine, or grab the mouse (\*ew\*) and choose from the list
+* Right-click project, Deploy…
+* Deploy dependencies
+* Deploy appx
 
 Which is great if you paid by the click, I suppose. For the rest of us it’s miserable. That’s just \*one\* app deployment to \*one\* device. And it requires Visual Studio! Tell your deployment teams they all need VS licenses for deployment…I’ll wait… Didn’t go so well, eh?
 
@@ -62,9 +62,9 @@ AppX Manager from WebB
 
 If you’ve done Windows 8+ modern app dev, this should be familiar. I know, we’ll just copy the bits, including the ps1, and deploy from that using remote powershell. What could go wrong? **Everything.** What does this script _do,_ anyway? It’s pretty simple, really:
 
-*   Checks for a developer certificate (which isn’t required in Windows 10) for ‘Developer Mode’
-*   Installs the cert, if necessary
-*   Attempts to install the app package + signing cert
+* Checks for a developer certificate (which isn’t required in Windows 10) for ‘Developer Mode’
+* Installs the cert, if necessary
+* Attempts to install the app package + signing cert
 
 RPis use ARM chips — so tools like certutil don’t exist. Know what uses certutil a lot? Install-AppDevPackage.ps1. I yanked every bit of reference to dev certificates out, seeing as there’s just a quick registry change for ‘Developer Mode’ in Windows 10. It all eventually died at Add-AppPackage — RPC endpoint mapper was out of endpoints (uh, endpoint mapper, isn’t this your only job?). I figure it may be related to permissions more than anything — apps are deployed + run under an account called DefaultAccount — not Administrator or whatever user you’ve connected as.
 
@@ -95,10 +95,10 @@ So innocuous. So simple. So _obvious_. Surely this little web server used someth
 ![Twiddlin’ bits in Fiddler…or would it be Fiddlin?fiddler](/img/0_AVcn-sWM1sViyQx2.png)
 Twiddlin’ bits in Fiddler…or would it be Fiddlin?
 
-*   Post the form data (e.g., the packages)
-*   Post dependencies
-*   Post certificate
-*   Commit deployment
+* Post the form data (e.g., the packages)
+* Post dependencies
+* Post certificate
+* Commit deployment
 
 There were a few other things I wanted to do too — like uninstall the app before it gets reinstalled (to start with a fresh slate, mostly because I was getting a lot of ‘file in use’ errors) and set my app to start at boot, as would be typical for a production deployment of an IoT app. Take a close look at the above — you’ll see a lot of paths starting with /api/appx — but a few are /api/iot/appx — there’s a difference here. One is the seemingly ‘private’ API used by the web interface. There is no documentation I could find about these, but I definitely needed them, especially for actions like setting default boot apps. I would guess there’s some sort of privilege boundary here, but I can’t say for sure. Fiddler trace in hand, I got to replicating this in Powershell. You may laugh, as I would at someone who says that, but I figured I need to get my PS chops better…and PS is really just C# with a syntax from the moon, so what’s the big deal? _How hard could it be?_
 

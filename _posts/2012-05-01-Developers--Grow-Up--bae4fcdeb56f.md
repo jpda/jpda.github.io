@@ -31,7 +31,7 @@ You’ll always have bugs. Responding to them in a timely manner is key. Filing 
 
 This is the next thing the old crusty guys in the corner complain about. It’s really an extension of control:
 
-#### “OMG, MY USERS WANT TO USE SKYDRIVE! DROPBOX! MADNESS!”
+#### "OMG, MY USERS WANT TO USE SKYDRIVE! DROPBOX! MADNESS!"
 
 Please. Let’s be reasonable. Third party services are the backbone of any development platform or OS. I mean, think your little delta replication algorithm you wrote in an afternoon holds a candle to Dropbox? Puh-leeez. Think dropbox has any interest in your data? (they don’t) Think that Twilio gives a rat’s ass what you’re texting to your corporate users? Here’s a hint:
 
@@ -43,7 +43,7 @@ yeah, No. They don’t. This isn’t to say you shouldn’t be diligent about yo
 
 Obviously, anyone who’s written consumer apps knows that if you have a crappy app, the only way to be successful is to obliterate the competition (or do something so dry and boring that no one else cares). Corporate devs know this, but elect not to care. For one reason — no competition. For a long time, it’s been like that for a long time — IT security ‘professionals’ (i.e., I read an informationweek article about threats to my network) have shut down internet access and crippled devices to keep users in the dark.
 
-#### Things Change.
+#### Things Change
 
 Things change. I said it twice so it would sink in. I’ll say it again: Things change. Your users are changing. Your corporate IT management is changing (albeit, brutally, brutally slowly). You can’t kill 87% of the internet through your proxy and expect top talent to stick around. You can’t expect top talent to keep their devices and services at home. You can’t expect even mediocre talent to stick around without a device with capabilities from this century (I’m looking at you, RIM).
 
