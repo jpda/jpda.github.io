@@ -8,4 +8,5 @@ remote_theme: heiswayi/the-plain
 url: https://jpda.dev
 permalink: /:title
 timezone: America/New_York
-mathjax: true
+mathjax: false
+appInsightsKey: "aa50374c-4629-4ab3-a058-5bb4d8bb1924"
