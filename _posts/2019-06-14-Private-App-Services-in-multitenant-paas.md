@@ -23,7 +23,7 @@ We need `jpd-app-1` and `jpd-app-2` to talk to each other and also be accessible
 
 ## Integrating with the VNet
 
-First we need to get integrated to the VNet from each of our app services. I prefer to keep the app service integrations into their own subnets, makes it easier to segment/separate later. First we need to register the `Microsoft.Web` service endpoint. If you're creating a new VNet, you can do this at creation time. If not, it's easy to enable afterward.
+First we need to get integrated to the VNet from each of our app services. We need to keep the app service integrations in their own subnets, so we can delegate the subnet to the App Service. First we need to register the `Microsoft.Web` service endpoint. If you're creating a new VNet, you can do this at creation time. If not, it's easy to enable afterward.
 
 During creation:
 
