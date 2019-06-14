@@ -1,4 +1,6 @@
-# jpda
+# John Patrick Dandison
+
+I like to build stuff. I started working with cloud platforms in late 2010, starting first in AWS before moving to Azure.
 
 ## Microsoft, 2016 - current
 
