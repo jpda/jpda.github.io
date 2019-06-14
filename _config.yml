@@ -13,6 +13,7 @@ mathjax: false
 appInsights: true
 appInsightsKey: "aa50374c-4629-4ab3-a058-5bb4d8bb1924"
 fontawesome: true
+resume_url: "img/file-pngrepo-com.png"
 
 plugins:
   - jekyll-sitemap
