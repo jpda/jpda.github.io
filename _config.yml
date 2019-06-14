@@ -10,3 +10,6 @@ permalink: /:title
 timezone: America/New_York
 mathjax: false
 appInsightsKey: "aa50374c-4629-4ab3-a058-5bb4d8bb1924"
+
+plugins:
+  - jekyll-sitemap
