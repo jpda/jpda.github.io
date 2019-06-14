@@ -7,6 +7,14 @@ twitter:
   username: azureandchill
   card: summary
 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      image: https://avatars2.githubusercontent.com/u/5932293?v=4
+      
+
 remote_theme: heiswayi/the-plain
 url: https://jpda.dev
 permalink: /:title
