@@ -1,6 +1,6 @@
 ---
 title: Private App Service-to-App Service calls in multitenant PaaS
-description: ''
+description: 'Recently, Shannon & I got an interesting request from a customer who is using multi-tenant App Services...'
 date: '2019-06-14T18:11:10.1901448Z'
 categories: ['azure', 'app service', 'networking']
 keywords: ['azure', 'app-service', 'ase', 'vnet-integration', 'service-endpoints']
