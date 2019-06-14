@@ -39,7 +39,7 @@ Once you've enabled them, head to the Networking pane of the first App Service (
 
 Configure VNet Integration, then choose Add VNet (Preview). Choose your vnet, then your subnet.
 
-![add feature](img/jpda-app-1-networking-add.png)
+![add feature](img/jpd-app-1-networking-add.png)
 
 Do this for both of your App Services, integrating each into their respective subnets. At this point, our app services are now connected to `vnet1` - if we had resources we needed to access in the VNet, like a VM, a SQL Managed Instance or even something on-prem via site-to-site VPN, we'd be able to by this point. The app services are exposed to the internet, however. We've enabled access _from_ the App Services to the VNet, but we haven't restricted access _to_ the App Services to only the VNet just yet. For that we'll use Access Restrictions.
 
@@ -59,7 +59,7 @@ Now let's add our restriction! Since this is `jpd-app-1` and it's integrated int
 
 First the `jpd-app-2-subnet` rule. Make sure you choose 'Virtual Network' in the type. Then choose your vnet (`vnet1`) and your subnet for the other app that needs access (`jpd-app-2-subnet`). Repeat for (`default`) to enable the rest of the vnet and any other vnets/subnets that may need access.
 
-![app2](img/jpd-app-1-add-app-2.png)
+![app2](img/jpd-app-1-access-add-app-2.png)
 
 ## Repeat for the other app
 
@@ -67,7 +67,7 @@ In your other app (`jpd-app-2`), do the same thing. Add access restrictions, onl
 
 ## Testing
 
-If you go to your app in a browser from your local machine, you should get a 403, 'web site stopped.' This is the experience for app services that are restricted - it's a 403 Forbidden, stopped is a bit misleading here. 
+If you go to your app in a browser from your local machine, you should get a 403, 'web site stopped.' This is the experience for app services that are restricted - it's a 403 Forbidden, stopped is a bit misleading here.
 
 ![stopped](img/jpd-app-1-stopped.png)
 
