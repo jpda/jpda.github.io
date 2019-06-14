@@ -14,7 +14,7 @@ Responsible for advising, guiding & building with named customers.
 
 **Co-founder/Developer** 2011 - current
 
-Technical design & development. Built two implementations of a core proxy engine on both Amazon AWS and Microsoft Azure. [Patents awarded](https://pdfpiw.uspto.gov/.piw?Docid=9894019&idkey=NONE) on the work.
+Technical design & development. Built two implementations of a core proxy engine on both Amazon AWS and Microsoft Azure. [Patents awarded](https://pdfpiw.uspto.gov/.piw?Docid=9894019&idkey=NONE){:target="_blank"} on the work.
 
 ## Cardinal Solutions, 2013-2016
 
