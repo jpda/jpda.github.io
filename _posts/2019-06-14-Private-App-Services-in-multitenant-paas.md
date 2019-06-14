@@ -82,3 +82,5 @@ This should return some HTML/markup. If it's a `403`, something is wrong. If you
 ![app-1-to-app-2](img/jpd-app-1-to-2-success.png)
 
 _Note: you may notice that my URLs changed near the end - I added a bad rule so I had to trash the two app services and recreate them. **Don't put zero (0) as a priority for a rule!**_
+
+I haven't tried this with Functions on a consumption plan yet, but that's coming next. Stay tuned!
