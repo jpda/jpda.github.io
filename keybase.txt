@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/jpda
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jpda.dev
+  * I am jpda (https://keybase.io/jpda) on keybase.
+  * I have a public key with fingerprint 57E2 0A64 15FC 9288 006C  0E20 1B0E B0CE C35D 3922
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101cf4614b70fd407e3ca2dd96eb555ac1005cf2ff0bd8a5b02943a5b8102cf1b5c0a",
+      "fingerprint": "57e20a6415fc9288006c0e201b0eb0cec35d3922",
+      "host": "keybase.io",
+      "key_id": "1b0eb0cec35d3922",
+      "kid": "0101cf4614b70fd407e3ca2dd96eb555ac1005cf2ff0bd8a5b02943a5b8102cf1b5c0a",
+      "uid": "6f37aa93e037d83474384811ea37ee19",
+      "username": "jpda"
+    },
+    "service": {
+      "hostname": "jpda.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1566484391,
+  "expire_in": 157680000,
+  "prev": "4109dce05198d148079818bbd712418f494affacc958a9774677950f491e7e6a",
+  "seqno": 23,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMIgAnicrVJbSBVBGD7HMktKLc+Dj7aJp0JtZnf2MqcCLSgRhF6KbnbYnZm1Vds9
+7q6nTCy7UERJKqFWmGCdhCKEiLKS6EYFRRAYREEXhCK6GgVK11kp6KHHnn7mm+/7
+/m8+5uaMSaHMcPbdoYqu/G+nw3evtTWEqjb09zcJhkMbhViTUMsmBqujzPPjtRYV
+YgKAABITKRAZKjApAiqTiC5SihVmyLKsEwiATEzRNIFBNV02gIiRxKcGgUhMaMgE
+6EKRYFp2NXMTrmX73FZWmQh0BUHZJFjUNAAUAjgEDcAMQBiRZCphUeTCjY4XKHg4
+Q/dYieVwjB/iE/H+wf/PuRsm7BRTUnUdSwxIKtUkpCJJQxqETJdUxiAOiB5zbX0T
+4+yaBNWF5iKBI0mLsKDU4BV/3ZZQluSahOv4DnHqOLrR9xNeLFD5jYmAtpkZ8d8G
+ccOyKe+PK5LM9SzHFmKQM4lvBY5QVhSkIQnDIoFtSVgui1sBQ1YVXiwAwR6+LiYg
+CDAlDMgQaxQiDahYg5phUBWKCGomwkg3TZ0QLGs6VlWkqCqWAcchU5kS1OGxetsR
+YqLEc+rV3NOzqm3db3CZ0Hz96vrJoXBmaEp6WvCxQpnTcv58t49rM35Ez6zwpxqv
+rzafiiye11r3fXzJIHE7a+C+7e17puT3Plm1NZVKK9vizDaXV46XRj8fyx4bmFkm
+ZCgFO469iWYvzRKfe0fnLCk4W3W++GnaeHx6x9uKdVU3tmd9Lex+FS08qB3OfQC6
+T6RS7xojj3bfT/2cmon39g3vJ7c7bi/8NDrc/jm8YGRXbmtGzsL+9uEjx1ffsvF8
+9UvFLHjhcElty8AoudTbn/es2Fw58CI9J+1HacvDRelz3nnlz3auK78z98C2nuKh
+vU0f3ofdPPvE9J4Nl+uzHq8YrKT0fl7nxZ6XuclDXcvOfBtrW7+1TBhZ2nflXk3k
+XDTy6MGagmtj+ZUnR34BxSc5qA==
+=++Mq
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jpda
+
+==================================================================
