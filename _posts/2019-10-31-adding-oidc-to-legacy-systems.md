@@ -48,4 +48,6 @@ Let's take a look at the config.
 
 The `mod_auth_oidc` package includes all the claims as passthrough headers, in addition to our custom header with our transformed value. My source claim in this case was `preferred_username`, which we transformed via apache to `X-jpda-header-loc`.
 
+The advantage to this method is potentially _many_ apps could live behind this proxy, with very little additional effort to onboard more. Of course the tradeoff with proxying is a single choke point for traffic, so carefully consider which apps should be grouped behind specific instances.
+
 ![img/apache-jwt-01.png][claims]
