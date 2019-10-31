@@ -32,9 +32,9 @@ Since we've got a web app and we want to add only authentication, it's relativel
 
 ## Considerations
 
-Since we're usurping the user path to the app, we'll need to make sure we manipulate the network environment &amp; DNS in a way to make the app either inaccessible or unusable if someone was to hit it directly. If hosted in Azure, this could be something like a two-subnet VNet, one subnet with the app and the other with the proxy, with NSGs locking down the app subnet to only allow traffic from the proxy subnet. On-prem there are myraid ways to segment networks and restrict access. 
+Since we're usurping the user path to the app, we'll need to make sure we manipulate the network environment &amp; DNS in a way to make the app either inaccessible or unusable if someone was to hit it directly. If hosted in Azure, this could be something like a two-subnet VNet, one subnet with the app and the other with the proxy, with NSGs locking down the app subnet to only allow traffic from the proxy subnet. On-prem there are myraid ways to segment networks and restrict access.
 
-You'll also want to host with TLS, Azure AD reply URLs will require `https` except in the case of localhost. 
+You'll also want to host with TLS, Azure AD reply URLs will require `https` except in the case of localhost.
 
 ## Apache config
 
@@ -50,4 +50,4 @@ The `mod_auth_oidc` package includes all the claims as passthrough headers, in a
 
 The advantage to this method is potentially _many_ apps could live behind this proxy, with very little additional effort to onboard more. Of course the tradeoff with proxying is a single choke point for traffic, so carefully consider which apps should be grouped behind specific instances.
 
-![claims](img/apache-jwt-00.png "claims")
+![claims](img/apache-jwt-01.png "claims")
