@@ -28,7 +28,7 @@ Since we've got a web app and we want to add only authentication, it's relativel
 
 ## Layout
 
-![img/apache-jwt-00.png]
+![img/apache-jwt-00.png][layout]
 
 ## Considerations
 
@@ -43,3 +43,9 @@ For apache, we're going to use [`mod_auth_oidc`](https://github.com/zmartzone/mo
 Let's take a look at the config.
 
 {% gist 3417e90338485374332d3e857cd7dd61 %}
+
+## Results
+
+The `mod_auth_oidc` package includes all the claims as passthrough headers, in addition to our custom header with our transformed value. My source claim in this case was `preferred_username`, which we transformed via apache to `X-jpda-header-loc`.
+
+![img/apache-jwt-01.png][claims]
