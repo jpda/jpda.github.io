@@ -30,6 +30,14 @@ Since we've got a web app and we want to add only authentication, it's relativel
 
 ![layout](img/apache-jwt-00.png "layout")
 
+Our layout is straightforward. We have our original old app (we'll call it `old-app.example.com`) and our front-end (`myapp.example.com`). We'll need to make sure DNS resolves on the Apache host for `old-app.example.com` and that our old app server is configured for that host header or to accept all names. If it's not in your local DNS, you could add it to `/etc/hosts` for local resolution.
+
+Next we'll want to make sure `myapp.example.com` resolves to our Apache server. You would likely want to use named virtual hosts here, although you could get away with `*` if you wanted. My virtual host on `:80` is just redirecting to `:443` - yours may need to do something different.
+
+Lastly you'll want to make sure you have any TLS certs available and installed on the Apache host.
+
+I'm using Apache 2.4.* on Ubuntu 18.04, with binaries for `mod_auth_openidc` 2.3.3, which is available in the universe repositories.
+
 ## Considerations
 
 Since we're usurping the user path to the app, we'll need to make sure we manipulate the network environment &amp; DNS in a way to make the app either inaccessible or unusable if someone was to hit it directly. If hosted in Azure, this could be something like a two-subnet VNet, one subnet with the app and the other with the proxy, with NSGs locking down the app subnet to only allow traffic from the proxy subnet. On-prem there are myraid ways to segment networks and restrict access.
@@ -38,7 +46,7 @@ You'll also want to host with TLS, Azure AD reply URLs will require `https` exce
 
 ## Apache config
 
-For apache, we're going to use [`mod_auth_oidc`](https://github.com/zmartzone/mod_auth_openidc){:target="_blank"} which is an [OIDC-compliant](https://openid.net/certification/){:target="_blank"} relying party/client module for OpenID Connect.
+For apache, we're going to use [`mod_auth_openidc`](https://github.com/zmartzone/mod_auth_openidc){:target="_blank"} which is an [OIDC-compliant](https://openid.net/certification/){:target="_blank"} relying party/client module for OpenID Connect.
 
 Let's take a look at the config.
 
@@ -46,7 +54,7 @@ Let's take a look at the config.
 
 ## Results
 
-The `mod_auth_oidc` package includes all the claims as passthrough headers, in addition to our custom header with our transformed value. My source claim in this case was `preferred_username`, which we transformed via apache to `X-jpda-header-loc`.
+The `mod_auth_openidc` package includes all the claims as passthrough headers, in addition to our custom header with our transformed value. My source claim in this case was `preferred_username`, which we transformed via apache to `X-jpda-header-loc`.
 
 The advantage to this method is potentially _many_ apps could live behind this proxy, with very little additional effort to onboard more. Of course the tradeoff with proxying is a single choke point for traffic, so carefully consider which apps should be grouped behind specific instances.
 
