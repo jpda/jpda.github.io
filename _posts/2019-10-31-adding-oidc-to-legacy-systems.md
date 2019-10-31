@@ -28,7 +28,7 @@ Since we've got a web app and we want to add only authentication, it's relativel
 
 ## Layout
 
-![img/apache-jwt-00.png][layout]
+![layout](img/apache-jwt-00.png "layout")
 
 ## Considerations
 
@@ -50,4 +50,4 @@ The `mod_auth_oidc` package includes all the claims as passthrough headers, in a
 
 The advantage to this method is potentially _many_ apps could live behind this proxy, with very little additional effort to onboard more. Of course the tradeoff with proxying is a single choke point for traffic, so carefully consider which apps should be grouped behind specific instances.
 
-![img/apache-jwt-01.png][claims]
+![claims](img/apache-jwt-00.png "claims")
