@@ -20,11 +20,11 @@ Let's dig in.
 Since we've got a web app and we want to add only authentication, it's relatively straightforward. We need to:
 
 - Authenticate the user, using a typical oidc-tango
-  - Redirect to identity provider
-  - Consume and validate issued token
+- Redirect to identity provider
+- Consume and validate issued token
 - Read claim data
 - Transform some claim data before forwarding along
-  - In our specific case, we need specific values from the claims to be forwarded in a specific header
+- In our specific case, we need specific values from the claims to be forwarded in a specific header
 
 ## Layout
 
