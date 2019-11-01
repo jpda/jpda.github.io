@@ -1,21 +1,27 @@
 <aside class="logo">
 	{% if page.url == '/index.html' or page.url == '/' %}
-		{% assign link = '/about' %}
-		{% assign prompt = 'About the Author' %}
+	{% assign link = '/about' %}
+	{% assign prompt = 'About the Author' %}
 	{% else %}
-		{% assign link = '/' %}
-		{% assign prompt = 'Back to Index' %}
+	{% assign link = '/' %}
+	{% assign prompt = 'Back to Index' %}
 	{% endif %}
 
 	<a href="{{ link | prepend: site.baseurl | prepend: site.url }}">
 		<img src="{{ site.logo_url }}" alt="picture of me" class="logo-avatar">
 	</a>
-    <span class="logo-prompt code">{{ prompt }}</span>
-    
-    <a href="/resume">
+	<span class="logo-prompt code">{{ prompt }}</span>
+
+	<a href="/resume">
 		<img src="{{ site.resume_url }}" alt="Resume icon" class="logo-avatar">
 	</a>
 	<span class="logo-prompt code">Resume</span>
+
+	<a href="#" id="fontSwapper">
+		<img src="img/font-button.png" alt="font-swapper-button" class="logo-avatar">
+	</a>
+	<span class="logo-prompt code">Read in author's handwriting (bad)</span>
+
 	<button id="fontSwapper">
 		Swap font
 	</button>
@@ -24,12 +30,12 @@
 <script type="text/javascript">
 	var added = false;
 	fontSwapper.addEventListener("click", function () {
-	  if (added) {
-		document.body.classList.remove("alt-font");
-		added = false;
-	  } else {
-		document.body.classList.add("alt-font");
-		added = true;
-	  }
+		if (added) {
+			document.body.classList.remove("alt-font");
+			added = false;
+		} else {
+			document.body.classList.add("alt-font");
+			added = true;
+		}
 	});
-  </script>
+</script>
