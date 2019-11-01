@@ -8,25 +8,26 @@
 	{% endif %}
 
 	<a href="{{ link | prepend: site.baseurl | prepend: site.url }}">
-		<img src="{{ site.logo_url }}" alt="picture of me" class="logo-avatar">
+		<img src="{{ site.logo_url }}" alt="picture of me" class="logo-avatar"/>
 	</a>
 	<span class="logo-prompt code">{{ prompt }}</span>
 
 	<a href="/resume">
-		<img src="{{ site.resume_url }}" alt="Resume icon" class="logo-avatar">
+		<img src="{{ site.resume_url }}" alt="Resume icon" class="logo-avatar"/>
 	</a>
 	<span class="logo-prompt code">Resume</span>
 
-	<button id="fontSwapper">
-		<img src="img/font-button.png" alt="font-swapper-button" class="logo-avatar">
-	</button>
+	<a id="fontSwapper">
+		<img src="img/font-button.png" alt="font-swapper-button" class="logo-avatar"/>
+	</a>
 	<span class="logo-prompt code">Read in author's handwriting (bad)</span>
 
 </aside>
 
 <script type="text/javascript">
 	var added = false;
-	fontSwapper.addEventListener("click", function () {
+	fontSwapper.addEventListener("click", function (e) {
+		e.preventDefault();
 		if (added) {
 			document.body.classList.remove("alt-font");
 			added = false;
