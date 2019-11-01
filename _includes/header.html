@@ -1,5 +1,4 @@
 <aside class="logo">
-
 	{% if page.url == '/index.html' or page.url == '/' %}
 		{% assign link = '/about' %}
 		{% assign prompt = 'About the Author' %}
@@ -17,5 +16,20 @@
 		<img src="{{ site.resume_url }}" alt="Resume icon" class="logo-avatar">
 	</a>
 	<span class="logo-prompt code">Resume</span>
-
+	<button id="fontSwapper">
+		Swap font
+	</button>
 </aside>
+
+<script type="text/javascript">
+	var added = true;
+	fontSwapper.addEventListener("click", function () {
+	  if (added) {
+		document.body.classList.remove("alt-font");
+		added = false;
+	  } else {
+		document.body.classList.add("alt-font");
+		added = true;
+	  }
+	});
+  </script>
