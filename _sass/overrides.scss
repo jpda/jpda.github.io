@@ -33,6 +33,12 @@ article img {
 
 .alt-font {
     font-family: "MyFont";
-    font-size: 2em;
-    line-height:1.5em;
+    font-size: 1.5em;
+    line-height:1em;
+article {
+    p {
+        font-size:1em;
+        line-height:1em;
+    }
+} 
 }
