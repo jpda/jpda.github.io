@@ -63,7 +63,7 @@ Next we want to grant our SP some rights to resources. You can do this in the po
 
 Once you find your AKS cluster, click Access Control (IAM) and add a role assignment. Search for your SP (the appId field will work, or the name as listed in the output of the `az ad sp` command earlier). Find an appropriate role. In my case, Azure Kubernetes Service Cluster Admin Role is what I was looking for. Select that, then make sure you Save/Add the role assignment.
 
-![portal-role-assignment](img/aks-sp-portal-role-assignment.png, "portal role assignment")
+![portal-role-assignment](/img/aks-sp-portal-role-assignment.png, "portal role assignment")
 
 ## Logging into the CLI with your newly minted SP
 
@@ -83,7 +83,7 @@ Lastly, we need to get our aks credentials for kubectl:
 
 Make sure it all works with `kubectl get nodes`
 
-![kubectl](img/aks-sp-cli-kubectl.png, "cli")
+![kubectl](/img/aks-sp-cli-kubectl.png, "cli")
 
 :bowtie:
 
