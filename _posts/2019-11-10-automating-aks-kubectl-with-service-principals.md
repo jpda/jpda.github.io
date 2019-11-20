@@ -41,9 +41,15 @@ Many people have written many words on this topic, so I'll move on - but the mes
 
 So what should we use? Azure AD offers Service Principals - these are effectively 'service accounts,' but we have far more control over both the scope of privileges &amp; access granted to the principal, in addition to being able to tightly control both credential and lifecycle. For example - Azure AD SPs can use passwords _or_ certificates for authentication. An organization with a centrally-managed certificate authority can rotate certificates on a schedule, keeping credentials entirely available yet out of the hands of developers. Beyond that, Managed Service Identity offers managed service principals tied to a resource (very much like managed service accounts from AD) where credentials are completely managed by Azure, but the service principal can be assigned permissions &amp; rights just like any other principal.
 
-If you're using an rbac-enabled AKS cluster, take a look [here](https://docs.microsoft.com/en-us/azure/aks/azure-ad-rbac) instead. 
+## RBAC vs non-RBAC AKS clusters
 
-In our specific scenario, let's look at how we can create a service principal for use with Azure Kubernetes Service &amp; kubectl.
+There are two ways to use AKS clusters in Azure - with or without Azure AD integration, usually referred to as 'RBAC-enabled' in most of the docs. The key difference here is related to the management vs. data planes of the Azure resource, in this case the AKS cluster. For example, think about an Azure VM. I may have _management_ rights to deploy/restart/change the VM's Azure configuration (disks, networking, resource group, etc), but may not have an account to RDP to the VM and make any changes there (the _data_ surface). Similarly, I may have the ability to _manage_ a storage account or SQL DB - change properties, move to different groups, add data sync partner regions, etc - but I may not have access to the data within those resources.
+
+In a non-RBAC cluster, we have _management_ rights within the Azure portal to manage the resource, including getting credentials for kubectl. The difference between this route and the RBAC route is the type of credential - in a non-RBAC scenario, I'm using a service principal to fetch/generate a credential for AKS, but the credential itself is disconnected from the service principal. It is merely access to _generate a credential_ for the management interface. In an RBAC or Azure AD-enlightened cluster, not only will my service principal potentially be used to _manage_ the cluster, but I can also connect to the cluster _as the service principal_ which offers a greater level of granularity to the types of management operations allowed _within the cluster itself_, e.g., roles that are more granular than what is populated within the Azure management surface.
+
+For an RBAC cluster, check the docs [here](https://docs.microsoft.com/en-us/azure/aks/azure-ad-rbac){:target=_blank} instead.
+
+In our specific scenario, let's look at how we can create a service principal for use with a non-RBAC-enabled aks cluster &amp; kubectl. This is fetching credentials, but _not_ connecting _as the service principal_.
 
 ## Creating the service principal
 
