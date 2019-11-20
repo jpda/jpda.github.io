@@ -1,5 +1,5 @@
 ---
-title: Automating AKS and kubectl with Azure AD service principals
+title: Automating non-RBAC AKS and kubectl with Azure AD service principals
 description: ''
 date: '2019-11-19T20:08:17.5261648Z'
 categories: ['azure', 'azure-ad', 'identity']
@@ -40,6 +40,8 @@ Many people have written many words on this topic, so I'll move on - but the mes
 ## Service Principals
 
 So what should we use? Azure AD offers Service Principals - these are effectively 'service accounts,' but we have far more control over both the scope of privileges &amp; access granted to the principal, in addition to being able to tightly control both credential and lifecycle. For example - Azure AD SPs can use passwords _or_ certificates for authentication. An organization with a centrally-managed certificate authority can rotate certificates on a schedule, keeping credentials entirely available yet out of the hands of developers. Beyond that, Managed Service Identity offers managed service principals tied to a resource (very much like managed service accounts from AD) where credentials are completely managed by Azure, but the service principal can be assigned permissions &amp; rights just like any other principal.
+
+If you're using an rbac-enabled AKS cluster, take a look [here](https://docs.microsoft.com/en-us/azure/aks/azure-ad-rbac) instead. 
 
 In our specific scenario, let's look at how we can create a service principal for use with Azure Kubernetes Service &amp; kubectl.
 
