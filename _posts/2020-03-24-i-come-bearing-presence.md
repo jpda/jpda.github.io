@@ -37,7 +37,7 @@ Same for the office - rather than a small light, I felt the size of this lamp re
 
 Here's what we're going to build:
 
-![runtime sketch 1](2020-03-24-16-40-00.png)
+![runtime sketch 1](img/2020-03-24-16-40-00.png)
 
 A presence-poller running in Azure Functions, which...
 
