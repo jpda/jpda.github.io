@@ -21,7 +21,7 @@ The Embrava lights were popular, I had one on my desk, in fact - but they don't 
 - [Working from home is a new reality for many people](https://news.microsoft.com/covid-19-response/){:target="_blank"}
 - [Working from home with an entire family](https://ed.sc.gov/districts-schools/schools/district-and-school-closures/){:target="_blank"}
 
-Any solution worth a solution is worth an over-engineered solution, right? _Right?!_ Click the video to see it in action.
+And since I have little ones at home, it got me thinking about ways to let them know if I'm on the phone or not. I wanted something multitenant that could publish presence for anyone, not just me. In that spirit - any solution worth a solution is worth an over-engineered solution, right? _Right?!_ Click the video to see it in action.
 
 [![video](https://img.youtube.com/vi/ujDyD63KdbA/0.jpg)](https://www.youtube.com/watch?v=ujDyD63KdbA){:target="_blank"}
 
