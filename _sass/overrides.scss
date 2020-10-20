@@ -45,7 +45,14 @@ article img {
         color: #03edf9;
         background: #222;
     }
+    time {
+        color:#fff;
+    }
     .footer {
         color: #fff;
+    }
+    article a:hover {
+        color:#fc28a8;
+        border-color:#fc28a8;
     }
 }
