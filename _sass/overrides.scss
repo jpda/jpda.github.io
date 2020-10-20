@@ -8,8 +8,8 @@ code, pre, .code, .footnotes {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    font-stretch: narrower;
+    font-weight: 650;
+    letter-spacing: -0.035em;
 }
 
 article {
@@ -17,6 +17,10 @@ article {
     p {
         font-size:1em;
         line-height:2em;
+    }
+    h1.title {
+        line-height: 1em;
+        font-size: 2.25em;
     }
 }
 
@@ -42,7 +46,7 @@ article img {
     }
     h1, h2, h3, h4, h5, h6 {
         color:white;
-        background:linear-gradient(0deg,#b13cff,#dd45d3 30%,#fd9d52);
+        background:linear-gradient(0deg,#b13cff,#03edf9 30%,#fd9d52);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
