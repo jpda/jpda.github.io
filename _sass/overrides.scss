@@ -4,7 +4,12 @@ body {
 }
 
 code, pre, .code, .footnotes {
-    font-family: 'Cascadia Code', 'Consolas', 'Fira Code', monaco, monospace;
+    font-family: 'Fira Code', 'Consolas', 'Cascadia Code', monaco, monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-stretch: narrower;
 }
 
 article {
@@ -37,7 +42,7 @@ article img {
     }
     h1, h2, h3, h4, h5, h6 {
         color:white;
-        background:linear-gradient(0deg,#b13cff,#dd45d3 50%,#fd9d52);
+        background:linear-gradient(0deg,#b13cff,#dd45d3 30%,#fd9d52);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
