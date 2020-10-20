@@ -3,6 +3,10 @@ body {
     line-height:1.2em;
 }
 
+code, pre, .code, .footnotes {
+    font-family: 'Cascadia Code', 'Consolas', 'Fira Code', monaco, monospace;
+}
+
 article {
     max-width: 1280px;
     p {
@@ -21,4 +25,17 @@ article img {
 
 .footer {
     color: #333;
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        background:#333;
+        color:white;
+    }
+    section ul li a {
+        color:white;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color:white;
+    }
 }
