@@ -58,6 +58,9 @@ article img {
         color: #03edf9;
         background: #222;
     }
+    pre {
+        background-color: #222;
+    }
     time {
         color:#fff;
     }
@@ -67,5 +70,14 @@ article img {
     article a:hover {
         color:#fc28a8;
         border-color:#fc28a8;
+    }
+
+    .highlight .err {
+        background-color: transparent;
+        color: #fc28a8;
+    }
+
+    .highlight .s2 {
+        color: #03edf9;
     }
 }
