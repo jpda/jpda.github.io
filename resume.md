@@ -4,11 +4,15 @@ I like to build stuff. I started working with cloud platforms in late 2010, star
 
 ## Microsoft, 2016 - current
 
-**Cloud Solution Architect, US** 10/17 - current
+**Principal Program Manager, Identity Division** 4/2020 - current
+
+Developer advocacy - educating, explaining and assisting customers & developers using Microsoft identity platforms. Reaching new audiences through live streaming on Twitch (https://aka.ms/425show), internal advocacy to drive product enhancements for developers. Strong end-to-end focus, especially with developers using Azure & Office. 
+
+**Cloud Solution Architect, US** 10/2017 - 4/2020
 
 Responsible for driving high priority customer initiatives on Azure in collaboration with customers and other Microsoft teams in the field. Accountable for the end-to-end customer cloud deployment experience, as new solutions are designed, developed and implemented.
 
-**Cloud Solution Architect, EPG** 2/16 - 10/27
+**Cloud Solution Architect, EPG** 2/2016 - 10/2017
 
 Responsible for advising, guiding & building with named customers.
 
