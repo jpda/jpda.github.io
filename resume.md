@@ -6,7 +6,7 @@ I like to build stuff. I started working with cloud platforms in late 2010, star
 
 **Principal Program Manager, Identity Division** 4/2020 - current
 
-Developer advocacy - educating, explaining and assisting customers & developers using Microsoft identity platforms. Reaching new audiences through live streaming on Twitch (https://aka.ms/425show), internal advocacy to drive product enhancements for developers. Strong end-to-end focus, especially with developers using Azure & Office. Compete analysis, coding-with customers for novel and strategic priorities.
+Developer advocacy - educating, explaining and assisting customers & developers using Microsoft identity platforms. Building a community of identity developers & enthusiasts via the [425 Show](https://aka.ms/425show), scaling that community through others within our division. Internal advocacy to convert feedback and customer experiences into product enhancements for developers. Strong end-to-end focus, especially with developers using Azure & Office. Industry competition analysis, developer experience analysis & building with customers for novel and strategic  priorities.
 
 **Cloud Solution Architect, US** 10/2017 - 4/2020
 
